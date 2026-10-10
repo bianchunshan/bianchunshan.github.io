@@ -2,143 +2,256 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>图说 | 关于发展新质生产力的意见</title>
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { width:1080px; font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",sans-serif; background:#f7f3ec; color:#2b2b2b; }
-  .header { background:linear-gradient(135deg,#8e0e0e 0%,#c1272d 55%,#8e0e0e 100%); color:#fff; padding:64px 60px 52px; text-align:center; position:relative; overflow:hidden; }
-  .header::after { content:""; position:absolute; left:0; right:0; bottom:0; height:10px; background:linear-gradient(90deg,#d4a017,#f5d76e,#d4a017); }
-  .kicker { display:inline-block; border:2px solid #f5d76e; color:#f5d76e; font-size:30px; letter-spacing:14px; padding:10px 26px 10px 40px; border-radius:8px; margin-bottom:28px; font-weight:700; }
-  .header h1 { font-size:64px; line-height:1.35; font-weight:900; letter-spacing:4px; margin-bottom:18px; }
-  .header .sub { font-size:28px; color:#ffe9a8; letter-spacing:2px; }
-  .core { background:#fff; margin:-6px 48px 0; border-radius:16px; padding:36px 44px; box-shadow:0 6px 24px rgba(140,10,10,.12); border-top:6px solid #d4a017; position:relative; z-index:2; }
-  .core .label { font-size:26px; color:#8e0e0e; font-weight:800; letter-spacing:6px; margin-bottom:14px; }
-  .core .big { font-size:44px; font-weight:900; color:#8e0e0e; margin-bottom:12px; }
-  .core p { font-size:28px; line-height:1.7; color:#444; }
-  .core .principles { display:flex; gap:14px; margin-top:18px; flex-wrap:wrap; }
-  .core .principles span { background:#fdf3e0; border:2px solid #d4a017; color:#8e0e0e; font-size:26px; font-weight:700; padding:10px 22px; border-radius:40px; }
-  .section { margin:44px 48px 0; }
-  .sec-head { display:flex; align-items:center; gap:18px; margin-bottom:22px; }
-  .num { width:64px; height:64px; border-radius:50%; background:linear-gradient(135deg,#c1272d,#8e0e0e); color:#f5d76e; font-size:36px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-  .sec-head h2 { font-size:40px; font-weight:900; color:#8e0e0e; letter-spacing:2px; }
-  .card { background:#fff; border-radius:14px; padding:30px 36px; margin-bottom:20px; box-shadow:0 3px 14px rgba(0,0,0,.06); border-left:8px solid #c1272d; }
-  .card h3 { font-size:32px; font-weight:800; color:#222; margin-bottom:12px; }
-  .card h3 .tag { display:inline-block; background:#c1272d; color:#fff; font-size:22px; padding:4px 14px; border-radius:20px; margin-left:12px; vertical-align:middle; font-weight:700;}
-  .card ul { list-style:none; }
-  .card li { font-size:27px; line-height:1.75; color:#444; padding-left:30px; position:relative; margin-bottom:6px; }
-  .card li::before { content:"▸"; position:absolute; left:0; color:#d4a017; font-weight:900; }
-  .chips { display:flex; flex-wrap:wrap; gap:12px; margin-top:14px; }
-  .chips span { background:#fdeeda; border:1.5px solid #d4a017; color:#7a4a00; font-size:25px; font-weight:700; padding:8px 20px; border-radius:30px; }
-  .warn { background:#fff7f7; border:2px dashed #c1272d; border-radius:14px; padding:28px 36px; margin:0 48px; }
-  .warn h3 { font-size:32px; color:#8e0e0e; font-weight:800; margin-bottom:12px; }
-  .warn li { font-size:27px; line-height:1.8; color:#555; list-style:none; padding-left:30px; position:relative;}
-  .warn li::before { content:"✕"; position:absolute; left:0; color:#c1272d; font-weight:900; }
-  .footer { margin:48px 48px 0; padding:30px; text-align:center; font-size:24px; color:#999; }
-  .bottom-bar { height:56px; }
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;background:#f2f6f9;color:#1e293b;max-width:760px;margin:0 auto;padding:0 0 60px;font-size:16px;line-height:1.75}
+.toolbar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid #e2e8f0}
+.toolbar-inner{max-width:760px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px}
+.brand{font-size:12px;font-weight:700;letter-spacing:2px;color:#0d9488;text-decoration:none;white-space:nowrap}
+.tools{display:flex;gap:8px}
+.tools button{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:5px 11px;font-size:12px;color:#475569;cursor:pointer}
+.tools button:hover{background:#f0fdfa;border-color:#0d9488}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;background:#0d9488;width:0;transition:width .1s linear}
+.hero{background:linear-gradient(165deg,#dff3ef 0%,#eef6f4 55%,#f2f6f9 100%);padding:48px 26px 36px;text-align:center;border-bottom:3px solid #0d9488}
+.kicker{display:inline-block;border:1.5px solid #0d9488;color:#0d9488;font-size:14px;letter-spacing:8px;padding:7px 16px 7px 24px;border-radius:8px;margin-bottom:20px;font-weight:700;background:rgba(255,255,255,.6)}
+.hero h1{font-size:27px;line-height:1.5;font-weight:900;margin-bottom:12px;color:#123f3a}
+.hero .lead{font-size:14.5px;color:#5b6b7c;line-height:1.8;margin-bottom:18px}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;border-top:1px solid rgba(13,148,136,.25);padding-top:16px;text-align:left}
+.meta div{font-size:13px;color:#475569;line-height:1.7}
+.meta b{display:block;font-size:11px;color:#0d9488;font-weight:700;letter-spacing:2px;margin-bottom:2px}
+.evidence{margin:18px 16px 0;border-top:2px solid #0d9488;border-bottom:2px solid #0d9488;padding:14px 4px;font-size:12.5px;line-height:1.9;color:#5b6b7c;background:#f0fdfa;border-radius:4px}
+.evidence strong{color:#0d9488}
+.contents{display:flex;gap:8px 18px;flex-wrap:wrap;padding:16px;font-size:12.5px;border-bottom:1px solid #e2e8f0;background:#fff}
+.contents a{color:#5b6b7c;text-decoration:none}
+.contents a span{color:#0d9488;margin-right:5px;font-family:Georgia,serif;font-weight:700}
+.sec{margin:28px 16px 0;scroll-margin-top:70px}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.num{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#0d9488,#0f766e);color:#fff;font-size:19px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:Georgia,serif}
+.sec-head h2{font-size:20px;font-weight:800;color:#123f3a}
+.sec-sub{font-size:13px;color:#7d8ba0;margin:0 0 14px 50px}
+.card{background:#fff;border-radius:14px;padding:16px 18px;margin-bottom:12px;border:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(15,118,110,.06)}
+.card .t{font-size:16px;font-weight:700;color:#0d9488;margin-bottom:8px}
+.card ul{list-style:none}
+.card li{font-size:14.5px;line-height:1.85;color:#3f4c5e;padding-left:20px;position:relative;margin-bottom:4px}
+.card li::before{content:"▸";position:absolute;left:0;color:#0d9488;font-weight:700}
+.card li b{color:#1e293b}
+.hl{background:#f0fdfa;border:1.5px dashed #0d9488;border-radius:14px;padding:16px 18px;margin-bottom:12px;font-size:14.5px;line-height:1.9;color:#123f3a}
+.hl b{color:#0d9488}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.pills span{background:#f0fdfa;color:#0d9488;border:1px solid #99e4dc;border-radius:8px;padding:4px 12px;font-size:13px;font-weight:600}
+.lbl{display:inline-block;font-size:11px;line-height:1.6;padding:1px 7px;border-radius:5px;margin-left:4px;vertical-align:1px;white-space:nowrap;font-weight:600}
+.l-q{background:#dcfce7;color:#15803d}
+.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:5px;letter-spacing:1px;font-weight:600}
+.tag.report{background:#f1f5f9;color:#64748b;border:1px solid #e2e8f0}
+.tag.editor{background:#fef9c3;color:#a16207;border:1px solid #fde68a}
+.editor-note{margin:0 0 12px;padding:14px 16px;border-left:4px solid #eab308;background:#fffbeb;border-radius:0 12px 12px 0;font-size:13.5px;line-height:1.9;color:#854d0e}
+.editor-note .tag{margin-right:8px}
+.hide-extensions .extension{display:none}
+.ref{font-size:11px;vertical-align:super;color:#94a3b8;text-decoration:none;padding-left:2px}
+.ref:hover{color:#0d9488}
+.quotes{display:grid;gap:12px}
+.quote{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:18px 18px 14px 52px;position:relative;box-shadow:0 1px 4px rgba(15,118,110,.06)}
+.quote::before{content:"“";position:absolute;left:14px;top:2px;font-size:50px;line-height:1;color:#5eead4;font-family:Georgia,serif}
+.quote p{font-size:15.5px;color:#1e293b;line-height:1.85}
+.quote .src{font-size:12px;color:#7d8ba0;margin-top:8px}
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.numc{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:14px;box-shadow:0 1px 4px rgba(15,118,110,.06)}
+.numc .v{font-size:23px;font-weight:800;color:#0d9488;line-height:1.3}
+.numc .k{font-size:13px;color:#3f4c5e;margin-top:4px;line-height:1.7}
+.numc .s{font-size:11px;color:#94a3b8;margin-top:6px}
+.check-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+.check-row{display:flex;align-items:flex-start;gap:10px;border-bottom:1px solid #e2e8f0;padding:14px 0;cursor:pointer;font-size:13.5px;color:#3f4c5e;background:#fff}
+.check-row input{accent-color:#0d9488;width:17px;height:17px;margin:3px 0 0;flex-shrink:0}
+.check-row small{display:block;font-size:12px;color:#7d8ba0;margin-top:3px}
+.check-row:has(input:checked) b{text-decoration:line-through;color:#94a3b8}
+.check-row b{font-weight:600;color:#1e293b}
+.check-status{display:flex;align-items:center;gap:14px;margin-top:16px;font-size:12px;color:#7d8ba0;flex-wrap:wrap}
+.check-status progress{accent-color:#0d9488;width:110px;height:6px}
+.check-status button{padding:4px 10px;background:#fff;border:1px solid #cbd5e1;font-size:12px;color:#7d8ba0;border-radius:8px;cursor:pointer}
+.note2{font-size:12.5px;color:#7d8ba0;margin-top:10px;line-height:1.8;padding-top:8px;border-top:1px dashed #e2e8f0}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;margin:6px 0 12px;font-size:12.5px;color:#7d8ba0}
+.srcs{font-size:13px;line-height:2;color:#5b6b7c}
+.srcs a{color:#0d9488;text-decoration:none;word-break:break-all}
+.srcs ol{padding-left:20px}
+.srcs small{display:block;font-size:11.5px;color:#94a3b8;line-height:1.8;margin-top:2px}
+.footer{margin:26px 16px 0;text-align:center;font-size:12px;color:#94a3b8;line-height:2}
+@media (max-width:480px){.nums{grid-template-columns:1fr}.meta{grid-template-columns:1fr}.check-grid{grid-template-columns:1fr}}
+@media print{body{background:#fff}.toolbar,.contents{display:none}.card,.quote,.numc{box-shadow:none}}
 </style>
 </head>
 <body>
-
-<div class="header">
-  <div class="kicker">图说</div>
-  <h1>中共中央 国务院<br>关于发展新质生产力的意见</h1>
-  <div class="sub">新华社北京10月9日电 · 受权发布</div>
+<header class="toolbar"><div class="toolbar-inner"><a class="brand" href="#top">新质生产力 · 图解</a><div class="tools"><button id="mode" type="button" aria-pressed="false">收起延伸解读</button><button id="print" type="button">打印 / PDF</button></div></div><div id="progress" class="progress"></div></header>
+<main id="top">
+<div class="hero">
+<div class="kicker">图 说 · 政 策 文 件</div>
+<h1>中共中央 国务院<br>关于发展新质生产力的意见</h1>
+<div class="lead">以科技创新为引领，推动技术革命性突破、生产要素创新性配置、产业深度转型升级。核心标志：全要素生产率大幅提升。</div>
+<div class="meta">
+<div><b>发布方</b>中共中央、国务院</div>
+<div><b>发布</b>新华社北京10月9日电 · 受权发布</div>
+<div><b>性质</b>政策意见 · 要点提炼版</div>
+<div><b>口径</b>原文以官方发布为准</div>
+</div>
 </div>
 
-<div class="core">
-  <div class="label">总体要求 · 核心标志</div>
-  <div class="big">全要素生产率大幅提升</div>
-  <p>以科技创新为引领，推动技术革命性突破、生产要素创新性配置、产业深度转型升级。全方位推进科技创新、产业创新、发展方式创新、体制机制创新、人才工作机制创新。</p>
-  <div class="principles">
-    <span>创新主导</span><span>改革为要</span><span>因地制宜</span><span>先立后破</span>
-    <span>高技术</span><span>高效能</span><span>高质量</span>
-  </div>
+<div class="evidence"><strong>先划清来源边界：</strong>本页为官方文件<b>要点提炼</b>，正文为<span class="tag report">文件要点转述</span>；<span class="tag editor">延伸解读</span>为编辑的对照提示，不属于文件原文，可一键收起。文件中"大幅提升"等表述为<b>原文措辞</b>，照录不改。</div>
+
+<nav class="contents"><a href="#c0"><span>00</span>总体要求</a><a href="#c1"><span>01</span>科技创新</a><a href="#c2"><span>02</span>产业融合</a><a href="#c3"><span>03</span>发展方式</a><a href="#c4"><span>04</span>体制机制</a><a href="#c5"><span>05</span>人才</a><a href="#c6"><span>06</span>组织实施</a><a href="#cq"><span>★</span>关键表述</a><a href="#cn"><span>#</span>数字</a><a href="#ck"><span>☑</span>清单</a><a href="#cs">来源</a></nav>
+
+<div class="sec" id="c0"><div class="sec-head"><div class="num">0</div><h2>总体要求</h2></div><div class="sec-sub">核心标志与四条原则 <span class="tag report">文件要点转述</span><a class="ref" href="#s1">[1]</a></div>
+<div class="hl"><b>核心标志：全要素生产率大幅提升。</b>以科技创新为引领，推动技术革命性突破、生产要素创新性配置、产业深度转型升级。</div>
+<div class="card"><div class="t">四条原则</div><div class="pills"><span>创新主导</span><span>改革为要</span><span>因地制宜</span><span>先立后破</span></div>
+<ul><li>全方位推进：科技创新、产业创新、发展方式创新、体制机制创新、人才工作机制创新。</li><li>高技术、高效能、高质量为特征。</li></ul></div>
 </div>
 
-<div class="section">
-  <div class="sec-head"><div class="num">1</div><h2>大力推进科技创新</h2></div>
-  <div class="card"><h3>原创性颠覆性创新</h3>
-    <ul><li>坚持"四个面向"，聚焦战略性、标志性、引领性产品组织重大科技项目</li>
-    <li>目标导向与自由探索并重，实施基础学科和交叉学科突破计划</li></ul></div>
-  <div class="card"><h3>突破关键核心技术</h3>
-    <ul><li>发挥新型举国体制优势，组织制造业重点产业链高质量发展行动</li>
-    <li>落实首台（套）、首批次应用政策，促进技术迭代升级</li></ul></div>
-  <div class="card"><h3>强化企业创新主体地位<span class="tag">亮点</span></h3>
-    <ul><li>建立企业研发准备金制度，提高研发费用加计扣除比例</li>
-    <li>支持有能力的民营企业牵头承担国家重大技术攻关任务</li></ul></div>
-  <div class="card"><h3>加速成果转化</h3>
-    <ul><li>新技术新产品新场景大规模应用示范；布局概念验证、中试验证平台</li>
-    <li>高校院所按"先使用后付费"把成果许可给中小微企业；以AI引领科研范式变革</li></ul></div>
+<div class="sec" id="c1"><div class="sec-head"><div class="num">1</div><h2>大力推进科技创新</h2></div><div class="sec-sub">原创性颠覆性创新 <span class="tag report">文件要点转述</span><a class="ref" href="#s1">[1]</a></div>
+<div class="card"><ul>
+<li><b>坚持"四个面向"</b>，聚焦战略性、标志性、引领性产品组织重大科技项目。</li>
+<li>目标导向与自由探索并重，实施基础学科和交叉学科突破计划。</li>
+<li><b>突破关键核心技术</b>：发挥新型举国体制优势，组织制造业重点产业链高质量发展行动。</li>
+<li>落实首台（套）、首批次应用政策，促进技术迭代升级。</li>
+</ul></div>
+<div class="card"><div class="t">亮点：强化企业创新主体地位</div><ul>
+<li>建立企业研发准备金制度，提高研发费用加计扣除比例。</li>
+<li>支持有能力的民营企业牵头承担国家重大技术攻关任务。</li>
+</ul></div>
+<div class="card"><div class="t">加速成果转化</div><ul>
+<li>新技术新产品新场景大规模应用示范；布局概念验证、中试验证平台。</li>
+<li>高校院所按"先使用后付费"把成果许可给中小微企业；以AI引领科研范式变革。</li>
+</ul></div>
+<div class="editor-note extension"><span class="tag editor">延伸解读</span>"先使用后付费"是把高校成果从"橱窗"变成"货架"的关键一招：中小企业先拿去用、产生效益再付钱，转化堵点少一半。</div>
 </div>
 
-<div class="section">
-  <div class="sec-head"><div class="num">2</div><h2>科技创新和产业创新深度融合</h2></div>
-  <div class="card"><h3>改造提升传统产业</h3>
-    <ul><li>以数智技术、绿色技术改造传统产业，发展智能制造、绿色制造</li>
-    <li>实施大规模设备更新工程，守牢实体经济根基</li></ul></div>
-  <div class="card"><h3>培育壮大新兴产业</h3>
-    <div class="chips"><span>新一代信息技术</span><span>新能源</span><span>新材料</span><span>智能网联新能源汽车</span><span>机器人</span><span>生物医药</span><span>高端装备</span><span>航空航天</span></div>
-    <ul><li style="margin-top:12px">低空经济、商业航天在确保安全前提下健康有序发展；避免"内卷式"竞争</li></ul></div>
-  <div class="card"><h3>前瞻布局未来产业<span class="tag">亮点</span></h3>
-    <div class="chips"><span>量子科技</span><span>生物制造</span><span>氢能和核聚变能</span><span>脑机接口</span><span>具身智能</span><span>第六代移动通信</span></div></div>
-  <div class="card"><h3>数字经济深度融合</h3>
-    <ul><li>健全数据产权、交易、分配制度；实施"东数西算"工程</li>
-    <li>建设全国一体化算力网、国家区块链网络</li></ul></div>
-  <div class="card"><h3>全面实施"人工智能+"行动<span class="tag">亮点</span></h3>
-    <ul><li>推进AI改造传统产业，加快智能网联新能源汽车、AI手机电脑、人形机器人等智能终端应用</li>
-    <li>强化算力、算法、数据高效供给；构建AI安全监测预警应急体系</li></ul></div>
+<div class="sec" id="c2"><div class="sec-head"><div class="num">2</div><h2>科技创新和产业创新深度融合</h2></div><div class="sec-sub">改造存量、壮大增量、布局未来 <span class="tag report">文件要点转述</span><a class="ref" href="#s1">[1]</a></div>
+<div class="card"><div class="t">改造提升传统产业</div><ul>
+<li>以数智技术、绿色技术改造传统产业，发展智能制造、绿色制造。</li>
+<li>实施大规模设备更新工程，守牢实体经济根基。</li>
+</ul></div>
+<div class="card"><div class="t">培育壮大新兴产业</div><div class="pills"><span>新一代信息技术</span><span>新能源</span><span>新材料</span><span>智能网联新能源汽车</span><span>机器人</span><span>生物医药</span><span>高端装备</span><span>航空航天</span></div>
+<ul><li>低空经济、商业航天在确保安全前提下健康有序发展；避免"内卷式"竞争。</li></ul></div>
+<div class="card"><div class="t">亮点：前瞻布局未来产业</div><div class="pills"><span>量子科技</span><span>生物制造</span><span>氢能和核聚变能</span><span>脑机接口</span><span>具身智能</span><span>第六代移动通信</span></div></div>
+<div class="card"><div class="t">数字经济深度融合</div><ul>
+<li>健全数据产权、交易、分配制度；实施"东数西算"工程。</li>
+<li>建设全国一体化算力网、国家区块链网络；全面实施"人工智能+"行动。</li>
+<li><b>亮点</b>：推进AI改造传统产业，加快智能网联新能源汽车、AI手机电脑、人形机器人等智能终端应用；强化算力、算法、数据高效供给；构建AI安全监测预警应急体系。</li>
+</ul></div>
 </div>
 
-<div class="section">
-  <div class="sec-head"><div class="num">3</div><h2>推进发展方式创新</h2></div>
-  <div class="card"><h3>绿色低碳循环体系</h3>
-    <ul><li>做强绿色制造业、壮大绿色能源产业，建设一批零碳工厂和园区</li></ul></div>
-  <div class="card"><h3>碳市场与碳定价</h3>
-    <ul><li>全面实施碳排放总量和强度双控制度；扩大全国碳排放权交易市场覆盖范围</li>
-    <li>完善全国统一绿证市场，发展绿色金融</li></ul></div>
-  <div class="card"><h3>积极推进能源革命</h3>
-    <ul><li>有序发展先进核裂变能，构建高比例可再生能源电力系统</li></ul></div>
+<div class="sec" id="c3"><div class="sec-head"><div class="num">3</div><h2>推进发展方式创新</h2></div><div class="sec-sub">绿色低碳循环体系 <span class="tag report">文件要点转述</span><a class="ref" href="#s1">[1]</a></div>
+<div class="card"><ul>
+<li>做强绿色制造业、壮大绿色能源产业，建设一批零碳工厂和园区。</li>
+<li><b>碳市场与碳定价</b>：全面实施碳排放总量和强度双控制度；扩大全国碳排放权交易市场覆盖范围。</li>
+<li>完善全国统一绿证市场，发展绿色金融。</li>
+<li><b>积极推进能源革命</b>：有序发展先进核裂变能，构建高比例可再生能源电力系统。</li>
+</ul></div></div>
+
+<div class="sec" id="c4"><div class="sec-head"><div class="num">4</div><h2>推进体制机制创新</h2></div><div class="sec-sub">让资本、数据、监管跟上 <span class="tag report">文件要点转述</span><a class="ref" href="#s1">[1]</a></div>
+<div class="card"><div class="t">亮点：加大金融创新产品供给</div><ul>
+<li><b>壮大耐心资本</b>：完善长期资本投早、投小、投长期、投硬科技的支持政策。</li>
+<li>鼓励规范发展天使投资、风险投资、私募股权投资；丰富科技创新债券；支持优质科技型企业上市融资。</li>
+</ul></div>
+<div class="card"><ul>
+<li><b>科技与经济紧密结合</b>：深化职务科技成果赋权改革；建设全国一体化数据市场。</li>
+<li><b>完善市场监管</b>：加强人工智能、生物等领域治理；探索"用数据决策、用数据管理"监管模式。</li>
+<li><b>全球配置先进生产要素</b>：扩大高水平对外开放；建立高效便利安全的数据跨境流动机制。</li>
+</ul></div>
+<div class="editor-note extension"><span class="tag editor">延伸解读</span>"耐心资本"是全文最值得企业细读的一句：投早、投小、投长期、投硬科技——四个"投"字背后是考核周期和容错机制的改革，钱的问题最后都是人的问题。</div>
 </div>
 
-<div class="section">
-  <div class="sec-head"><div class="num">4</div><h2>推进体制机制创新</h2></div>
-  <div class="card"><h3>加大金融创新产品供给<span class="tag">亮点</span></h3>
-    <ul><li>壮大耐心资本：完善长期资本投早、投小、投长期、投硬科技的支持政策</li>
-    <li>鼓励规范发展天使投资、风险投资、私募股权投资；丰富科技创新债券；支持优质科技型企业上市融资</li></ul></div>
-  <div class="card"><h3>科技与经济紧密结合</h3>
-    <ul><li>深化职务科技成果赋权改革；建设全国一体化数据市场</li></ul></div>
-  <div class="card"><h3>完善市场监管</h3>
-    <ul><li>加强人工智能、生物等领域治理；探索"用数据决策、用数据管理"监管模式</li></ul></div>
-  <div class="card"><h3>全球配置先进生产要素</h3>
-    <ul><li>扩大高水平对外开放；建立高效便利安全的数据跨境流动机制</li></ul></div>
+<div class="sec" id="c5"><div class="sec-head"><div class="num">5</div><h2>深化人才工作机制创新</h2></div><div class="sec-sub">培养急需人才 <span class="tag report">文件要点转述</span><a class="ref" href="#s1">[1]</a></div>
+<div class="card"><ul>
+<li>发展新型研究型大学，优化学科专业设置；全面推进工学一体化技能人才培养。</li>
+<li><b>亮点</b>：科研人员考核评价与报项目、发论文、评奖励适度脱钩，防止简单按"帽子"定薪酬职称待遇。</li>
+<li>健全"新八级工"职业技能等级制度，畅通产业工人上升通道。</li>
+</ul></div></div>
+
+<div class="sec" id="c6"><div class="sec-head"><div class="num">6</div><h2>加强组织实施</h2></div><div class="sec-sub">三条红线 + 追责 <span class="tag report">文件要点转述</span><a class="ref" href="#s1">[1]</a></div>
+<div class="card"><div class="t">三条红线</div><ul>
+<li>不能脱实向虚、贪大求全、搞泡沫化。</li>
+<li>不能出现产业空心化或产业断层现象。</li>
+<li>不能盲目求新、顾此失彼。</li>
+</ul></div>
+<div class="card"><div class="t">追责</div><ul>
+<li>严禁借发展新质生产力之名违规滥用政策，对一哄而上、盲目投资造成重大损失的严肃追究责任。</li>
+</ul></div></div>
+
+<div class="sec" id="cq"><div class="sec-head"><div class="num">★</div><h2>关键表述</h2></div><div class="sec-sub"><span class="lbl l-q">原文表述</span> 文件中的标志性提法，照录 <a class="ref" href="#s1">[1]</a></div>
+<div class="quotes">
+<div class="quote"><p>全要素生产率大幅提升。</p><div class="src"><span class="lbl l-q">原文表述</span> 总体要求 · 核心标志</div></div>
+<div class="quote"><p>创新主导、改革为要、因地制宜、先立后破。</p><div class="src"><span class="lbl l-q">原文表述</span> 总体要求 · 四条原则</div></div>
+<div class="quote"><p>壮大耐心资本：完善长期资本投早、投小、投长期、投硬科技的支持政策。</p><div class="src"><span class="lbl l-q">原文表述</span> 体制机制创新</div></div>
+<div class="quote"><p>避免"内卷式"竞争。</p><div class="src"><span class="lbl l-q">原文表述</span> 新兴产业</div></div>
+<div class="quote"><p>不能脱实向虚、贪大求全、搞泡沫化。</p><div class="src"><span class="lbl l-q">原文表述</span> 组织实施 · 三条红线</div></div>
+<div class="quote"><p>防止简单按"帽子"定薪酬职称待遇。</p><div class="src"><span class="lbl l-q">原文表述</span> 人才工作机制创新</div></div>
+</div></div>
+
+<div class="sec" id="cn"><div class="sec-head"><div class="num">#</div><h2>关键数字</h2></div><div class="sec-sub">文件结构中的数量关系 <a class="ref" href="#s1">[1]</a></div>
+<div class="nums">
+<div class="numc"><div class="v">5</div><div class="k">全方位推进的创新领域：科技创新、产业创新、发展方式创新、体制机制创新、人才工作机制创新</div><div class="s">[1] 总体要求</div></div>
+<div class="numc"><div class="v">6</div><div class="k">文件任务板块：科技创新、产业融合、发展方式、体制机制、人才、组织实施</div><div class="s">[1] 全文结构</div></div>
+<div class="numc"><div class="v">4</div><div class="k">"四个面向"：坚持面向世界科技前沿、面向经济主战场、面向国家重大需求、面向人民生命健康</div><div class="s">[1] 科技创新（通用表述）</div></div>
+<div class="numc"><div class="v">6</div><div class="k">未来产业方向：量子科技、生物制造、氢能和核聚变能、脑机接口、具身智能、第六代移动通信</div><div class="s">[1] 产业融合</div></div>
+<div class="numc"><div class="v">3</div><div class="k">组织实施三条红线：不脱实向虚、不产业空心化、不盲目求新</div><div class="s">[1] 组织实施</div></div>
+<div class="numc"><div class="v">8</div><div class="k">新兴产业重点：新一代信息技术、新能源、新材料、智能网联新能源汽车、机器人、生物医药、高端装备、航空航天</div><div class="s">[1] 产业融合</div></div>
+</div>
+<p class="note2">数字为文件结构梳理；"四个面向"为科技工作通用表述，文件原文为"坚持'四个面向'"。</p>
 </div>
 
-<div class="section">
-  <div class="sec-head"><div class="num">5</div><h2>深化人才工作机制创新</h2></div>
-  <div class="card"><h3>培养急需人才</h3>
-    <ul><li>发展新型研究型大学，优化学科专业设置；全面推进工学一体化技能人才培养</li></ul></div>
-  <div class="card"><h3>健全使用和流动政策<span class="tag">亮点</span></h3>
-    <ul><li>科研人员考核评价与报项目、发论文、评奖励适度脱钩，防止简单按"帽子"定薪酬职称待遇</li>
-    <li>健全"新八级工"职业技能等级制度，畅通产业工人上升通道</li></ul></div>
+<div class="sec" id="ck"><div class="sec-head"><div class="num">☑</div><h2>行动清单：企业对照自查</h2></div><div class="sec-sub"><span class="tag editor">编辑应用 · 非文件原文</span> · 勾选只保存在当前浏览器本地</div>
+<div class="check-grid">
+<label class="check-row"><input type="checkbox" data-check="rd"><span><b>研发投入是否达标</b><small>有无研发准备金？研发费用加计扣除用足了吗？</small></span></label>
+<label class="check-row"><input type="checkbox" data-check="trans"><span><b>成果转化堵点在哪</b><small>"先使用后付费"、概念验证平台能用上吗？</small></span></label>
+<label class="check-row"><input type="checkbox" data-check="digital"><span><b>数智化改造排期</b><small>传统产线智能化、绿色化改造列入计划了吗？</small></span></label>
+<label class="check-row"><input type="checkbox" data-check="capital"><span><b>对接耐心资本</b><small>天使/VC/科创债渠道梳理过一遍吗？</small></span></label>
+<label class="check-row"><input type="checkbox" data-check="talent"><span><b>人才评价松绑</b><small>考核是否还唯"帽子"、唯论文？</small></span></label>
+<label class="check-row"><input type="checkbox" data-check="redline"><span><b>三条红线自查</b><small>有无脱实向虚、贪大求全、盲目求新？</small></span></label>
+</div>
+<div class="check-status"><span id="check-count">已完成 0 / 6</span><progress id="check-progress" value="0" max="6"></progress><span id="storage-note">仅保存在本地浏览器</span><button id="reset-checks" type="button">清空勾选</button></div>
 </div>
 
-<div class="section">
-  <div class="sec-head"><div class="num">6</div><h2>加强组织实施</h2></div>
-</div>
-<div class="warn">
-  <h3>三条红线</h3>
-  <ul>
-    <li>不能脱实向虚、贪大求全、搞泡沫化</li>
-    <li>不能出现产业空心化或产业断层现象</li>
-    <li>不能盲目求新、顾此失彼</li>
-  </ul>
-  <h3 style="margin-top:16px">追责</h3>
-  <ul>
-    <li style="list-style:none">严禁借发展新质生产力之名违规滥用政策，对一哄而上、盲目投资造成重大损失的严肃追究责任</li>
-  </ul>
-</div>
+<div class="sec" id="cs"><div class="sec-head"><div class="num">≡</div><h2>来源与边界</h2></div>
+<div class="legend"><span><span class="tag report">文件要点转述</span> 依据官方发布</span><span><span class="tag editor">延伸解读</span> 编辑的对照提示</span><span><span class="lbl l-q">原文表述</span> 文件中的标志性提法</span></div>
+<div class="card srcs"><ol>
+<li id="s1">新华社受权发布：《中共中央 国务院关于发展新质生产力的意见》，2026年10月9日<br><small>本页为要点提炼，原文以官方发布为准。</small></li>
+</ol>
+</div></div>
 
-<div class="footer">资料来源：新华社受权发布（2026年10月9日）· 内容为要点提炼，原文以官方发布为准</div>
-<div class="bottom-bar"></div>
-
+<div class="footer">本图说仅为政策文件要点整理 · 整理日期 2026-10-10</div>
+</main>
+<script>
+(function(){'use strict';
+var key='xinzhi-20261009-review-v1';
+var checks=Array.prototype.slice.call(document.querySelectorAll('[data-check]'));
+var storageOK=true, stored={};
+try{stored=JSON.parse(localStorage.getItem(key)||'{}');}catch(_){storageOK=false;}
+checks.forEach(function(c){c.checked=stored[c.dataset.check]===true;});
+function update(save){
+  var done=checks.filter(function(c){return c.checked;}).length;
+  document.getElementById('check-count').textContent='已完成 '+done+' / '+checks.length;
+  document.getElementById('check-progress').value=done;
+  if(save){try{localStorage.setItem(key,JSON.stringify(Object.fromEntries(checks.map(function(c){return [c.dataset.check,c.checked];}))));}catch(_){storageOK=false;}}
+  document.getElementById('storage-note').textContent=storageOK?'仅保存在本地浏览器':'浏览器限制存储：勾选仅在当前页面有效';
+}
+checks.forEach(function(c){c.addEventListener('change',function(){update(true);});});
+document.getElementById('reset-checks').addEventListener('click',function(){checks.forEach(function(c){c.checked=false;});update(true);});
+document.getElementById('mode').addEventListener('click',function(){
+  var hidden=document.body.classList.toggle('hide-extensions');
+  this.setAttribute('aria-pressed',String(hidden));
+  this.textContent=hidden?'展开延伸解读':'收起延伸解读';
+});
+document.getElementById('print').addEventListener('click',function(){window.print();});
+function progress(){
+  var total=document.documentElement.scrollHeight-window.innerHeight;
+  var pct=total>0?Math.min(100,Math.max(0,window.scrollY/total*100)):0;
+  document.getElementById('progress').style.width=pct+'%';
+}
+window.addEventListener('scroll',progress,{passive:true});
+window.addEventListener('resize',progress);
+update(false);progress();
+})();
+</script>
 </body>
 </html>
