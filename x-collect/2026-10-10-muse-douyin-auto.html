@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>让 Muse 全自动运营一个抖音号（30 天实验全记录）</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f2f6f9;color:#1e293b;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8;padding:24px 16px}
+.wrap{max-width:720px;margin:0 auto}
+.back{display:inline-block;color:#0d9488;text-decoration:none;font-size:14px;margin-bottom:16px}
+h1{font-size:22px;margin-bottom:12px}
+.meta{background:#fff;border-radius:12px;padding:16px 20px;margin-bottom:20px;box-shadow:0 1px 4px rgba(0,0,0,.06);font-size:14px;color:#5b6b7c}
+.meta a{color:#0d9488}
+h2{font-size:17px;margin:24px 0 12px;color:#0f766e}
+.card{background:#fff;border-radius:12px;padding:18px 20px;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.card ul{padding-left:20px}
+.card li{margin-bottom:8px;font-size:15px}
+.note{background:#fffbeb;border-left:4px solid #f59e0b;border-radius:0 12px 12px 0;padding:14px 18px;font-size:14px;color:#5b6b7c;margin-top:20px}
+.tag{display:inline-block;font-size:12px;background:#f0fdfa;color:#0f766e;border-radius:4px;padding:2px 8px;margin-right:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="index.html">← 返回收藏列表</a>
+<h1>手把手教你：让 Muse 全自动运营一个抖音号（30 天实验全记录）</h1>
+<div class="meta">
+<span class="tag">AI 实战</span><br><br>
+作者：Ryan（@7998l201）<br>
+发布时间：2026-10-10<br>
+原文：<a href="https://x.com/7998l201/status/2108841636713337148">x.com/7998l201/status/2108841636713337148</a><br>
+互动：16 回复 / 42 转帖 / 274 赞 / 435 收藏 / 1.9 万浏览
+</div>
+
+<h2>内容摘要</h2>
+<div class="card">
+<p>一篇 X 长文，记录用 Muse 30 天全自动运营抖音号的完整实验。人只负责注册账号和扫码登录一次，之后 30 天从选题、脚本、视频生成、文案到发布全部由 AI 自动完成，每天 21:00 更新一条。</p>
+</div>
+
+<h2>关键点</h2>
+<div class="card"><ul>
+<li><b>发布链路</b>：抖音没有开放给个人的内容发布 API，走浏览器自动化——电脑打开 douyin.com，手机 App 扫码登录</li>
+<li><b>内容策略</b>：三条内容线轮流做 AB 测试——POV 男友视角（竖屏完播率高）、每日古诗词（AI 讲诗）、仙侠竞速飞行（视觉奇观）</li>
+<li><b>配音方案</b>：视频生成无声版，旁白用豆包语音合成（火山引擎，音色"魅力女友"）单独合成后用 ffmpeg 混音</li>
+<li><b>合规</b>：AI 生成内容必须勾选平台"AI 生成"标识，否则有被限流下架风险；账号实名是真人，如实说明"AI 自主运营实验"</li>
+<li><b>定时任务</b>：每天 20:45 执行，选题→生成→质检（无字无水印、画幅正确）→发布→记录数据；失败记日志告警，登录态失效通知真人重扫码</li>
+<li><b>成本</b>：人力约 10 分钟 + 1 次扫码；单条视频生成 2–5 分钟；30 天总人力成本趋近于 0</li>
+<li><b>复盘计划</b>：2026-11-10 左右输出（总播放、涨粉、爆款率、三条线横向对比）</li>
+</ul></div>
+
+<div class="note">备注：评论区有人质疑用美国 IP 运营抖音账号的做法。实验刚启动（2026-10-10），效果待 30 天后验证。</div>
+</div>
+</body>
+</html>
