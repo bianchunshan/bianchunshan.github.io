@@ -7,14 +7,14 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;background:#0f1420;color:#e8e4d8;max-width:760px;margin:0 auto;padding:0 0 60px}
-.hero{background:linear-gradient(165deg,#1a2238 0%,#2a2118 65%,#0f1420 100%);padding:56px 28px 44px;text-align:center;border-bottom:3px solid #c9a227}
-.kicker{display:inline-block;border:1.5px solid #c9a227;color:#c9a227;font-size:15px;letter-spacing:10px;padding:8px 18px 8px 28px;border-radius:6px;margin-bottom:22px;font-weight:700}
-.hero h1{font-size:29px;line-height:1.5;font-weight:900;margin-bottom:14px;color:#f5f0e0}
-.hero .who{font-size:16px;color:#9aa3b8}
-.hero .meta{font-size:13px;color:#6b7490;margin-top:12px;line-height:1.8}
-.intro{background:#171e30;margin:22px 16px 0;border-radius:14px;padding:22px 20px;border-left:4px solid #c9a227}
-.intro p{font-size:15px;line-height:1.9;color:#c9c4b4}
-.intro b{color:#c9a227}
+.hero{background:linear-gradient(165deg,#1a2238 0%,#2a2118 65%,#0f1420 100%);padding:52px 26px 40px;text-align:center;border-bottom:3px solid #c9a227}
+.kicker{display:inline-block;border:1.5px solid #c9a227;color:#c9a227;font-size:14px;letter-spacing:8px;padding:7px 16px 7px 24px;border-radius:6px;margin-bottom:20px;font-weight:700}
+.hero h1{font-size:27px;line-height:1.5;font-weight:900;margin-bottom:12px;color:#f5f0e0}
+.hero .lead{font-size:14.5px;color:#9aa3b8;line-height:1.8;margin-bottom:18px}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;border-top:1px solid rgba(201,162,39,.25);padding-top:16px;text-align:left}
+.meta div{font-size:13px;color:#c9c4b4;line-height:1.7}
+.meta b{display:block;font-size:11px;color:#c9a227;font-weight:600;letter-spacing:2px;margin-bottom:2px}
+.notice{background:#1d1a12;border:1px solid #c9a227;border-left:4px solid #c9a227;border-radius:10px;padding:14px 16px;margin:20px 16px 0;font-size:13.5px;line-height:1.85;color:#c9b98a}
 .sec{margin:30px 16px 0}
 .sec-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
 .num{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#c9a227,#9a7b1a);color:#111;font-size:19px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -31,130 +31,177 @@ body{font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;b
 .six{display:grid;grid-template-columns:1fr;gap:10px}
 .six .item{background:#171e30;border-radius:10px;padding:14px 16px;border:1px solid #26304a;font-size:14px;line-height:1.8;color:#c9c4b4}
 .six .item b{color:#c9a227;display:block;font-size:15px;margin-bottom:4px}
-.quote{margin:30px 16px 0;background:linear-gradient(135deg,#1a2238,#241f14);border-radius:14px;padding:28px 22px;text-align:center;border:1px solid #33405e}
-.quote .q{font-size:19px;font-weight:800;line-height:1.9;color:#c9a227}
-.quote .s{font-size:13px;color:#7d869e;margin-top:10px}
-.note{background:#141a10;border:1px solid #3a4a2a;border-radius:12px;padding:16px 18px;margin:26px 16px 0;font-size:13px;line-height:1.85;color:#a8b89a}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0;font-size:12.5px}
+.flow span{background:#232c44;color:#c9a227;border-radius:6px;padding:4px 10px;border:1px solid #33405e}
+.flow i{color:#c9a227;font-style:normal;font-weight:700}
+.lbl{display:inline-block;font-size:11px;line-height:1.6;padding:1px 7px;border-radius:5px;margin-left:4px;vertical-align:1px;white-space:nowrap;font-weight:600}
+.l-q{background:#2a3a2e;color:#8fd6a0}
+.l-p{background:#3a2a2e;color:#e08a9a}
+.quotes{display:grid;gap:12px}
+.quote{background:#171e30;border:1px solid #26304a;border-radius:12px;padding:18px 18px 14px 52px;position:relative}
+.quote::before{content:""";position:absolute;left:14px;top:2px;font-size:50px;line-height:1;color:#c9a227;font-family:Georgia,serif}
+.quote p{font-size:15.5px;color:#e8e4d8;line-height:1.85}
+.quote .src{font-size:12px;color:#7d869e;margin-top:8px}
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.numc{background:#171e30;border:1px solid #26304a;border-radius:12px;padding:14px}
+.numc .v{font-size:23px;font-weight:800;color:#e08a9a;line-height:1.3}
+.numc .k{font-size:13px;color:#c9c4b4;margin-top:4px;line-height:1.7}
+.numc .s{font-size:11px;color:#5c6b8c;margin-top:6px}
+.qa{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.qa .card{margin:0}
+.qa h4{font-size:14.5px;color:#c9a227;margin-bottom:6px}
+.qa p{font-size:13.5px;color:#c9c4b4;line-height:1.8}
+.note2{font-size:12.5px;color:#7d869e;margin-top:10px;line-height:1.8;padding-top:8px;border-top:1px dashed #26304a}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;margin:6px 0 12px;font-size:12.5px;color:#7d869e}
+.srcs{font-size:13px;line-height:2;color:#9aa3b8}
+.srcs a{color:#c9a227;text-decoration:none;word-break:break-all}
+.srcs ol{padding-left:20px}
 .footer{margin:26px 16px 0;text-align:center;font-size:12px;color:#5c6b8c;line-height:2}
-.footer a{color:#c9a227;text-decoration:none}
+@media (max-width:480px){.qa{grid-template-columns:1fr}.nums{grid-template-columns:1fr}.meta{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="hero">
-<div class="kicker">图 说</div>
-<h1>李录哥大演讲：<br>价值投资、AI 狂热与人生复利</h1>
-<div class="who">喜马拉雅资本创始人 · 芒格家族资产管理人</div>
-<div class="meta">第 36 届格雷厄姆与多德年度论坛 · 哥大商学院<br>2026 年 10 月 5 日（美东）· 主持人 Tano Santos<br>英文发表 · 要点提炼版</div>
+<div class="kicker">图 说 · 价 值 投 资</div>
+<h1>李录哥大交流：AI 是工具不是"人造神"，市场分化给理性者更好的机会</h1>
+<div class="lead">从价值投资六条原则讲起，谈 AI 狂热、市场分化、中国"双层经济"、全球共同市场，最后落到知识、信任与健康的复利。</div>
+<div class="meta">
+<div><b>演讲人</b>李录｜喜马拉雅资本创始人、董事长，芒格家族资产管理人</div>
+<div><b>场合</b>哥大 Heilbrunn 中心 · 第 36 届 Graham &amp; Dodd 年度活动</div>
+<div><b>日期</b>2026 年 10 月 5 日（美东）｜北京时间 10 月 6 日凌晨</div>
+<div><b>形式</b>主题分享 + 与 Tano Santos 对谈 + 现场问答，全程英文</div>
 </div>
-<div class="intro"><p>格雷厄姆价值投资思想的顶级传承盛会。李录用 90 分钟谈了<b>六条投资理念、AI 狂热的质疑、市场定价之锚、中国双层经济、加密货币</b>，最后落到<b>人生复利</b>。以下为结构化提炼。</p></div>
+</div>
 
-<div class="sec"><div class="sec-head"><div class="num">1</div><h2>六条价值投资基本理念</h2></div><div class="sec-sub">李录三十余年全球实践的总结</div>
+<div class="notice"><b>来源说明：</b>截至 2026-10-10 未见官方完整视频或逐字稿。本页依据中文整理稿（主要基于但斌视频号发布的现场片段及 GitHub 实录整理）。李录现场以英文发言，下文"原话"均为整理稿的<b>中文译文直接引语</b>，非英文逐字；其余为转述概括。</div>
+
+<div class="sec"><div class="sec-head"><div class="num">1</div><h2>价值投资的六条基本原则</h2></div><div class="sec-sub">前三条源自格雷厄姆，第四、五条来自巴菲特与芒格，第六条为李录自己的体会</div>
 <div class="six">
-<div class="item"><b>一 · 股票是所有权</b>股票是企业部分所有权，不是交易纸片。</div>
-<div class="item"><b>二 · 市场先生只报价</b>市场只给你报价，不指导你决策。</div>
-<div class="item"><b>三 · 安全边际</b>投资是预测不可预测的未来，必须要求安全边际。</div>
-<div class="item"><b>四 · 能力圈纪律</b>知道边界与知道圈内同等重要。</div>
-<div class="item"><b>五 · 到有鱼的地方钓鱼</b>芒格之言：去注意力少、竞争弱的市场、行业与国家。</div>
-<div class="item"><b>六 · 财富的真正尺度</b>财富是占全球购买力的百分比——在最有活力的经济体，以有利价格买入伟大企业并长期持有。</div>
+<div class="item"><b>① 所有权</b>股票是企业的部分所有权，不是一张纸。</div>
+<div class="item"><b>② 市场先生</b>市场提供服务，而非指导你。（本场视频未覆盖此条，系据李录 2024 年北大演讲补全）</div>
+<div class="item"><b>③ 安全边际</b>未来不可预测，投资必须保护下行。</div>
+<div class="item"><b>④ 能力圈</b>知道边界，与知道圈内有什么同样重要。</div>
+<div class="item"><b>⑤ 有鱼处钓鱼</b>去关注少、竞争弱的市场、行业与国家，错价更多。</div>
+<div class="item"><b>⑥ 全球购买力</b>财富 = 你在全球购买力中的占比；在最有活力的经济体中，以有利价格买入最优秀的企业并长期持有。</div>
 </div></div>
 
-<div class="sec"><div class="sec-head"><div class="num">2</div><h2>市场是一座教堂，旁附一间赌场</h2></div><div class="sec-sub">沿用巴菲特的比喻</div>
-<div class="card"><div class="t">市场参与者分四类</div><ul>
-<li><b>投资者</b>：长期陪伴企业创造价值</li>
-<li><b>套利者</b>：纠正错误定价</li>
-<li><b>投机者</b>：猜测他人的买卖</li>
-<li><b>经纪与做市商</b>：提供交易便利</li>
-<li>多数人四种兼有；买指数，即买到四者的平均</li>
-</ul></div>
-<div class="hl">投机加总为<b>零和</b>，是市场运转的成本；市场存在的首要目的是把过剩储蓄导向生产性企业，创造现代经济的复利增长。<b>赌场是人性的必要成本</b>——个人要选择玩零和还是价值创造的游戏，社会也要校准两者比例。</div>
-<div class="card"><div class="t">问答：一切理性投资本质都是价值投资</div><ul>
-<li>付出的是价格、得到的是价值——现金牛、成长股、低胜率高赔率，数学上都是对可理解范围内的未来现金流折现</li>
-<li>传统行业与科技公司原则相同，区别只在应用，关键看能力圈</li>
-</ul></div></div>
-
-<div class="sec"><div class="sec-head"><div class="num">3</div><h2>质疑 AI 狂热："人造神"不会出现</h2></div><div class="sec-sub">全场最锋利的部分</div>
-<div class="card"><div class="t">硅谷主流叙事</div><ul>
-<li>生成式 AI 经递归自我改进走向 AGI 再到 ASI，智能超越人类总和，等于造出"半神"</li>
-<li>因影响巨大，万亿美元投入合理——所谓"上帝的 IPO"</li>
-</ul></div>
-<div class="hl">李录的反驳：若真如此，人类将生活在由极少数人造出、<b>无人理解、无人控制</b>的"人造神"统治下——没人愿意要这种社会。结局只有两种：技术并未朝那方向发展，或全人类联合起来阻止它。<b>无论哪种，人造神凌驾于人类社会都不会出现。</b></div>
-<div class="card"><div class="t">他对 AI 的暂定定义</div><ul>
-<li>以蛮力算力加聪明算法，吃进人类全部数据及其一阶衍生物，在近乎无限变量间建立系统性上下文相关性，从而获得近似人类推理的机器</li>
-<li>人类会用、会改进，但并不真正理解它为何有效</li>
-</ul></div>
-<div class="card"><div class="t">AI 的作用边界</div><ul>
-<li>拉平的是<b>知识型服务业</b>这一层；改变不了最底层的能源交通，也改变不了制造业（本质是分子原子的重新组合）</li>
-<li>仍处在人类生成数据范畴内，距生物层面的复杂性极其遥远</li>
-<li>成本结构独特：AI 永远伴随与使用量挂钩的<b>增量成本</b>，不像互联网可一次性投入长期摊销——成本、利润与资本纪律永远在场</li>
-</ul></div>
-<div class="hl"><b>红线：必须有人在回路</b>（human in the loop），把 AI 牢牢钉在"工具"一侧。无人参与的递归自我改进会发展出自己的目标，极其危险。AI 狂热很可能经历<b>不止一轮繁荣与崩溃</b>的周期。</div>
-<div class="card"><div class="t">中美路径差异</div><ul>
-<li>硅谷的根本问题是"技术还能做什么"——自称实验室、谈前沿边界</li>
-<li>中国公司更关心"技术能为客户做什么"——两种路径，结果将不同</li>
-<li>在中国语境下，生成式 AI 的代码能力正补上过去缺失的软件环节（操作系统、半导体软件栈），在技术自主中起"平权器"作用</li>
-</ul></div></div>
-
-<div class="sec"><div class="sec-head"><div class="num">4</div><h2>市场定价与长期回报之锚</h2></div><div class="sec-sub">"上帝 IPO"是不必参与的非理性</div>
+<div class="sec"><div class="sec-head"><div class="num">2</div><h2>市场参与者："教堂旁边的赌场"</h2></div><div class="sec-sub">借巴菲特的比喻：四类人，两种游戏</div>
 <div class="card"><ul>
-<li><b>非理性例证</b>：某自称"研究实验室"的公司已烧掉数百亿美元、承诺再烧数千亿，自述技术约一成概率毁灭人类，却以 2 万亿美元估值募资至少 1000 亿美元——市场非理性的极端例证</li>
-<li><b>回报之锚</b>：标普 500 自 2010 年起 16 年年化约 14%–15%，但 2000–2010 十年年化约零甚至略负；26 年平均回落至高个位数——与名义经济增速（实际 GDP 约 2% + 通胀 2%–3%）加上市公司经筛选略优的逻辑一致，这才是应得回报的基准</li>
-<li><b>分化即机会</b>：资本涌向顶端，意味着另一边大批优秀企业被忽视、低价交易；美国如此，中国可能更极端——巨大分化给理性者提供比平时更好的机会集</li>
+<li><b>投资者</b>关注企业创造价值 · <b>套利者</b>纠正错误定价 · <b>投机者</b>猜别人下一步买卖 · <b>经纪/做市</b>提供交易服务<span class="lbl l-p">转述</span></li>
+<li>投机整体是<b>零和游戏</b>，经纪与做市同样是市场运行成本；买指数，相当于买下这四类人的平均。<span class="lbl l-p">转述</span></li>
+<li>市场存在的根本目的：把社会过剩储蓄引向生产性企业，形成长期复利式增长。<span class="lbl l-p">转述</span></li>
+<li>个人要选零和还是创造价值；社会也不能让"赌场"压倒市场本来的目的。<span class="lbl l-p">转述</span></li>
+</ul></div>
+<div class="card"><div class="t">问答：一切理性投资本质都是价值投资</div><ul>
+<li>付出的是价格、得到的是价值；无论现金奶牛、高成长还是低胜率高赔率，都是在能力圈内对未来现金流折现，数学相同。<span class="lbl l-p">转述</span></li>
+<li>传统行业与科技公司原则相同，区别只在应用。<span class="lbl l-p">转述</span></li>
+</ul></div></div>
+
+<div class="sec"><div class="sec-head"><div class="num">3</div><h2>AI：工具，还是"人造神"？</h2></div><div class="sec-sub">全场最锋利的部分：质疑硅谷宏大叙事，划出"有人参与"的红线</div>
+<div class="card"><div class="t">李录复述的硅谷叙事链条（他本人不认同终点）</div>
+<div class="flow"><span>图灵测试</span><i>→</i><span>推理</span><i>→</i><span>编程/智能体</span><i>→</i><span>RSI 递归自我改进</span><i>→</i><span>AGI</span><i>→</i><span>ASI（"人造神"）</span></div>
+<ul>
+<li>这轮 AI 不同在于：技术正沿着"<b>工具 → 造物</b>"的光谱移动，叙事变了，资本配置也随之极度集中。<span class="lbl l-p">转述</span></li>
+<li>两种可能：技术不会一路走到那里；或者走向那里时，人类会联合起来阻止。无论哪种，都不会出现凌驾人类之上的"人造神"。<span class="lbl l-p">转述</span></li>
+</ul></div>
+<div class="hl">他对 AI 的暂时性定义：用巨量算力和聪明算法，从人类全部数据中提取"<b>一阶导数</b>"（相关性）。它主要把<b>知识型服务业</b>这一层普及化，并不改变能源、交通、制造业的本质——制造业本质是分子原子的重新组合。<span class="lbl l-p">转述</span></div>
+<div class="card"><ul>
+<li><b>红线</b>：AI 的自我学习与工具使用必须始终 <b>human in the loop</b>（有人在回路）；风险涉及就业、情感依赖、网络/生物/核安全。<span class="lbl l-p">转述</span></li>
+<li>AI 永远伴随<b>增量成本</b>，不同于"一次性建好基础设施"的互联网，资本与财务纪律终会起作用；适应过程很可能经历<b>不止一轮</b>繁荣与崩溃。<span class="lbl l-p">转述</span></li>
+</ul></div>
+<div class="card"><div class="t">中美 AI 路径差异</div><ul>
+<li>硅谷首先问"技术还能做什么"（实验室、前沿）；中国 AI 公司更会问"能为我的客户做什么"——两条路径会在不同指标上产生不同结果。<span class="lbl l-p">转述</span></li>
+<li>在中国语境下，AI 生成代码的能力正补上过去缺失的软件环节（操作系统、半导体软件栈），在技术自主中起"平权器"作用。<span class="lbl l-p">转述</span></li>
+</ul></div></div>
+
+<div class="sec"><div class="sec-head"><div class="num">4</div><h2>AI 狂热、市场分化与长期回报</h2></div><div class="sec-sub">资本挤向顶端，另一边就有被忽视的好企业</div>
+<div class="card"><ul>
+<li>举例一份募资材料：自称"研究实验室"的公司每年烧掉数百亿美元，称技术有约 10% 概率杀死所有人，同时邀请按 <b>2 万亿美元</b>估值投入至少 1000 亿美元——"这些事情不可能同时都是真的"。（现场未点名该公司）<span class="lbl l-p">转述</span></li>
+<li><b>长期锚点</b>：标普 500 自 2010 年起约 16 年年化 14%–15%，此前 2000–2010 年约为 0；合起来约高个位数，与名义 GDP 4%–5% 加上优选公司溢价大致吻合。<span class="lbl l-p">转述</span></li>
+<li>市场不会凭空产生无限新资本——美国、中国、其他市场都有被低估的优秀企业，"中国的情况可能更加极端"。<span class="lbl l-p">转述</span></li>
 </ul></div></div>
 
 <div class="sec"><div class="sec-head"><div class="num">5</div><h2>能源：经济体系最底层</h2></div><div class="sec-sub">能源 → 交通运输 → 制造业 → 通信 → 知识型服务业</div>
 <div class="card"><ul>
-<li>能源影响每一层；AI 发展受芯片、电力、劳动力多重约束，也牵涉气候问题</li>
-<li>中国已在能源、电动车、储能、电池、重型机械等领域占据全球领先地位</li>
+<li>能源影响每一层；AI 发展受芯片、电力、劳动力多重约束，也牵涉气候问题。<span class="lbl l-p">转述</span></li>
+<li>中国已在能源、电动车、储能、电池、重型机械等领域占据全球领先地位。<span class="lbl l-p">转述</span></li>
 </ul></div></div>
 
 <div class="sec"><div class="sec-head"><div class="num">6</div><h2>加密货币：根本不去想它</h2></div><div class="sec-sub">李录的态度很干脆</div>
 <div class="card"><ul>
-<li>认为它最终会自己消失，本质上是虚假的东西</li>
-<li>理由：真正的货币需要可强制执行的制度与力量背书，才能成为被普遍认可的计价、结算与储值工具</li>
-<li>它确实便利了犯罪与非法交易；个人当收藏品是个人偏好，从社会角度不感兴趣</li>
+<li>认为其缺乏可强制执行的制度支撑，本质上是"虚假的东西"，最终会自己消失。<span class="lbl l-p">转述</span></li>
+<li>真正的货币需要制度与力量背书，才能成为被普遍认可的计价、结算与储值工具。<span class="lbl l-p">转述</span></li>
+<li>它确实便利了犯罪与非法交易；有人愿意收藏是个人偏好，从社会角度不感兴趣。<span class="lbl l-p">转述</span></li>
 </ul></div></div>
 
-<div class="sec"><div class="sec-head"><div class="num">7</div><h2>中国"双层经济"</h2></div><div class="sec-sub">过去十年股市停滞的另一面</div>
-<div class="card"><div class="t">转型的代价</div><ul>
-<li>2021 年房价见顶时，典型中产约七成净资产在住房、房产带约五成按揭杠杆；随后五年全国房价平均下跌约四成</li>
-<li>家庭转向少消费、多储蓄、还债务，内需增长接近零；居民储蓄存款约 165 万亿元（约 GDP 的 120%）</li>
-</ul></div>
-<div class="card"><div class="t">另一面：制造业升级</div><ul>
-<li>"中国制造 2025"目标基本达成；成熟制程设备与制造接近完整自主，先进制程只剩少数环节缺口</li>
-<li>美国技术制裁反成"意外礼物"——给了产业最宝贵的需求订单，订单→收入→利润→研发→技术改善的飞轮转了起来</li>
-<li><b>结构性对冲</b>：房地产收缩的规模，与每年新增的制造业升级/技术自主投资大致相当（每年约 10 万亿元量级）</li>
-</ul></div>
-<div class="hl"><b>投资者警示</b>：在任何具体时点，必须知道自己是政策的"目标"还是"成本"。当房地产在资产负债表中占比下降，<b>股权资产必须接替成为财富载体</b>——股权随经济增长增值、资本市场又推动经济增长，同属一个飞轮。</div></div>
-
-<div class="sec"><div class="sec-head"><div class="num">8</div><h2>世界秩序与"筷子论"</h2></div><div class="sec-sub">政治秩序之下，经济秩序极难瓦解</div>
+<div class="sec"><div class="sec-head"><div class="num">7</div><h2>中国："双层经济"与今天的机会</h2></div><div class="sec-sub">目标与代价：地产承压，制造业升级</div>
 <div class="card"><ul>
-<li>世界秩序分两层：美国主导 80 年的政治秩序正在转型；之下是 30 年前随苏联解体形成的<b>单一全球共同市场</b>，因效率飞轮与比较优势极难瓦解，退出代价巨大</li>
-<li>中美直接贸易下降，但经墨西哥、越南等第三国的贸易大致对冲</li>
-<li><b>"筷子论"</b>：全球芯片制造地有一个共同点——造芯片的人都用筷子；美国主要半导体公司掌门人也多用筷子；相互依赖极深</li>
-<li>美中领导人 8 个月内安排 4 次会面，核心是"战略稳定"——和平本身具有战略价值</li>
+<li>十年前面对"中等收入陷阱"，中国以十年期的"中国制造 2025"推动制造业从中低端走向中高端；贸易战、技术限制后，2021 年起加码<b>技术自主</b>（半导体、航空发动机、操作系统等）。<span class="lbl l-p">转述</span></li>
+<li><b>代价一面</b>：典型中产家庭约 70% 净资产在自住房、约 50% 按揭杠杆，房价五年平均跌约 40%；家庭少消费、多储蓄、还债，内需增长接近零。<span class="lbl l-p">转述</span></li>
+<li><b>目标一面</b>：制裁反而给半导体带来最宝贵的需求——成熟制程接近自主；AI 生成代码补齐软件短板；能源、电动车、储能、电池、重型机械已居全球领先。<span class="lbl l-p">转述</span></li>
+<li>中国大约每十年一组新目标，上一阶段的目标可能变成下一阶段的代价（环境、房地产）。投资者和企业家必须知道自己是"<b>目标</b>"还是"<b>成本</b>"。<span class="lbl l-p">转述</span></li>
+<li>金融市场停滞十年，部分具世界级竞争力的企业以很低价格交易——理性投资者今天可能找到比其他时期更好的机会。<span class="lbl l-p">转述</span></li>
+</ul></div>
+<div class="hl"><b>结构性对冲</b>：新房年销售额较高点降幅约 70%（每年约 10 万亿元量级），与每年新增的制造业升级/技术自主投资大致相当。<span class="lbl l-p">转述</span></div></div>
+
+<div class="sec"><div class="sec-head"><div class="num">8</div><h2>世界秩序与"筷子论"</h2></div><div class="sec-sub">政治秩序在转型，经济秩序难以解体</div>
+<div class="card"><ul>
+<li>二战后美国主导的政治秩序正在转型，新秩序尚看不清；但约 30 年前（冷战结束）真正成型的<b>全球共同市场</b>会持续存在，主动退出代价巨大。<span class="lbl l-p">转述</span></li>
+<li>美中直接贸易下降，但被美国与墨西哥、东南亚等第三方贸易的增长大体抵消。<span class="lbl l-p">转述</span></li>
+<li>"用筷子"的玩笑：真正制造先进芯片的地方，以及美国主要芯片公司的掌门人（黄仁勋、陈立武、苏姿丰），都用筷子——相互依赖之深。<span class="lbl l-p">转述</span></li>
+<li>中美领导人 8 个月安排 4 次会面（已进行 2 次），体现"<b>战略稳定</b>"：稳定本身具有战略价值，同时各方都在激烈竞争、都相信时间站在自己一边。<span class="lbl l-p">转述</span></li>
+<li>落回原则⑥：用全球购买力份额衡量财富；喜马拉雅过去 30 年在亚洲等地尝试"建教堂"。<span class="lbl l-p">转述</span></li>
 </ul></div></div>
 
 <div class="sec"><div class="sec-head"><div class="num">9</div><h2>人生复利</h2></div><div class="sec-sub">演讲的落点</div>
 <div class="hl">复利最基本的前提是<b>不要失去已拥有的东西</b>——不仅指资本，还包括知识、信任关系、智慧与健康。守住并让其持续积累，是人生极其强大的力量。</div>
 <div class="card"><ul>
-<li><b>选双赢而非零和</b>：双赢中能力与知识不断积累复利；零和迎合短期本能，学到的东西明天就没用，还会让人越来越依赖外部工具（乃至被 AI 替代）</li>
-<li>知识、信任、智慧都可复利；健康寿命与有效工作年限可尽量延长——前提是持续投入、做有意思且创造社会价值的事</li>
-<li>引芒格：人与人最高层次的关系是<b>"信赖的无缝之网"</b></li>
-<li><b>给年轻人</b>：找到真正倾向擅长的事，长期持续构建、让其积累复利；慢没关系，方向对终将到达应得的位置</li>
+<li><b>选双赢而非零和</b>：双赢中能力与知识不断积累复利；零和迎合短期本能，学到的东西明天就没用，还会让人越来越依赖外部工具（乃至被 AI 替代）。<span class="lbl l-p">转述</span></li>
+<li>知识、信任、智慧都可复利；健康寿命与有效工作年限可尽量延长——前提是持续投入、做有意思且创造社会价值的事。<span class="lbl l-p">转述</span></li>
+<li>引芒格：人与人最高层次的关系是<b>"信赖的无缝之网"</b>。<span class="lbl l-p">转述</span></li>
+<li><b>给年轻人</b>：找到真正倾向擅长的事，长期持续构建、让其积累复利；慢没关系，方向对终将到达应得的位置。<span class="lbl l-p">转述</span></li>
 </ul></div></div>
 
-<div class="sec"><div class="sec-head"><div class="num">10</div><h2>问答精华：逆人性</h2></div><div class="sec-sub">把价值投资做成生意的前提</div>
-<div class="card"><ul>
-<li>连续跑输市场时，人性想两全其美——既长期正确又每年漂亮，最终会变成投机者；<b>必须二选一</b>：市场是"指导你"还是"服务你"</li>
-<li>想混在一起不如买指数；把价值投资做成生意，要找到理念相同、愿长期跟随的投资人</li>
-<li>需要近乎"基因突变"的心理结构——<b>因逻辑事实而确信，而非因他人认同</b>；不能一边做这种投资，一边追求全世界最大 AUM</li>
-<li><b>安全边际</b>：价值投资者极重下行保护；能力圈要知边界，更要主动持续扩大——让知识可持续地复利，资本终将复利</li>
-</ul></div></div>
+<div class="sec"><div class="sec-head"><div class="num">10</div><h2>问答精要</h2></div><div class="sec-sub">逆人性：市场是"指导你"还是"服务你"，只能选一个</div>
+<div class="qa">
+<div class="card"><h4>跑输两年怎么办</h4><p>不能既要长期正确又要每季度漂亮；要么市场指导你，要么服务你。需要逆人性的心理特质与理念相同的长期出资人。<span class="lbl l-p">转述</span></p></div>
+<div class="card"><h4>中国股市</h4><p>当房地产在家庭和国家资产负债表中占比下降，股权终须承担更重要的财富载体角色；政治风险需理解各时期的政策目标与历史记录，且适用于所有国家。<span class="lbl l-p">转述</span></p></div>
+<div class="card"><h4>安全边际与能力圈</h4><p>价值投资者极其重视下行保护；从资产负债表等简单处起步，逐步扩大能力圈。让知识持续复利，资本终将复利。<span class="lbl l-p">转述</span></p></div>
+<div class="card"><h4>把投资做成生意</h4><p>需要近乎"基因突变"的心理结构——因逻辑事实而确信，而非因他人认同；不能一边做这种投资，一边追求全世界最大 AUM。<span class="lbl l-p">转述</span></p></div>
+</div></div>
 
-<div class="quote"><div class="q">不要失去已拥有的东西，<br>让知识、信任与资本持续复利。</div><div class="s">—— 李录 2026 哥大演讲</div></div>
+<div class="sec"><div class="sec-head"><div class="num">★</div><h2>金句</h2></div><div class="sec-sub"><span class="lbl l-q">原话·中译</span> 整理稿中的直接引语（英文发言的中文译文），非英文逐字</div>
+<div class="quotes">
+<div class="quote"><p>在任何一个时点，整个市场并不会凭空创造出无限多的新资本。所以，如果大量资本都被吸引到最热门、最顶端的那些公司里，那么另一边就一定会出现一大批原本非常优秀的企业，被忽视，并以非常低的价格交易。</p><div class="src"><span class="lbl l-q">原话·中译</span> 聪明投资者整理稿</div></div>
+<div class="quote"><p>今天这种巨大的市场分化，对能够保持理性的人来说，实际上提供了一个比平常更好的机会集。</p><div class="src"><span class="lbl l-q">原话·中译</span> 聪明投资者整理稿</div></div>
+<div class="quote"><p>这项技术极其有用，具有变革性；同时，它也极其危险。</p><div class="src"><span class="lbl l-q">原话·中译</span> 谈 AI，聪明投资者整理稿</div></div>
+<div class="quote"><p>你必须知道，你现在到底是"目标"，还是"成本"。</p><div class="src"><span class="lbl l-q">原话·中译</span> 谈中国，聪明投资者整理稿</div></div>
+<div class="quote"><p>一个统一的全球共同市场已经形成，而且它会继续存在。</p><div class="src"><span class="lbl l-q">原话·中译</span> 谈世界秩序，聪明投资者整理稿</div></div>
+<div class="quote"><p>如果你能够让自己的知识持续复利，最终你的资本也能够复利。复利最基本的一个前提就是，不要失去你已经拥有的东西。</p><div class="src"><span class="lbl l-q">原话·中译</span> 问答，聪明投资者整理稿</div></div>
+</div></div>
 
-<div class="note">📌 说明：哥大海尔布伦中心历年不公开午餐会录像，官方亦未发布文字稿。本图说根据中文二手整理转述（源自但斌现场拍摄视频的转写与格隆汇约 1.8 万字整理），个别数字与表述以官方未来发布版本为准；部分背景（如六条理念第二条）引自李录 2024 年北大演讲补全。</div>
+<div class="sec"><div class="sec-head"><div class="num">#</div><h2>关键数字</h2></div><div class="sec-sub">均为李录现场所述，据整理稿转述，未经独立核实</div>
+<div class="nums">
+<div class="numc"><div class="v">14%–15%</div><div class="k">标普 500 自 2010 年起约 16 年年化回报；2000–2010 年约为 0</div><div class="s">聪明投资者整理稿</div></div>
+<div class="numc"><div class="v">70% · 50%</div><div class="k">典型中产家庭净资产在自住房的占比 · 按揭杠杆（2021 年峰值时）</div><div class="s">聪明投资者整理稿</div></div>
+<div class="numc"><div class="v">≈ −40%</div><div class="k">2021 年以来全国房价平均跌幅</div><div class="s">聪明投资者整理稿</div></div>
+<div class="numc"><div class="v">165 万亿元</div><div class="k">居民储蓄存款规模，约 GDP 的 120%</div><div class="s">聪明投资者整理稿</div></div>
+<div class="numc"><div class="v">≈ −70%</div><div class="k">新房年销售额较高点降幅；每年约 10 万亿元，与制造业升级投入大致相当</div><div class="s">聪明投资者整理稿</div></div>
+<div class="numc"><div class="v">2 万亿美元</div><div class="k">某 AI"研究实验室"募资估值，募资至少 1000 亿美元，自称约 10% 毁灭概率（现场未点名）</div><div class="s">聪明投资者整理稿</div></div>
+</div></div>
 
-<div class="footer">要点提炼，非逐字稿 · 观点为嘉宾个人分享，不构成投资建议<br><a href="https://www.youtube.com/watch?v=FwDKCNfHHtY">视频来源：学用复利投资 Value Insights（YouTube）</a></div>
+<div class="sec"><div class="sec-head"><div class="num">≡</div><h2>来源与标注说明</h2></div>
+<div class="legend"><span><span class="lbl l-q">原话·中译</span> 整理稿中的直接引语（英文发言的中文译文）</span><span><span class="lbl l-p">转述</span> 本页对整理稿内容的概括</span></div>
+<div class="card srcs"><ol>
+<li>聪明投资者：《1.8万字｜李录最新哥大交流》，雪球，2026-10-08<br><a href="https://www.xueqiu.com/4406747817/411555940">xueqiu.com/4406747817/411555940</a></li>
+<li>格隆汇全文转载（含中国、全球市场与问答部分），约 2026-10-08<br><a href="https://m.gelonghui.com/p/6887032">m.gelonghui.com/p/6887032</a></li>
+<li>一涵笔记：《李录最新：今天投资中国，比其他时期更好！》，雪球，2026-10-07<br><a href="https://www.xueqiu.com/7934656604/411444608">xueqiu.com/7934656604/411444608</a></li>
+<li>GitHub：xbtlin/ai-berkshire 仓库《对谈实录-20261005》（whisper 转写但斌现场视频）<br><a href="https://github.com/xbtlin/ai-berkshire">github.com/xbtlin/ai-berkshire</a></li>
+<li>小宇宙播客《跨国串门儿计划》#758「李录 - 哥大交流会」（AI 克隆音色翻译）<br><a href="https://www.xiaoyuzhoufm.com/episode/6ac5ef7c195d838e2aee1f09">xiaoyuzhoufm.com/episode/6ac5ef7c195d838e2aee1f09</a></li>
+</ol>
+<p class="note2">整理稿基于分段现场视频，存在缺失与衔接问题；"原话"为中文译文，不同整理稿措辞略有差异。数字为现场口述，未经独立核实。</p>
+</div></div>
+
+<div class="footer">本图说仅为演讲内容整理，不构成任何投资建议 · 整理日期 2026-10-10<br><a href="https://www.youtube.com/watch?v=FwDKCNfHHtY">视频来源：学用复利投资 Value Insights（YouTube）</a></div>
 </body>
 </html>
