@@ -6,138 +6,271 @@
 <title>图说 | 对话孙宇晨：年轻人如何抓住AI时代的机会？</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;background:#0d1117;color:#e6e9f0;max-width:760px;margin:0 auto;padding:0 0 60px}
-.hero{background:linear-gradient(160deg,#131a2e 0%,#0d2b26 70%,#0d1117 100%);padding:56px 28px 44px;text-align:center;border-bottom:3px solid #f0b90b}
-.kicker{display:inline-block;border:1.5px solid #f0b90b;color:#f0b90b;font-size:15px;letter-spacing:10px;padding:8px 18px 8px 28px;border-radius:6px;margin-bottom:22px;font-weight:700}
-.hero h1{font-size:30px;line-height:1.5;font-weight:900;margin-bottom:14px}
-.hero .who{font-size:16px;color:#8b9bb8}
-.hero .meta{font-size:13px;color:#5c6b8c;margin-top:12px;line-height:1.8}
-.intro{background:#161d2e;margin:0 16px;border-radius:14px;padding:22px 20px;border-left:4px solid #f0b90b;margin-top:22px}
-.intro p{font-size:15px;line-height:1.9;color:#c3ccdf}
-.intro b{color:#f0b90b}
-.sec{margin:30px 16px 0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;background:#f2f6f9;color:#1e293b;max-width:760px;margin:0 auto;padding:0 0 60px;font-size:16px;line-height:1.75}
+.toolbar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid #e2e8f0}
+.toolbar-inner{max-width:760px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px}
+.brand{font-size:12px;font-weight:700;letter-spacing:2px;color:#0d9488;text-decoration:none;white-space:nowrap}
+.tools{display:flex;gap:8px}
+.tools button{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:5px 11px;font-size:12px;color:#475569;cursor:pointer}
+.tools button:hover{background:#f0fdfa;border-color:#0d9488}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;background:#0d9488;width:0;transition:width .1s linear}
+.hero{background:linear-gradient(165deg,#dff3ef 0%,#eef6f4 55%,#f2f6f9 100%);padding:48px 26px 36px;text-align:center;border-bottom:3px solid #0d9488}
+.kicker{display:inline-block;border:1.5px solid #0d9488;color:#0d9488;font-size:14px;letter-spacing:8px;padding:7px 16px 7px 24px;border-radius:8px;margin-bottom:20px;font-weight:700;background:rgba(255,255,255,.6)}
+.hero h1{font-size:27px;line-height:1.5;font-weight:900;margin-bottom:12px;color:#123f3a}
+.hero .lead{font-size:14.5px;color:#5b6b7c;line-height:1.8;margin-bottom:18px}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;border-top:1px solid rgba(13,148,136,.25);padding-top:16px;text-align:left}
+.meta div{font-size:13px;color:#475569;line-height:1.7}
+.meta b{display:block;font-size:11px;color:#0d9488;font-weight:700;letter-spacing:2px;margin-bottom:2px}
+.evidence{margin:18px 16px 0;border-top:2px solid #0d9488;border-bottom:2px solid #0d9488;padding:14px 4px;font-size:12.5px;line-height:1.9;color:#5b6b7c;background:#f0fdfa;border-radius:4px}
+.evidence strong{color:#0d9488}
+.contents{display:flex;gap:8px 18px;flex-wrap:wrap;padding:16px;font-size:12.5px;border-bottom:1px solid #e2e8f0;background:#fff}
+.contents a{color:#5b6b7c;text-decoration:none}
+.contents a span{color:#0d9488;margin-right:5px;font-family:Georgia,serif;font-weight:700}
+.sec{margin:28px 16px 0;scroll-margin-top:70px}
 .sec-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
-.num{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#f0b90b,#d49406);color:#111;font-size:19px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.sec-head h2{font-size:20px;font-weight:800;color:#fff}
-.sec-sub{font-size:13px;color:#7d8aa5;margin:0 0 14px 50px}
-.card{background:#161d2e;border-radius:12px;padding:16px 18px;margin-bottom:12px;border:1px solid #232c44}
-.card .t{font-size:16px;font-weight:700;color:#f0b90b;margin-bottom:8px}
+.num{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#0d9488,#0f766e);color:#fff;font-size:19px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:Georgia,serif}
+.sec-head h2{font-size:20px;font-weight:800;color:#123f3a}
+.sec-sub{font-size:13px;color:#7d8ba0;margin:0 0 14px 50px}
+.card{background:#fff;border-radius:14px;padding:16px 18px;margin-bottom:12px;border:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(15,118,110,.06)}
+.card .t{font-size:16px;font-weight:700;color:#0d9488;margin-bottom:8px}
 .card ul{list-style:none}
-.card li{font-size:14.5px;line-height:1.85;color:#c3ccdf;padding-left:20px;position:relative;margin-bottom:4px}
-.card li::before{content:"▸";position:absolute;left:0;color:#f0b90b;font-weight:700}
-.hl{background:#1c2438;border:1px dashed #f0b90b;border-radius:12px;padding:16px 18px;margin-bottom:12px;font-size:14.5px;line-height:1.85;color:#e6e9f0}
-.hl b{color:#f0b90b}
-.note{background:#141a10;border:1px solid #3a4a2a;border-radius:12px;padding:16px 18px;margin:26px 16px 0;font-size:13.5px;line-height:1.85;color:#a8b89a}
-.quote{margin:30px 16px 0;background:linear-gradient(135deg,#131a2e,#1c2b1a);border-radius:14px;padding:28px 22px;text-align:center;border:1px solid #2a3550}
-.quote .q{font-size:19px;font-weight:800;line-height:1.8;color:#f0b90b}
-.quote .s{font-size:13px;color:#7d8aa5;margin-top:10px}
-.footer{margin:26px 16px 0;text-align:center;font-size:12px;color:#5c6b8c;line-height:2}
-.footer a{color:#f0b90b;text-decoration:none}
+.card li{font-size:14.5px;line-height:1.85;color:#3f4c5e;padding-left:20px;position:relative;margin-bottom:4px}
+.card li::before{content:"▸";position:absolute;left:0;color:#0d9488;font-weight:700}
+.card li b{color:#1e293b}
+.hl{background:#f0fdfa;border:1.5px dashed #0d9488;border-radius:14px;padding:16px 18px;margin-bottom:12px;font-size:14.5px;line-height:1.9;color:#123f3a}
+.hl b{color:#0d9488}
+.lbl{display:inline-block;font-size:11px;line-height:1.6;padding:1px 7px;border-radius:5px;margin-left:4px;vertical-align:1px;white-space:nowrap;font-weight:600}
+.l-q{background:#dcfce7;color:#15803d}
+.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:5px;letter-spacing:1px;font-weight:600}
+.tag.report{background:#f1f5f9;color:#64748b;border:1px solid #e2e8f0}
+.tag.editor{background:#fef9c3;color:#a16207;border:1px solid #fde68a}
+.editor-note{margin:0 0 12px;padding:14px 16px;border-left:4px solid #eab308;background:#fffbeb;border-radius:0 12px 12px 0;font-size:13.5px;line-height:1.9;color:#854d0e}
+.editor-note .tag{margin-right:8px}
+.hide-extensions .extension{display:none}
+.ref{font-size:11px;vertical-align:super;color:#94a3b8;text-decoration:none;padding-left:2px}
+.ref:hover{color:#0d9488}
+.quotes{display:grid;gap:12px}
+.quote{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:18px 18px 14px 52px;position:relative;box-shadow:0 1px 4px rgba(15,118,110,.06)}
+.quote::before{content:"“";position:absolute;left:14px;top:2px;font-size:50px;line-height:1;color:#5eead4;font-family:Georgia,serif}
+.quote p{font-size:15.5px;color:#1e293b;line-height:1.85}
+.quote .src{font-size:12px;color:#7d8ba0;margin-top:8px}
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.numc{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:14px;box-shadow:0 1px 4px rgba(15,118,110,.06)}
+.numc .v{font-size:23px;font-weight:800;color:#0d9488;line-height:1.3}
+.numc .k{font-size:13px;color:#3f4c5e;margin-top:4px;line-height:1.7}
+.numc .s{font-size:11px;color:#94a3b8;margin-top:6px}
+.check-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+.check-row{display:flex;align-items:flex-start;gap:10px;border-bottom:1px solid #e2e8f0;padding:14px 0;cursor:pointer;font-size:13.5px;color:#3f4c5e;background:#fff}
+.check-row input{accent-color:#0d9488;width:17px;height:17px;margin:3px 0 0;flex-shrink:0}
+.check-row small{display:block;font-size:12px;color:#7d8ba0;margin-top:3px}
+.check-row:has(input:checked) b{text-decoration:line-through;color:#94a3b8}
+.check-row b{font-weight:600;color:#1e293b}
+.check-status{display:flex;align-items:center;gap:14px;margin-top:16px;font-size:12px;color:#7d8ba0;flex-wrap:wrap}
+.check-status progress{accent-color:#0d9488;width:110px;height:6px}
+.check-status button{padding:4px 10px;background:#fff;border:1px solid #cbd5e1;font-size:12px;color:#7d8ba0;border-radius:8px;cursor:pointer}
+.note2{font-size:12.5px;color:#7d8ba0;margin-top:10px;line-height:1.8;padding-top:8px;border-top:1px dashed #e2e8f0}
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;margin:6px 0 12px;font-size:12.5px;color:#7d8ba0}
+.srcs{font-size:13px;line-height:2;color:#5b6b7c}
+.srcs a{color:#0d9488;text-decoration:none;word-break:break-all}
+.srcs ol{padding-left:20px}
+.srcs small{display:block;font-size:11.5px;color:#94a3b8;line-height:1.8;margin-top:2px}
+.footer{margin:26px 16px 0;text-align:center;font-size:12px;color:#94a3b8;line-height:2}
+.footer a{color:#0d9488;text-decoration:none}
+@media (max-width:480px){.nums{grid-template-columns:1fr}.meta{grid-template-columns:1fr}.check-grid{grid-template-columns:1fr}}
+@media print{body{background:#fff}.toolbar,.contents{display:none}.card,.quote,.numc{box-shadow:none}}
 </style>
 </head>
 <body>
+<header class="toolbar"><div class="toolbar-inner"><a class="brand" href="#top">对话孙宇晨 · 图解</a><div class="tools"><button id="mode" type="button" aria-pressed="false">收起延伸解读</button><button id="print" type="button">打印 / PDF</button></div></div><div id="progress" class="progress"></div></header>
+<main id="top">
 <div class="hero">
-<div class="kicker">图 说</div>
-<h1>对话孙宇晨：<br>年轻人如何抓住 AI 时代的机会？</h1>
-<div class="who">邵艾伦 Alan × 孙宇晨（波场 TRON 创始人）</div>
-<div class="meta">4 小时 22 分钟 · 2026 年 10 月 9 日发布 · YouTube<br>全程无广告 · 要点提炼版（非逐字稿）</div>
+<div class="kicker">图 说 · 人 物 访 谈</div>
+<h1>对话孙宇晨：年轻人如何抓住 AI 时代的机会？</h1>
+<div class="lead">健身博主邵艾伦转型长访谈的代表作，和孙宇晨聊了四个多小时：从用 AI 管理饮食训练，到年轻人的机会、Crypto 与商业；从财富自由，到婚姻感情，以及有钱之后仍然要找的人生方向。</div>
+<div class="meta">
+<div><b>嘉宾</b>孙宇晨｜波场 TRON 创始人</div>
+<div><b>主持</b>邵艾伦 Alan｜健身博主转型访谈</div>
+<div><b>时长</b>4 小时 22 分钟，全程无广告</div>
+<div><b>发布</b>2026 年 10 月 9 日 · YouTube</div>
 </div>
-<div class="intro"><p>健身博主<b>邵艾伦</b>转型长访谈的代表作，和孙宇晨聊了<b>四个多小时</b>：从用 AI 管理饮食训练，到年轻人的机会、Crypto 与商业；从财富自由，到婚姻感情，以及有钱之后仍然要找的人生方向。十年前孙宇晨的《财富自由革命之路》影响了邵艾伦过去十年的选择，这次他想追问：<b>十年之后，想法有哪些变了？</b></p></div>
+</div>
 
-<div class="sec"><div class="sec-head"><div class="num">1</div><h2>用 AI 管理一天</h2></div><div class="sec-sub">饮食、训练、睡眠，全部交给 AI</div>
+<div class="evidence"><strong>先划清来源边界：</strong>本页为<strong>要点提炼版，非逐字稿</strong>。内容根据视频官方章节、知乎解析与观众讨论转述整理<a class="ref" href="#s1">[1]</a>。正文为<span class="tag report">访谈观点转述</span>；<span class="tag editor">延伸解读</span>为编辑的应用与提示，不冒充嘉宾原话，可一键收起。<br>📌 <b>勘误</b>：视频简介提到"十年前的《财富自由革命之路》"，那是<b>孙宇晨本人</b> 2016 年在喜马拉雅推出的 157 期付费音频课，并非邵艾伦的作品——邵艾伦是受其影响十年的听众，这次访谈正是十年后的追问。</div>
+
+<nav class="contents"><a href="#c1"><span>01</span>AI管一天</a><a href="#c2"><span>02</span>20岁起步</a><a href="#c3"><span>03</span>认知</a><a href="#c4"><span>04</span>年轻人机会</a><a href="#c5"><span>05</span>探图</a><a href="#c6"><span>06</span>赛道</a><a href="#c7"><span>07</span>TRON</a><a href="#c8"><span>08</span>香蕉</a><a href="#c9"><span>09</span>健康</a><a href="#c10"><span>10</span>财富自由</a><a href="#c11"><span>11</span>婚姻</a><a href="#c12"><span>12</span>三个人</a><a href="#c13"><span>13</span>人生意义</a><a href="#cq"><span>★</span>金句</a><a href="#cn"><span>#</span>数字</a><a href="#ck"><span>☑</span>清单</a><a href="#cs">来源</a></nav>
+
+<div class="sec" id="c1"><div class="sec-head"><div class="num">1</div><h2>用 AI 管理一天</h2></div><div class="sec-sub">饮食、训练、睡眠，全部交给 AI <span class="tag report">访谈观点转述</span><a class="ref" href="#s1">[1]</a></div>
 <div class="card"><ul>
-<li>孙宇晨把 AI 当生活管家：饮食、训练计划、睡眠都由 AI 安排，自称对 AI 建议"百分百执行"</li>
-<li>方法论：把身体当作"碳基服务器"维护，用数据而非感觉管理健康</li>
-<li>工具观：今天用 Claude，明天可换别的模型；关键是把个人知识沉淀为清晰文档，换工具不从头开始</li>
+<li>孙宇晨把 AI 当生活管家：饮食、训练计划、睡眠都由 AI 安排，自称对 AI 建议"百分百执行"。</li>
+<li><b>方法论</b>：把身体当作"碳基服务器"维护，用数据而非感觉管理健康。</li>
+<li><b>工具观</b>：今天用 Claude，明天可换别的模型；关键是把个人知识沉淀为清晰文档，换工具不从头开始。</li>
+</ul></div>
+<div class="editor-note extension"><span class="tag editor">延伸解读</span>重点不是用哪个 AI，而是"文档化自己"——把饮食偏好、训练记录写成 AI 能直接读的文档，人才是可迁移的，工具只是插槽。</div>
+</div>
+
+<div class="sec" id="c2"><div class="sec-head"><div class="num">2</div><h2>重回 20 岁，没资源怎么起步？</h2></div><div class="sec-sub">先升级自己的操作系统，而不是急着找风口 <span class="tag report">访谈观点转述</span><a class="ref" href="#s1">[1]</a></div>
+<div class="card"><ul>
+<li>从零开始几乎不用花钱：有手机就从手机开始，用 AI 的免费额度；不会配置工具，就让 AI 教你配置。</li>
+<li>强调 <b>Small Ego（小自我）</b>：像马斯克那样不带偏见地接受一切信息，快速从中发现价值。</li>
 </ul></div></div>
 
-<div class="sec"><div class="sec-head"><div class="num">2</div><h2>重回 20 岁，没资源怎么起步？</h2></div><div class="sec-sub">先升级自己的操作系统，而不是急着找风口</div>
+<div class="sec" id="c3"><div class="sec-head"><div class="num">3</div><h2>认知：人生最大变量</h2></div><div class="sec-sub">认知本身不是目的，能不能改变行为才是检验标准 <span class="tag report">访谈观点转述</span><a class="ref" href="#s1">[1]</a></div>
 <div class="card"><ul>
-<li>从零开始几乎不用花钱：有手机就从手机开始，用 AI 的免费额度；不会配置工具，就让 AI 教你配置</li>
-<li>强调 <b style="color:#f0b90b">Small Ego（小自我）</b>：像马斯克那样不带偏见地接受一切信息，快速从中发现价值</li>
+<li>用 AI 做自我盘点和方向探索，把模糊的人生问题拆成可执行的步骤。</li>
+<li>"高效学习五步法"：以输出倒逼输入，用 AI 加速学习循环。</li>
 </ul></div></div>
 
-<div class="sec"><div class="sec-head"><div class="num">3</div><h2>认知：人生最大变量</h2></div><div class="sec-sub">认知本身不是目的，能不能改变行为才是检验标准</div>
+<div class="sec" id="c4"><div class="sec-head"><div class="num">4</div><h2>AI 时代，年轻人的机会</h2></div><div class="sec-sub">把全世界当潜在客户 <span class="tag report">访谈观点转述</span><a class="ref" href="#s1">[1]</a></div>
 <div class="card"><ul>
-<li>用 AI 做自我盘点和方向探索，把模糊的人生问题拆成可执行的步骤</li>
-<li>"高效学习五步法"：以输出倒逼输入，用 AI 加速学习循环</li>
+<li><b>未来感判断</b>：AI Agent 会成为经济活动的直接参与者，年轻人卖服务的对象可能不再只有人。</li>
+<li>创业别只盯着身边人：举例尼日利亚、阿根廷用户，利用全球价差与出海机会。</li>
+<li>同一 API 在不同地区的价差、不同市场的认知差，就是利润空间；出海是普通人可复制的路径。</li>
+</ul></div>
+<div class="editor-note extension"><span class="tag editor">延伸解读</span>别一上来就想"我要做 AI 产品"，先做"AI 时代的倒爷"：把成熟的 AI 能力搬到信息差更大的市场，价差就是第一桶金。</div>
+</div>
+
+<div class="sec" id="c5"><div class="sec-head"><div class="num">5</div><h2>做决定前先"探图"</h2></div><div class="sec-sub">买房、择业与信息差 <span class="tag report">访谈观点转述</span><a class="ref" href="#s1">[1]</a></div>
+<div class="card"><ul>
+<li>用游戏术语"先把地图打开"作比喻：重大决定前先做充分信息侦察，涉及"最优停止问题"思维。</li>
+<li>职业观激进："逐水草而居"，哪里有机会就去哪里，不被职业资格和地域绑定。</li>
+<li>对买房持否定态度。</li>
 </ul></div></div>
 
-<div class="sec"><div class="sec-head"><div class="num">4</div><h2>AI 时代，年轻人的机会</h2></div><div class="sec-sub">把全世界当潜在客户</div>
+<div class="sec" id="c6"><div class="sec-head"><div class="num">6</div><h2>看好哪些赛道？</h2></div><div class="sec-sub">一套逻辑，长期持有时代级资产 <span class="tag report">访谈观点转述</span><a class="ref" href="#s1">[1]</a></div>
 <div class="card"><ul>
-<li>未来感判断：AI Agent 会成为经济活动的<b style="color:#f0b90b">直接参与者</b>，年轻人卖服务的对象可能不再只有人</li>
-<li>创业别只盯着身边人：举例尼日利亚、阿根廷用户，利用全球价差与出海机会</li>
-<li>同一 API 在不同地区的价差、不同市场的认知差，就是利润空间；出海是普通人可复制的路径</li>
+<li>大方向围绕 <b>AI、Crypto 与互联网的交叉点</b>：科研、生物、健康与 AI。</li>
+<li>过去十年最确定的判断：押注比特币、区块链基础设施、AI 算力相关资产。</li>
+<li>投资只用"一套逻辑"：长期持有时代级资产，不做短期投机。</li>
 </ul></div></div>
 
-<div class="sec"><div class="sec-head"><div class="num">5</div><h2>做决定前先"探图"</h2></div><div class="sec-sub">买房、择业与信息差</div>
+<div class="sec" id="c7"><div class="sec-head"><div class="num">7</div><h2>TRON 在做什么</h2></div><div class="sec-sub">让机器读懂货币 <span class="tag report">访谈观点转述</span><a class="ref" href="#s1">[1]</a></div>
 <div class="card"><ul>
-<li>用游戏术语"先把地图打开"作比喻：重大决定前先做充分信息侦察，涉及"最优停止问题"思维</li>
-<li>职业观激进："逐水草而居"，哪里有机会就去哪里，不被职业资格和地域绑定</li>
-<li>对买房持否定态度</li>
+<li>TRON 的定位是让货币"机器可读"：未来的支付要能被 AI Agent 直接理解和调用。</li>
+<li>可编程货币是 AI 经济体的原生结算层——Crypto 与 AI 将在支付环节相遇。</li>
+<li>Crypto 进入日常：从投机交易走向支付与稳定币结算。</li>
+<li>AI Agent 与数字货币结合：机器自己下单、自己结算，商业形态跟着变。</li>
 </ul></div></div>
 
-<div class="sec"><div class="sec-head"><div class="num">6</div><h2>看好哪些赛道？</h2></div><div class="sec-sub">一套逻辑，长期持有时代级资产</div>
+<div class="sec" id="c8"><div class="sec-head"><div class="num">8</div><h2>600 万美元的香蕉</h2></div><div class="sec-sub">买的是注意力 <span class="tag report">访谈观点转述</span><a class="ref" href="#s1">[1]</a></div>
 <div class="card"><ul>
-<li>大方向围绕 <b style="color:#f0b90b">AI、Crypto 与互联网的交叉点</b>：科研、生物、健康与 AI</li>
-<li>过去十年最确定的判断：押注比特币、区块链基础设施、AI 算力相关资产</li>
-<li>投资只用"一套逻辑"：长期持有时代级资产，不做短期投机</li>
+<li>在注意力经济时代，争议性行为本身就是个人 IP 的放大器。</li>
+<li>对"高调"的回应：高调是刻意经营的结果，争议带来流量，流量可以变现。</li>
+<li>钱分层级：不同层级的钱，用法不同。</li>
+</ul></div>
+<div class="editor-note extension"><span class="tag editor">延伸解读</span>普通人学不来 600 万买香蕉，但能学"注意力记账"：你每一次发声，是在积累资产还是在消耗信用？</div>
+</div>
+
+<div class="sec" id="c9"><div class="sec-head"><div class="num">9</div><h2>健康：长期战略的前置位</h2></div><div class="sec-sub">从排斥健身到认知转弯 <span class="tag report">访谈观点转述</span><a class="ref" href="#s1">[1]</a></div>
+<div class="card"><ul>
+<li>练"薄肌"：符合 WHO 对成年人有氧 + 力量训练的建议，体型管理是自律的外显。</li>
+<li>AI + 定期体检：用 AI 汇总分析体检数据，做主动健康干预，工程化、指标化。</li>
+<li>"肌肉也是资产"：重新理解身体的储备。</li>
 </ul></div></div>
 
-<div class="sec"><div class="sec-head"><div class="num">7</div><h2>TRON 在做什么</h2></div><div class="sec-sub">让机器读懂货币</div>
-<div class="hl">TRON 的定位是让货币<b>"机器可读"</b>：未来的支付要能被 AI Agent 直接理解和调用。<b>可编程货币是 AI 经济体的原生结算层</b>——Crypto 与 AI 将在支付环节相遇。</div>
+<div class="sec" id="c10"><div class="sec-head"><div class="num">10</div><h2>十年之后，重谈财富自由</h2></div><div class="sec-sub">先自由，后财富 <span class="tag report">访谈观点转述</span><a class="ref" href="#s1">[1]</a></div>
 <div class="card"><ul>
-<li>Crypto 进入日常：从投机交易走向支付与稳定币结算</li>
-<li>AI Agent 与数字货币结合：机器自己下单、自己结算，商业形态跟着变</li>
+<li>财富自由不是终点，而是获得选择权的起点。他反而想去 OpenAI 或 Anthropic 上班——不是为工资，而是想搞懂顶级 AI 组织内部如何运转。</li>
+<li>金钱能解决什么、解决不了什么；只追求钱和肌肉还不够。</li>
+<li>最终落点：<b>多创造，少消费</b>——AI 时代财富分配向创造者倾斜。</li>
 </ul></div></div>
 
-<div class="sec"><div class="sec-head"><div class="num">8</div><h2>600 万美元的香蕉</h2></div><div class="sec-sub">买的是注意力</div>
+<div class="sec" id="c11"><div class="sec-head"><div class="num">11</div><h2>婚姻与感情</h2></div><div class="sec-sub">金钱的边界在哪里 <span class="tag report">访谈观点转述</span><a class="ref" href="#s1">[1]</a></div>
 <div class="card"><ul>
-<li>在注意力经济时代，争议性行为本身就是个人 IP 的放大器</li>
-<li>对"高调"的回应：高调是刻意经营的结果，争议带来流量，流量可以变现</li>
-<li>钱分层级：不同层级的钱，用法不同</li>
+<li>罕见坦白：承认钱解决不了婚姻问题。</li>
+<li>核心观点：先搞懂自己，否则亲密关系只是把个人问题转嫁给对方。</li>
+<li>感情与创业类似，都需要长期主义和自我认知。</li>
 </ul></div></div>
 
-<div class="sec"><div class="sec-head"><div class="num">9</div><h2>健康：长期战略的前置位</h2></div><div class="sec-sub">从排斥健身到认知转弯</div>
+<div class="sec" id="c12"><div class="sec-head"><div class="num">12</div><h2>他眼中的三个人</h2></div><div class="sec-sub">三种操作系统，只取方法论 <span class="tag report">访谈观点转述</span><a class="ref" href="#s1">[1]</a></div>
 <div class="card"><ul>
-<li>练"薄肌"：符合 WHO 对成年人有氧 + 力量训练的建议，体型管理是自律的外显</li>
-<li>AI + 定期体检：用 AI 汇总分析体检数据，做主动健康干预，工程化、指标化</li>
-<li>"肌肉也是资产"：重新理解身体的储备</li>
+<li>学马斯克的工程思维与第一性原理。</li>
+<li>学巴菲特的长期主义与资本配置。</li>
+<li>观察特朗普的注意力操控与叙事能力。</li>
 </ul></div></div>
 
-<div class="sec"><div class="sec-head"><div class="num">10</div><h2>十年之后，重谈财富自由</h2></div><div class="sec-sub">先自由，后财富</div>
-<div class="hl">财富自由不是终点，而是<b>获得选择权的起点</b>。他反而想去 OpenAI 或 Anthropic 上班——不是为工资，而是想搞懂顶级 AI 组织内部如何运转。</div>
+<div class="sec" id="c13"><div class="sec-head"><div class="num">13</div><h2>人生意义：地球 Online</h2></div><div class="sec-sub">以玩家心态探索，先体验再下结论 <span class="tag report">访谈观点转述</span><a class="ref" href="#s1">[1]</a></div>
 <div class="card"><ul>
-<li>金钱能解决什么、解决不了什么；只追求钱和肌肉还不够</li>
-<li>最终落点：<b style="color:#f0b90b">多创造，少消费</b>——AI 时代财富分配向创造者倾斜</li>
+<li>把人生比作 Earth Online：自己是探索地图的玩家，离看清整张地图还很远。</li>
+<li>意义不是想出来的，是玩出来的；先上路，再寻找意义。</li>
+<li>百年创业计划：以百年为尺度做事；谈及财富传承的安排思路。</li>
+<li>2025 年搭乘蓝色起源上太空：人生体验清单的重要一项。</li>
+<li>持续学习，不断更新自己的"操作系统"——访谈结尾寄语。</li>
 </ul></div></div>
 
-<div class="sec"><div class="sec-head"><div class="num">11</div><h2>婚姻与感情</h2></div><div class="sec-sub">金钱的边界在哪里</div>
-<div class="card"><ul>
-<li>罕见坦白：承认钱解决不了婚姻问题</li>
-<li>核心观点：先搞懂自己，否则亲密关系只是把个人问题转嫁给对方</li>
-<li>感情与创业类似，都需要长期主义和自我认知</li>
-</ul></div></div>
+<div class="sec" id="cq"><div class="sec-head"><div class="num">★</div><h2>金句</h2></div><div class="sec-sub"><span class="lbl l-q">原话·转述</span> 访谈中的核心表达，据要点整理 <a class="ref" href="#s1">[1]</a></div>
+<div class="quotes">
+<div class="quote"><p>先升级自己的操作系统，而不是急着找风口。</p><div class="src"><span class="lbl l-q">原话·转述</span> 谈 20 岁起步</div></div>
+<div class="quote"><p>把全世界当潜在客户。</p><div class="src"><span class="lbl l-q">原话·转述</span> 谈 AI 时代年轻人的机会</div></div>
+<div class="quote"><p>多创造，少消费——AI 时代财富分配向创造者倾斜。</p><div class="src"><span class="lbl l-q">原话·转述</span> 访谈落点</div></div>
+<div class="quote"><p>肌肉也是资产。</p><div class="src"><span class="lbl l-q">原话·转述</span> 谈健康</div></div>
+<div class="quote"><p>意义不是想出来的，是玩出来的；先上路，再寻找意义。</p><div class="src"><span class="lbl l-q">原话·转述</span> 谈人生意义</div></div>
+<div class="quote"><p>钱分层级：不同层级的钱，用法不同。</p><div class="src"><span class="lbl l-q">原话·转述</span> 谈财富观</div></div>
+</div></div>
 
-<div class="sec"><div class="sec-head"><div class="num">12</div><h2>他眼中的三个人</h2></div><div class="sec-sub">三种操作系统，只取方法论</div>
-<div class="card"><ul>
-<li>学马斯克的<b style="color:#f0b90b">工程思维与第一性原理</b></li>
-<li>学巴菲特的<b style="color:#f0b90b">长期主义与资本配置</b></li>
-<li>观察特朗普的<b style="color:#f0b90b">注意力操控与叙事能力</b></li>
-</ul></div></div>
+<div class="sec" id="cn"><div class="sec-head"><div class="num">#</div><h2>关键数字</h2></div><div class="sec-sub">据访谈内容整理 <a class="ref" href="#s1">[1]</a></div>
+<div class="nums">
+<div class="numc"><div class="v">4小时22分</div><div class="k">访谈总时长，全程无广告</div><div class="s">[1] YouTube</div></div>
+<div class="numc"><div class="v">600万美元</div><div class="k">香蕉艺术品成交价——买的是注意力</div><div class="s">[1] 访谈第8节</div></div>
+<div class="numc"><div class="v">157期</div><div class="k">《财富自由革命之路》喜马拉雅付费音频课（2016年，孙宇晨作品）</div><div class="s">[1] 勘误说明</div></div>
+<div class="numc"><div class="v">10年</div><div class="k">邵艾伦受那门音频课影响的时间跨度</div><div class="s">[1] 访谈背景</div></div>
+<div class="numc"><div class="v">2025年</div><div class="k">孙宇晨搭乘蓝色起源上太空</div><div class="s">[1] 访谈第13节</div></div>
+<div class="numc"><div class="v">百分百</div><div class="k">孙宇晨自称对 AI 健康建议的执行率</div><div class="s">[1] 访谈第1节</div></div>
+</div></div>
 
-<div class="sec"><div class="sec-head"><div class="num">13</div><h2>人生意义：地球 Online</h2></div><div class="sec-sub">以玩家心态探索，先体验再下结论</div>
-<div class="card"><ul>
-<li>把人生比作 Earth Online：自己是探索地图的玩家，离看清整张地图还很远</li>
-<li>意义不是想出来的，是玩出来的；先上路，再寻找意义</li>
-<li>百年创业计划：以百年为尺度做事；谈及财富传承的安排思路</li>
-<li>2025 年搭乘蓝色起源上太空：人生体验清单的重要一项</li>
-</ul></div></div>
+<div class="sec" id="ck"><div class="sec-head"><div class="num">☑</div><h2>行动清单：AI 时代的个人版本</h2></div><div class="sec-sub"><span class="tag editor">编辑应用 · 非嘉宾给出的原始清单</span> · 勾选只保存在当前浏览器本地</div>
+<div class="check-grid">
+<label class="check-row"><input type="checkbox" data-check="doc"><span><b>把自己文档化</b><small>饮食偏好、经验记录写成文档，让 AI 直接可用。</small></span></label>
+<label class="check-row"><input type="checkbox" data-check="ego"><span><b>每天练一次 Small Ego</b><small>主动接受一条和自己观点相反的信息。</small></span></label>
+<label class="check-row"><input type="checkbox" data-check="map"><span><b>重大决定前先"探图"</b><small>列出信息差清单：还缺哪些关键事实？</small></span></label>
+<label class="check-row"><input type="checkbox" data-check="arb"><span><b>找一个全球价差</b><small>研究某 AI 服务在海外市场的定价和需求。</small></span></label>
+<label class="check-row"><input type="checkbox" data-check="out"><span><b>每周输出一次</b><small>以输出倒逼输入，强制学习闭环。</small></span></label>
+<label class="check-row"><input type="checkbox" data-check="health"><span><b>把体检数据交给 AI</b><small>汇总历年报告，做一次主动健康盘点。</small></span></label>
+</div>
+<div class="check-status"><span id="check-count">已完成 0 / 6</span><progress id="check-progress" value="0" max="6"></progress><span id="storage-note">仅保存在本地浏览器</span><button id="reset-checks" type="button">清空勾选</button></div>
+</div>
 
-<div class="quote"><div class="q">持续学习，<br>不断更新自己的"操作系统"</div><div class="s">—— 访谈结尾寄语</div></div>
+<div class="sec" id="cs"><div class="sec-head"><div class="num">≡</div><h2>来源与边界</h2></div>
+<div class="legend"><span><span class="tag report">访谈观点转述</span> 依据视频章节与第三方解析</span><span><span class="tag editor">延伸解读</span> 编辑的应用与提示</span><span><span class="lbl l-q">原话·转述</span> 访谈中的核心表达</span></div>
+<div class="card srcs"><ol>
+<li id="s1">邵艾伦 Alan × 孙宇晨 4 小时访谈，YouTube，2026-10-09（4:22:29）<br><a href="https://www.youtube.com/watch?v=0Z-vhBvBmUY">youtube.com/watch?v=0Z-vhBvBmUY</a><small>官方视频无字幕；本页依据视频官方章节、知乎解析与观众讨论转述，非逐字稿。</small></li>
+</ol>
+<p class="note2">观点为嘉宾个人分享；涉及投资、健康的信息请独立核实，不构成任何建议。本页内容为要点提炼，不复述完整访谈。</p>
+</div></div>
 
-<div class="note">📌 勘误：视频简介提到"十年前的《财富自由革命之路》"，那是<b>孙宇晨本人 2016 年在喜马拉雅推出的 157 期付费音频课</b>，并非邵艾伦的作品——邵艾伦是受其影响十年的听众，这次访谈正是十年后的追问。</div>
-
-<div class="footer">内容根据视频章节与第三方解析转述整理，非逐字稿 · 观点为嘉宾个人分享<br>涉及投资、健康的信息请独立核实，不构成任何建议<br><a href="https://www.youtube.com/watch?v=0Z-vhBvBmUY">原视频：对话孙宇晨：年轻人如何抓住AI时代的机会？</a></div>
+<div class="footer">本图说仅为访谈内容整理，不构成任何投资建议 · 整理日期 2026-10-10</div>
+</main>
+<script>
+(function(){'use strict';
+var key='sunyuchen-20261009-review-v1';
+var checks=Array.prototype.slice.call(document.querySelectorAll('[data-check]'));
+var storageOK=true, stored={};
+try{stored=JSON.parse(localStorage.getItem(key)||'{}');}catch(_){storageOK=false;}
+checks.forEach(function(c){c.checked=stored[c.dataset.check]===true;});
+function update(save){
+  var done=checks.filter(function(c){return c.checked;}).length;
+  document.getElementById('check-count').textContent='已完成 '+done+' / '+checks.length;
+  document.getElementById('check-progress').value=done;
+  if(save){try{localStorage.setItem(key,JSON.stringify(Object.fromEntries(checks.map(function(c){return [c.dataset.check,c.checked];}))));}catch(_){storageOK=false;}}
+  document.getElementById('storage-note').textContent=storageOK?'仅保存在本地浏览器':'浏览器限制存储：勾选仅在当前页面有效';
+}
+checks.forEach(function(c){c.addEventListener('change',function(){update(true);});});
+document.getElementById('reset-checks').addEventListener('click',function(){checks.forEach(function(c){c.checked=false;});update(true);});
+document.getElementById('mode').addEventListener('click',function(){
+  var hidden=document.body.classList.toggle('hide-extensions');
+  this.setAttribute('aria-pressed',String(hidden));
+  this.textContent=hidden?'展开延伸解读':'收起延伸解读';
+});
+document.getElementById('print').addEventListener('click',function(){window.print();});
+function progress(){
+  var total=document.documentElement.scrollHeight-window.innerHeight;
+  var pct=total>0?Math.min(100,Math.max(0,window.scrollY/total*100)):0;
+  document.getElementById('progress').style.width=pct+'%';
+}
+window.addEventListener('scroll',progress,{passive:true});
+window.addEventListener('resize',progress);
+update(false);progress();
+})();
+</script>
 </body>
 </html>
