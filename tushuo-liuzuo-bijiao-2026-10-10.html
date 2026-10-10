@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>图说 | 五款六座新能源家用车深度对比</title>
+<title>图说 | 30万级家用车深度对比：六座SUV vs 热门MPV</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
@@ -17,7 +17,7 @@ body{font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;b
 .progress{position:absolute;left:0;bottom:-1px;height:2px;background:#0d9488;width:0;transition:width .1s linear}
 .hero{background:linear-gradient(165deg,#dff3ef 0%,#eef6f4 55%,#f2f6f9 100%);padding:48px 26px 36px;text-align:center;border-bottom:3px solid #0d9488}
 .kicker{display:inline-block;border:1.5px solid #0d9488;color:#0d9488;font-size:14px;letter-spacing:8px;padding:7px 16px 7px 24px;border-radius:8px;margin-bottom:20px;font-weight:700;background:rgba(255,255,255,.6)}
-.hero h1{font-size:26px;line-height:1.5;font-weight:900;margin-bottom:12px;color:#123f3a}
+.hero h1{font-size:25px;line-height:1.5;font-weight:900;margin-bottom:12px;color:#123f3a}
 .hero .lead{font-size:14.5px;color:#5b6b7c;line-height:1.8;margin-bottom:18px}
 .meta{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;border-top:1px solid rgba(13,148,136,.25);padding-top:16px;text-align:left}
 .meta div{font-size:13px;color:#475569;line-height:1.7}
@@ -42,13 +42,14 @@ body{font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;b
 .hl b{color:#0d9488}
 .warn{background:#fffbeb;border:1.5px dashed #eab308;border-radius:14px;padding:16px 18px;margin-bottom:12px;font-size:14px;line-height:1.9;color:#854d0e}
 .warn b{color:#b45309}
-.ref{font-size:11px;vertical-align:super;color:#94a3b8;text-decoration:none;padding-left:2px}
-.ref:hover{color:#0d9488}
+.group-t{font-size:14px;font-weight:800;color:#123f3a;margin:16px 2px 10px;letter-spacing:1px}
+.group-t::before{content:"";display:inline-block;width:4px;height:14px;background:#0d9488;border-radius:2px;margin-right:8px;vertical-align:-1px}
 .price-row{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:12px 14px;margin-bottom:10px;box-shadow:0 1px 4px rgba(15,118,110,.06)}
-.price-row .name{flex:none;width:96px;font-size:13.5px;font-weight:700;color:#1e293b;line-height:1.5}
+.price-row .name{flex:none;width:104px;font-size:13.5px;font-weight:700;color:#1e293b;line-height:1.5}
 .price-row .bar{flex:1;height:14px;background:#eef2f5;border-radius:7px;overflow:hidden;position:relative}
 .price-row .bar i{display:block;height:100%;background:linear-gradient(90deg,#0d9488,#14b8a6);border-radius:7px}
-.price-row .val{flex:none;width:86px;text-align:right;font-size:15px;font-weight:800;color:#0d9488}
+.price-row .bar i.mpv{background:linear-gradient(90deg,#0284c7,#38bdf8)}
+.price-row .val{flex:none;width:88px;text-align:right;font-size:15px;font-weight:800;color:#0d9488}
 .price-row .val small{display:block;font-size:11px;color:#94a3b8;font-weight:400}
 .price-note{font-size:12px;color:#7d8ba0;line-height:1.8;margin:8px 2px 0}
 .tbl-wrap{overflow-x:auto;background:#fff;border:1px solid #e2e8f0;border-radius:14px;box-shadow:0 1px 4px rgba(15,118,110,.06);margin-bottom:12px}
@@ -59,6 +60,7 @@ tr:last-child td{border-bottom:none}
 td:first-child{font-weight:700;color:#1e293b;white-space:nowrap;background:#f8fafc}
 .rank{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px;margin-bottom:10px;box-shadow:0 1px 4px rgba(15,118,110,.06)}
 .rank .r{flex:none;width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,#0d9488,#0f766e);color:#fff;font-weight:800;font-size:16px;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif}
+.rank.mpv .r{background:linear-gradient(135deg,#0284c7,#0ea5e9)}
 .rank.dim .r{background:#cbd5e1}
 .rank .body{font-size:13.5px;line-height:1.8;color:#3f4c5e}
 .rank .body b{color:#1e293b;font-size:14.5px}
@@ -72,132 +74,192 @@ td:first-child{font-weight:700;color:#1e293b;white-space:nowrap;background:#f8fa
 .srcs ol{padding-left:20px}
 .srcs small{display:block;font-size:11.5px;color:#94a3b8;line-height:1.8;margin-top:2px}
 .footer{margin:26px 16px 0;text-align:center;font-size:12px;color:#94a3b8;line-height:2}
-@media (max-width:480px){.meta{grid-template-columns:1fr}.price-row .name{width:80px;font-size:12.5px}.price-row .val{width:74px;font-size:13.5px}}
+@media (max-width:480px){.meta{grid-template-columns:1fr}.price-row .name{width:88px;font-size:12.5px}.price-row .val{width:76px;font-size:13.5px}}
 @media print{body{background:#fff}.toolbar,.contents{display:none}.card,.price-row,.rank,.verdict{box-shadow:none}}
 </style>
 </head>
 <body>
-<header class="toolbar"><div class="toolbar-inner"><a class="brand" href="#top">六座车对比 · 图解</a><div class="tools"><button id="print" type="button">打印 / PDF</button></div></div><div id="progress" class="progress"></div></header>
+<header class="toolbar"><div class="toolbar-inner"><a class="brand" href="#top">30万级家用车对比 · 图解</a><div class="tools"><button id="print" type="button">打印 / PDF</button></div></div><div id="progress" class="progress"></div></header>
 <main id="top">
 <div class="hero">
 <div class="kicker">图 说 · 购 车 对 比</div>
-<h1>五款六座新能源家用车深度对比</h1>
-<div class="lead">理想 i9、蔚来 ES8 六座、乐道 L90、小米"鹏程"、小鹏 GX——谁更适合二胎家庭？先核实存在性，再比同等配置下的到手价。</div>
+<h1>30万级家用车深度对比<br>六座SUV vs 热门MPV</h1>
+<div class="lead">以乐道 L90 顶配 307,399 元（含黑武士套装）为基准，对比理想 i9、蔚来 ES8、小鹏 GX、小米澎程 N90，以及同价位四款热门 MPV。</div>
 <div class="meta">
-<div><b>对比车型</b>理想 i9 / 蔚来 ES8 / 乐道 L90 / 小米澎程 N90 / 小鹏 GX</div>
+<div><b>对比基准</b>乐道 L90 顶配 307,399 元（含黑武士套装）</div>
+<div><b>使用场景</b>俩娃仨大人共 5 人：爸爸开车、副驾老人、二排妈妈+新生儿提篮、三排女儿+空1座</div>
+<div><b>对比口径</b>同等配置：高阶智驾 + 二排舒适 + 后排娱乐 + 一娃一大人</div>
 <div><b>基准日</b>2026 年 10 月 10 日（价格为 10 月公开信息）</div>
-<div><b>使用场景</b>二胎家庭 · 二排装两个儿童安全座椅 · 全家 6 人出行</div>
-<div><b>对比口径</b>六座 + 高阶智驾 + 二排零重力 + 后排娱乐屏 + 空悬</div>
 </div>
 </div>
 
-<div class="evidence"><strong>先说两个核实结论：</strong><br>① 你说的"小米鹏程"，官方实叫<b>小米澎程</b>（"鹏程"是谐音误传），2026-09-07 已上市，但只有大五座 N70（20.99 万起）和大七座 N90 Max（26.99 万，2+2+3）——<b>没有六座版</b>。<br>② <b>小鹏 GX 真实存在且在售</b>（非传闻），2026-05-20 上市，全系大六座，纯电 + 增程双动力，27.98 万元起。</div>
+<div class="evidence"><strong>先说核实结论：</strong><br>① "小米鹏程"官方实叫<b>小米澎程</b>（谐音误传），只有大五座 N70 和大七座 N90 Max（2+2+3），<b>没有六座版</b>；N90 二排双独立座椅 + 180mm 中央过道进三排，不用放倒座椅。<br>② <b>小鹏 GX 真实存在且在售</b>（2026-05-20 上市），全系大六座，27.98 万元起。<br>③ MPV 同价位纠正：魏牌高山 9（38.58 万）和岚图梦想家 9（41.99 万起）超预算，同价位应为<b>高山 8（30.98 万）</b>和<b>梦想家 2026 款（32.99 万起）</b>。</div>
 
-<nav class="contents"><a href="#c0"><span>00</span>存在性核实</a><a href="#c1"><span>01</span>到手价对比</a><a href="#c2"><span>02</span>参数总表</a><a href="#c3"><span>03</span>逐车档案</a><a href="#c4"><span>04</span>二胎家庭排序</a><a href="#c5"><span>05</span>未能核实</a><a href="#cs">来源</a></nav>
+<nav class="contents"><a href="#c0"><span>00</span>存在性核实</a><a href="#c1"><span>01</span>到手价对比</a><a href="#c2"><span>02</span>SUV参数表</a><a href="#c2b"><span>03</span>MPV参数表</a><a href="#c3"><span>04</span>SUV档案</a><a href="#c3b"><span>05</span>MPV档案</a><a href="#c4"><span>06</span>综合排序</a><a href="#c5"><span>07</span>未能核实</a><a href="#cs">来源</a></nav>
 
 <div class="sec" id="c0"><div class="sec-head"><div class="num">0</div><h2>存在性核实</h2></div><div class="sec-sub">先确认每款车是不是真的在卖</div>
-<div class="card"><ul>
-<li><b>理想 i9</b>：✅ 在售。2026-09-16 上市，六座纯电 SUV，单一 Home 版 36.98 万元。</li>
-<li><b>蔚来 ES8 全新一代</b>：✅ 在售。2025-09-20 上市（第三代），六座 40.68 万元起，BaaS 电池租用 29.88 万元起。</li>
-<li><b>乐道 L90</b>：✅ 在售。2026 款 2026-04-21 上市，六座 26.58 万元起，BaaS 17.98 万元起。</li>
-<li><b>小米澎程</b>：⚠️ 在售但<b>无六座版</b>。此前"小米 YU9 / 代号昆仑"爆料链 → 2026-05 传"YU9 命名取消、归属子品牌寻天" → 最终以"澎程 N70 / N90"发布。N90 Max 为大七座 2+2+3。</li>
-<li><b>小鹏 GX</b>：✅ 在售。2026-05-20 上市，全系大六座，纯电 + 增程双动力，27.98 万元起。</li>
+<div class="card"><div class="t">SUV 组</div><ul>
+<li><b>乐道 L90 顶配</b>：✅ 基准。含黑武士套装 307,399 元，六座 2+2+2。</li>
+<li><b>理想 i9</b>：✅ 在售。2026-09-16 上市，六座纯电，单一 Home 版 36.98 万元。</li>
+<li><b>蔚来 ES8 全新一代</b>：✅ 在售。六座 40.68 万元起，BaaS 29.88 万元起。</li>
+<li><b>小鹏 GX</b>：✅ 在售。全系大六座，纯电 + 增程，27.98 万元起。</li>
+<li><b>小米澎程 N90 Max</b>：⚠️ 在售但<b>无六座版</b>，为七座 2+2+3（二排双独立座椅），26.99 万元。</li>
+</ul></div>
+<div class="card"><div class="t">MPV 组（同价位）</div><ul>
+<li><b>小鹏 X9 2026 款</b>：✅ 在售。30.98 万元起，纯电 / 超级增程，7 座 2+2+3。</li>
+<li><b>腾势 D9 DM-i</b>：✅ 在售。两驱尊航型 30.98 万（9 月加推），与 L90 顶配几乎同价。</li>
+<li><b>魏牌高山 8 智慧版</b>：✅ 在售。30.98 万，7 座 2+2+3（高山 9 为 38.58 万，超预算）。</li>
+<li><b>岚图梦想家 2026 款</b>：✅ 在售。PHEV 32.99 万元起（梦想家 9 为 41.99 万起，超预算）。</li>
 </ul></div>
 </div>
 
-<div class="sec" id="c1"><div class="sec-head"><div class="num">1</div><h2>同等配置下实际到手价</h2></div><div class="sec-sub">基准：六座 + 高阶智驾 + 二排零重力 + 后排娱乐屏 + 空悬（含主要选装）</div>
-<div class="price-row"><div class="name">乐道 L90<br>六座 Max+</div><div class="bar"><i style="width:63%"></i></div><div class="val">约 30.0 万<small>落地</small></div></div>
-<div class="price-row"><div class="name">小鹏 GX<br>增程 Ultra SE</div><div class="bar"><i style="width:63%"></i></div><div class="val">约 30.0 万<small>落地</small></div></div>
-<div class="price-row"><div class="name">小米澎程<br>N90 Max 七座</div><div class="bar"><i style="width:61%"></i></div><div class="val">约 28.9 万<small>落地·无六座</small></div></div>
-<div class="price-row"><div class="name">理想 i9<br>Home</div><div class="bar"><i style="width:83%"></i></div><div class="val">约 39.7 万<small>落地·满选装41.8万</small></div></div>
-<div class="price-row"><div class="name">蔚来 ES8<br>六座行政豪华</div><div class="bar"><i style="width:92%"></i></div><div class="val">约 43.6 万<small>落地·选装后47.9万</small></div></div>
-<div class="card"><div class="t">优惠与方案明细（2026 年 10 月）</div><ul>
-<li><b>乐道 L90</b>：车价 27.98 万，标配即满配；9/30 前 5 万权益已过期，10 月新政未见公开。BaaS 落地约 20.2–21.1 万 + 月租 899 元。</li>
-<li><b>小鹏 GX 增程 Ultra SE</b>：30.98 万 − 1 万限时优惠 − 5000 置换 − 1.5 万以旧换新 ≈ 30.0 万落地（与探店 300,243 元案例吻合）；城市 NGP 在 Ultra 版免费 3 年。交付等 7–9 周。</li>
-<li><b>小米澎程 N90 Max</b>：26.99 万落地约 28.9 万；首销权益已于 10/7 过期。</li>
-<li><b>理想 i9</b>：36.98 万落地约 39.7 万；满选装（智驾包首销 2 万 + 剧院音响 1 万）约 41.8 万；首销权益（车漆免费等）截止 10/31；10 月底切换自研电池；交付 8–10 周。</li>
-<li><b>蔚来 ES8</b>：40.68 万落地约 43.6 万；1 万选装基金；每月 4 次免费换电；BaaS 落地约 30.9 万 + 月租约 980 元/月（免购置税）。</li>
-</ul><p class="note2">落地口径：车价 − 优惠 − 置换/国补 + 购置税减半 5% + 保险 + 上牌。地方补贴各地不一，以当地商务部门 10 月政策为准。</p></div>
+<div class="sec" id="c1"><div class="sec-head"><div class="num">1</div><h2>同等配置下实际到手价</h2></div><div class="sec-sub">落地口径：车价 − 优惠 − 置换/国补 + 购置税减半 5% + 保险上牌</div>
+<div class="group-t">SUV 组</div>
+<div class="price-row"><div class="name">乐道 L90<br>顶配·黑武士</div><div class="bar"><i style="width:70%"></i></div><div class="val">约 32.8 万<small>落地·基准</small></div></div>
+<div class="price-row"><div class="name">小鹏 GX<br>增程 Ultra SE</div><div class="bar"><i style="width:64%"></i></div><div class="val">约 30.0 万<small>落地</small></div></div>
+<div class="price-row"><div class="name">小米澎程<br>N90 Max 七座</div><div class="bar"><i style="width:62%"></i></div><div class="val">约 28.9 万<small>落地</small></div></div>
+<div class="price-row"><div class="name">理想 i9<br>Home</div><div class="bar"><i style="width:85%"></i></div><div class="val">约 39.7 万<small>落地</small></div></div>
+<div class="price-row"><div class="name">蔚来 ES8<br>六座行政豪华</div><div class="bar"><i style="width:93%"></i></div><div class="val">约 43.6 万<small>落地</small></div></div>
+<div class="group-t">MPV 组</div>
+<div class="price-row"><div class="name">小鹏 X9<br>2026款</div><div class="bar"><i class="mpv" style="width:63%"></i></div><div class="val">约 29.6 万<small>落地起·含权益</small></div></div>
+<div class="price-row"><div class="name">腾势 D9<br>DM-i 尊航型</div><div class="bar"><i class="mpv" style="width:70%"></i></div><div class="val">约 33.0 万<small>落地·优惠未确认</small></div></div>
+<div class="price-row"><div class="name">高山 8<br>智慧版</div><div class="bar"><i class="mpv" style="width:70%"></i></div><div class="val">约 33.0 万<small>落地·优惠未确认</small></div></div>
+<div class="price-row"><div class="name">梦想家<br>2026款 PHEV</div><div class="bar"><i class="mpv" style="width:75%"></i></div><div class="val">约 35.2 万<small>落地起</small></div></div>
+<div class="card"><div class="t">优惠明细（2026 年 10 月）</div><ul>
+<li><b>小鹏 X9</b>：10 月至 10.31 下定享 33200 元权益包 + 置换至高 2.3 万；1–3 周交付。</li>
+<li><b>腾势 D9</b>：两驱尊航型 30.98 万为 9 月加推版本；10 月权益延续未核实。</li>
+<li><b>高山 8 / 梦想家</b>：10 月现行权益未核实。</li>
+<li><b>L90 顶配</b>：307,399 元为含黑武士套装整车买断价；BaaS 方案另计。</li>
+</ul><p class="note2">2026 年起新能源购置税减半征收（减税上限 1.5 万），约 31 万的车需缴约 1.37 万，L90 与各 MPV 均适用。地方补贴各地不一，以当地商务部门 10 月政策为准。</p></div>
 </div>
 
-<div class="sec" id="c2"><div class="sec-head"><div class="num">2</div><h2>参数总表</h2></div><div class="sec-sub">左右滑动查看完整表格</div>
+<div class="sec" id="c2"><div class="sec-head"><div class="num">2</div><h2>SUV 参数总表</h2></div><div class="sec-sub">左右滑动查看完整表格</div>
 <div class="tbl-wrap"><table>
-<tr><th>维度</th><th>理想 i9</th><th>蔚来 ES8</th><th>乐道 L90</th><th>小米澎程 N90</th><th>小鹏 GX</th></tr>
-<tr><td>状态</td><td>2026-09-16 上市</td><td>第三代，2025-09 上市</td><td>2026 款，2026-04 上市</td><td>2026-09-07 上市</td><td>2026-05-20 上市</td></tr>
-<tr><td>座椅</td><td>六座 2+2+2</td><td>六座 2+2+2</td><td>六座 2+2+2</td><td>七座 2+2+3（二排双独立座椅，无六座版）</td><td>大六座 2+2+2</td></tr>
-<tr><td>动力</td><td>纯电</td><td>纯电</td><td>纯电</td><td>增程 SUV</td><td>纯电 + 增程</td></tr>
-<tr><td>续航/补能</td><td>5C 超充，705km</td><td>900V，换电 3 分钟（3996 座）</td><td>换电 3 分钟</td><td>增程</td><td>增程综合 1585km</td></tr>
-<tr><td>三排</td><td>—</td><td>1.8 米成人可坐</td><td>38° 电动调节 + 纯平地台，1.33 米高度</td><td>—</td><td>—</td></tr>
-<tr><td>三排进出</td><td>—</td><td>二排横向滑动 150mm 让位</td><td>二排中央 18cm 过道 + 电动踏板，不拆儿童座椅可进</td><td>二排 180mm 中央过道，直接步入，无需放倒二排；装两儿童座椅后成人通过较挤</td><td>—</td></tr>
-<tr><td>智驾</td><td>新平台</td><td>双神玑 NX9031，NOP+ 全域领航</td><td>蔚来体系</td><td>—</td><td>4 图灵芯片 3000TOPS，第二代 VLA（最强）</td></tr>
-<tr><td>座舱亮点</td><td>四把零重力 + 旋转二排</td><td>21.4 英寸吸顶屏</td><td>—</td><td>—</td><td>21.4 英寸吸顶屏；后轮转向 5.4 米转弯半径</td></tr>
-<tr><td>安全</td><td>—</td><td>—</td><td>9 气囊 + 中欧双五星</td><td>—</td><td>720° 碰撞 + 航空六重冗余</td></tr>
-<tr><td>销量验证</td><td>上市不足 1 月，仅订单数据</td><td>9 月 10,542 台，累计 15 万台</td><td>上市一周年累计超 6 万台</td><td>首销月锁单破 7 万，9 月交付破万</td><td>9 月 7,224 台，连续 3 个月超 7000</td></tr>
+<tr><th>维度</th><th>乐道 L90 顶配</th><th>理想 i9</th><th>蔚来 ES8</th><th>小鹏 GX</th><th>小米澎程 N90</th></tr>
+<tr><td>状态</td><td>基准：307,399 元</td><td>2026-09-16 上市</td><td>第三代，2025-09 上市</td><td>2026-05-20 上市</td><td>2026-09-07 上市</td></tr>
+<tr><td>座椅</td><td>六座 2+2+2</td><td>六座 2+2+2</td><td>六座 2+2+2</td><td>大六座 2+2+2</td><td>七座 2+2+3（二排双独立座椅）</td></tr>
+<tr><td>动力</td><td>纯电</td><td>纯电</td><td>纯电</td><td>纯电 + 增程</td><td>增程</td></tr>
+<tr><td>续航/补能</td><td>换电 3 分钟</td><td>5C 超充，705km</td><td>900V，换电 3 分钟</td><td>增程综合 1585km</td><td>纯电 464km，综合 1705km</td></tr>
+<tr><td>三排进出</td><td>二排中央 18cm 过道 + 电动踏板</td><td>—</td><td>二排横向滑动 150mm 让位</td><td>二排 180mm 中央过道</td><td>二排 180mm 中央过道，直接步入</td></tr>
+<tr><td>三排 ISOFIX</td><td>未见公开信息</td><td>未见公开信息</td><td>未见公开信息</td><td>未见公开信息（全系标配 ISOFIX，未明确排数）</td><td>未见公开信息（二排确认有）</td></tr>
+<tr><td>智驾</td><td>神玑 NX9031（顶配）</td><td>新平台</td><td>双神玑 NX9031，NOP+ 全域领航</td><td>4 图灵芯片 3000TOPS，第二代 VLA</td><td>Thor-U 700TOPS，双激光雷达</td></tr>
+<tr><td>销量验证</td><td>累计超 6 万台</td><td>上市不足 1 月</td><td>9 月 10,542 台，累计 15 万台</td><td>9 月 7,224 台，连续 3 个月超 7000</td><td>首销月锁单破 7 万，9 月交付破万</td></tr>
 </table></div>
-<p class="price-note">"—"表示本次调研未取得可信公开数据，非该车缺失该配置。</p>
+<p class="price-note">"—"表示本次调研未取得可信公开数据；"未见公开信息"为明确核查结论，非缺失。</p>
 </div>
 
-<div class="sec" id="c3"><div class="sec-head"><div class="num">3</div><h2>逐车档案</h2></div><div class="sec-sub">每款车一句话定位 + 家庭视角要点</div>
+<div class="sec" id="c2b"><div class="sec-head"><div class="num">3</div><h2>MPV 参数总表</h2></div><div class="sec-sub">左右滑动查看完整表格</div>
+<div class="tbl-wrap"><table>
+<tr><th>维度</th><th>小鹏 X9 2026款</th><th>腾势 D9 DM-i</th><th>高山 8 智慧版</th><th>梦想家 2026款</th></tr>
+<tr><td>价格</td><td>30.98 万起；城区领航需 Ultra 版 32.98 万起</td><td>两驱尊航型 30.98 万（9 月加推）</td><td>30.98 万</td><td>PHEV 32.99 万起；配齐约 35 万+</td></tr>
+<tr><td>座椅</td><td>7 座 2+2+3</td><td>7 座 2+2+3</td><td>7 座 2+2+3</td><td>7 座 2+2+3</td></tr>
+<tr><td>车门/地台</td><td>双侧电滑门，低地台</td><td>双侧电滑门</td><td>—</td><td>—</td></tr>
+<tr><td>三排进出</td><td>三排电动三折叠，灵活</td><td>二排过道 + 一键回位，最方便</td><td>二三排共轨滑轨 + 纯平地板</td><td>—</td></tr>
+<tr><td>三排 ISOFIX</td><td>✅ 二三排共 4 个（唯一官方明确）</td><td>⚠️ 公开信息矛盾，未核实</td><td>未见公开信息</td><td>未见公开信息</td></tr>
+<tr><td>二排舒适</td><td>零重力座椅</td><td>零重力（入门版是否减配未核实）</td><td>未见官方证实</td><td>入门版无（配齐约 35 万+）</td></tr>
+<tr><td>后排娱乐</td><td>21.4 英寸吸顶屏 + 冰箱</td><td>吸顶屏（入门版是否减配未核实）</td><td>未见官方证实</td><td>入门版无</td></tr>
+<tr><td>后备箱</td><td>三排放倒 2 座后装载最灵活</td><td>882L</td><td>—</td><td>—</td></tr>
+<tr><td>动力续航</td><td>增程综合 1602km</td><td>纯电 350/401km，综合约 1100km</td><td>纯电 270km，综合 1199km</td><td>纯电 350km，800V 5C 快充</td></tr>
+<tr><td>智驾</td><td>第二代 VLA + 2250TOPS（Ultra 版）</td><td>天神之眼 5.0 全系标配，含城市 NOA</td><td>Coffee Pilot 4（Thor-U + 双激光雷达）</td><td>乾崑版 ADS 4 城市 NCA（需高配）</td></tr>
+<tr><td>交付</td><td>1–3 周</td><td>—</td><td>爬坡中</td><td>—</td></tr>
+</table></div>
+</div>
 
-<div class="card"><div class="t">乐道 L90 六座 Max+ ｜ 同等配置落地最低</div><ul>
-<li><b>价格</b>：27.98 万，标配即满配，落地约 30.0 万；BaaS 约 20.2–21.1 万 + 月租 899 元。</li>
-<li><b>家庭点</b>：三排 38° 电动调节 + 纯平地台 + 1.33 米高度，成人可坐；二排中央 18cm 过道 + 电动踏板，<b>不拆儿童座椅可进三排</b>；9 气囊 + 中欧双五星；换电 3 分钟。</li>
-<li><b>验证</b>：上市一周年累计交付超 6 万台，非 PPT。</li>
-<li><b>短板</b>：品牌溢价低于蔚来主品牌；9/30 前 5 万权益已过期，10 月新政未公布。</li>
+<div class="sec" id="c3"><div class="sec-head"><div class="num">4</div><h2>SUV 逐车档案</h2></div><div class="sec-sub">每款车一句话定位 + 家庭视角要点</div>
+
+<div class="card"><div class="t">乐道 L90 顶配（含黑武士）｜ 对比基准</div><ul>
+<li><b>价格</b>：整车买断 307,399 元，落地约 32.8 万；配置拉满。</li>
+<li><b>家庭点</b>：三排 38° 电动调节 + 纯平地台，成人可坐；二排中央 18cm 过道 + 电动踏板；9 气囊 + 中欧双五星；换电 3 分钟；累计交付超 6 万台。</li>
+<li><b>短板</b>：SUV 形态，抱新生儿上下车不如 MPV 侧滑门 + 低地台省力；三排 ISOFIX 未见公开信息。</li>
 </ul></div>
 
-<div class="card"><div class="t">小鹏 GX 增程 Ultra SE ｜ 长途全家出行的续航王</div><ul>
+<div class="card"><div class="t">小鹏 GX 增程 Ultra SE ｜ 长途续航王</div><ul>
 <li><b>价格</b>：30.98 万 − 优惠 ≈ 30.0 万落地；城市 NGP 在 Ultra 版免费 3 年。</li>
-<li><b>家庭点</b>：增程综合 1585km，全家长途无焦虑；720° 碰撞 + 航空六重冗余；后轮转向 5.4 米转弯半径，大车好挪；21.4 英寸吸顶屏。</li>
-<li><b>智驾</b>：4 图灵芯片 3000TOPS、第二代 VLA——五款中最强。</li>
-<li><b>短板</b>：交付等 7–9 周；二排座椅舒适功能明细与三排进出官方细节未取得。</li>
+<li><b>家庭点</b>：增程综合 1585km；720° 碰撞 + 航空六重冗余；后轮转向 5.4 米转弯半径；21.4 英寸吸顶屏；二排 180mm 中央过道。</li>
+<li><b>智驾</b>：4 图灵芯片 3000TOPS、第二代 VLA——五款 SUV 中最强（注：智驾路线存在纯视觉/激光雷达两种说法，到店确认）。</li>
+<li><b>短板</b>：交付等 7–9 周；三排 ISOFIX 未明确排数。</li>
 </ul></div>
 
-<div class="card"><div class="t">蔚来 ES8 六座行政豪华版 ｜ 最省心，服务天花板</div><ul>
-<li><b>价格</b>：40.68 万，落地约 43.6 万（选装后约 47.9 万）；BaaS 落地约 30.9 万 + 月租约 980 元/月（免购置税）；1 万选装基金；每月 4 次免费换电。</li>
-<li><b>家庭点</b>：换电网络最成熟（3996 座）；二排横向滑动 150mm 让位；三排 1.8 米成人可坐；服务口碑最好。</li>
-<li><b>验证</b>：9 月 10,542 台，累计 15 万台。</li>
-<li><b>短板</b>：整车买断落地 43.6 万，五款中最贵；你已是 NIO + BaaS 车主，换购有老车主权益可谈。</li>
+<div class="card"><div class="t">蔚来 ES8 六座行政豪华版 ｜ 最省心</div><ul>
+<li><b>价格</b>：40.68 万，落地约 43.6 万；BaaS 落地约 30.9 万 + 月租约 980 元/月；1 万选装基金；每月 4 次免费换电。</li>
+<li><b>家庭点</b>：换电网络最成熟；二排横向滑动 150mm 让位；三排 1.8 米成人可坐；服务口碑最好；9 月 10,542 台。</li>
+<li><b>短板</b>：整车买断最贵；你已是 NIO + BaaS 车主，换购老车主权益可谈。</li>
 </ul></div>
 
-<div class="card"><div class="t">理想 i9 Home ｜ 产品最新，但建议观望</div><ul>
-<li><b>价格</b>：36.98 万，落地约 39.7 万；满选装约 41.8 万；首销权益截止 10/31。</li>
-<li><b>亮点</b>：四把零重力 + 旋转二排 + 5C 超充 705km，产品力是五款里最新的。</li>
-<li><b>风险</b>：上市不足 1 月，无交付口碑；等 8–10 周；正处 10 月底切换自研电池的窗口期——<b>建议等首批口碑再下手</b>。</li>
+<div class="card"><div class="t">理想 i9 Home ｜ 产品最新，建议观望</div><ul>
+<li><b>价格</b>：36.98 万，落地约 39.7 万；首销权益截止 10/31。</li>
+<li><b>亮点</b>：四把零重力 + 旋转二排 + 5C 超充 705km。</li>
+<li><b>风险</b>：上市不足 1 月无口碑；等 8–10 周；处 10 月底切换自研电池窗口期。</li>
 </ul></div>
 
-<div class="card"><div class="t">小米澎程 N90 Max ｜ 性价比之王，但无六座</div><ul>
+<div class="card"><div class="t">小米澎程 N90 Max ｜ 七座备选</div><ul>
 <li><b>价格</b>：26.99 万，落地约 28.9 万；首销权益已于 10/7 过期。</li>
-<li><b>验证</b>：首销月锁单破 7 万台，9 月交付破万。</li>
-<li><b>注意</b>：无六座版，为七座 2+2+3（二排双独立座椅）；<b>二排中间有 180mm 中央过道</b>，第三排从过道直接走进去，<b>不用放倒二排</b>，纯平地板；但装两个儿童座椅后，成人经 180mm 过道进出较挤，孩子没问题。</li>
+<li><b>家庭点</b>：七座 2+2+3，二排双独立座椅 + 180mm 中央过道进三排；三排 3 座，5 人场景下丘丘坐三排 + 空 1 座可行；纯电 464km，综合 1705km；12 气囊。</li>
+<li><b>注意</b>：无六座版；三排 ISOFIX 未见公开信息；二排确认有 ISOFIX。</li>
 </ul></div>
 </div>
 
-<div class="sec" id="c4"><div class="sec-head"><div class="num">4</div><h2>二胎家庭排序</h2></div><div class="sec-sub">二排两个儿童座椅 · 全家 6 人出行</div>
-<div class="rank"><div class="r">1</div><div class="body"><b>乐道 L90 六座 Max+</b><div class="why">同等配置落地最低（约 30 万）；不拆儿童座椅可进三排；三排成人可坐；换电 3 分钟；6 万台交付验证。</div></div></div>
-<div class="rank"><div class="r">2</div><div class="body"><b>小鹏 GX 增程 Ultra SE</b><div class="why">落地同约 30 万；增程 1585km 最适合全家长途；智驾最强；后轮转向大车好挪。交付等 7–9 周。</div></div></div>
-<div class="rank"><div class="r">3</div><div class="body"><b>蔚来 ES8 六座行政豪华版</b><div class="why">换电网络最成熟、服务口碑最好；BaaS 30.9 万 + 月租是折中方案。整车买断 43.6 万最贵。</div></div></div>
-<div class="rank"><div class="r">4</div><div class="body"><b>理想 i9</b><div class="why">产品力最新，但上市不足 1 月无口碑、处电池切换期，建议观望首批交付反馈。</div></div></div>
-<div class="rank dim"><div class="r">5</div><div class="body"><b>小米澎程 N90 Max</b><div class="why">无六座版（七座 2+2+3，二排双独立座椅 + 180mm 中央过道进三排，不用放倒座椅）；如接受七座，落地约 28.9 万是性价比之王，过道进出比传统七座方便得多。</div></div></div>
-<div class="verdict"><div class="t">一句话建议</div>
-<p>要<b>便宜好用、闭眼入</b>——<b>乐道 L90</b>；要<b>经常全家长途、智驾拉满</b>——<b>小鹏 GX 增程</b>；要<b>最省心、服务兜底</b>（你已是 NIO 车主）——<b>蔚来 ES8</b>，BaaS 把首付压到 30 万出头。理想 i9 等首批口碑。小米澎程没有六座版，但 N90 的 180mm 过道七座值得带家人到店实测一下。</p></div>
+<div class="sec" id="c3b"><div class="sec-head"><div class="num">5</div><h2>MPV 逐车档案</h2></div><div class="sec-sub">同价位四款，按 5 人一娃一大人场景评估</div>
+
+<div class="card"><div class="t">小鹏 X9 2026 款 ｜ MPV 首选</div><ul>
+<li><b>价格</b>：30.98 万起；10 月 33200 元权益包 + 置换至高 2.3 万，落地约 29.6 万起；1–3 周交付。</li>
+<li><b>家庭点</b>：<b>二三排共 4 个 ISOFIX</b>（四款中唯一官方明确三排有）；双侧电滑门 + 低地台，抱新生儿上下车最省力；三排电动三折叠，5 人时放倒 2 座装载最灵活；二排零重力 + 21.4 寸吸顶屏 + 冰箱。</li>
+<li><b>智驾</b>：城区领航需 Ultra 版 32.98 万起（第二代 VLA + 2250TOPS）。</li>
+<li><b>短板</b>：Max 版二排通风加热按摩与城区领航边界未完全核实。</li>
+</ul></div>
+
+<div class="card"><div class="t">腾势 D9 DM-i 两驱尊航型 ｜ 同价备选</div><ul>
+<li><b>价格</b>：30.98 万，与 L90 顶配几乎同价；10 月权益延续未核实。</li>
+<li><b>家庭点</b>：二排过道 + 一键回位，<b>三排进出最方便</b>；882L 后备箱；天神之眼 5.0 全系标配含城市 NOA。</li>
+<li><b>风险</b>：三排 ISOFIX 公开信息矛盾，未能核实；入门版零重力/按摩/吸顶屏/云辇-C 是否减配未核实。</li>
+</ul></div>
+
+<div class="card"><div class="t">魏牌高山 8 智慧版 ｜ 均衡之选</div><ul>
+<li><b>价格</b>：30.98 万；10 月现行权益未核实；交付爬坡中。</li>
+<li><b>家庭点</b>：7 座 2+2+3；270km 纯电、综合 1199km；二三排共轨滑轨 + 纯平地板，空间灵活。</li>
+<li><b>智驾</b>：Coffee Pilot 4（Thor-U 700TOPS + 双激光雷达），城区 + 高速辅助驾驶。</li>
+<li><b>短板</b>：三排 ISOFIX、后排娱乐屏、座椅通风加热按摩未见官方证实。</li>
+</ul></div>
+
+<div class="card"><div class="t">岚图梦想家 2026 款 PHEV ｜ 偏贵，需加钱配齐</div><ul>
+<li><b>价格</b>：32.99 万起；入门版无华为智驾/娱乐屏/冰箱，<b>配齐约 35 万+</b>，落地约 37.5 万。</li>
+<li><b>亮点</b>：350km 纯电 + 800V 5C 快充（20–80% 约 12 分钟）+ 智能后轮转向；乾崑版 ADS 4 城市 NCA。</li>
+<li><b>短板</b>：同等配置下最贵；三排 ISOFIX 未见公开信息；10 月终端成交价未核实。</li>
+</ul></div>
 </div>
 
-<div class="sec" id="c5"><div class="sec-head"><div class="num">5</div><h2>未能核实</h2></div><div class="sec-sub">以下信息本次调研未取得可信公开来源，决策前建议到店确认</div>
-<div class="warn"><b>⚠️ 未核实清单：</b><br>· 乐道 L90 的 10 月新权益（9/30 前 5 万权益已过期）<br>· 蔚来 ES8 当前交付周期<br>· 理想 i9 置换 / 金融专项政策<br>· 小鹏 GX 二排座椅舒适功能明细与三排进出官方细节<br>· 各车型二排 ISOFIX（按惯例应有，未逐项确认）<br>· 各地地方补贴细则（以当地商务部门 10 月政策为准）<br>· 小鹏 GX 官方为纯视觉智驾路线（与早期激光雷达传闻有出入）<br>· 蔚来换电站数量存在 3996 座（2026 年中官方）vs 2500 座（个别信源）口径分歧</div>
+<div class="sec" id="c4"><div class="sec-head"><div class="num">6</div><h2>综合排序</h2></div><div class="sec-sub">5 人二胎 · 一娃一大人贴身场景</div>
+<div class="hl"><b>场景安排</b>：爸爸开车、副驾老人、二排妈妈 + 新生儿提篮（ISOFIX）、三排女儿座椅 + 空 1 座。MPV 的侧滑门 + 低地台 + 灵活三排，在"抱新生儿上下车、妈妈进出三排安顿女儿"上占优；SUV 则赢在通过性和换电/续航。</div>
+<div class="group-t">MPV 组排序</div>
+<div class="rank mpv"><div class="r">1</div><div class="body"><b>小鹏 X9 超级增程 Ultra（32.98 万）</b><div class="why">唯一三排 ISOFIX + 双侧电滑门 + 三排灵活放倒；增程 1602km 长途无忧。比 L90 顶配贵约 2.2 万。</div></div></div>
+<div class="rank mpv"><div class="r">2</div><div class="body"><b>腾势 D9 DM-i 两驱尊航型（30.98 万）</b><div class="why">与 L90 顶配几乎同价；三排进出最方便；城市 NOA 全系标配。三排 ISOFIX 待到店核实。</div></div></div>
+<div class="rank mpv"><div class="r">3</div><div class="body"><b>魏牌高山 8 智慧版（30.98 万）</b><div class="why">同价位均衡，空间灵活；但三排 ISOFIX、娱乐屏等关键配置未见官方证实。</div></div></div>
+<div class="rank mpv"><div class="r">4</div><div class="body"><b>岚图梦想家 2026 款 PHEV（32.99 万起）</b><div class="why">配齐约 35 万+，同等配置最贵；产品力不差，但价格掉队。</div></div></div>
+<div class="group-t">SUV 组排序</div>
+<div class="rank"><div class="r">1</div><div class="body"><b>乐道 L90 顶配（307,399 元）</b><div class="why">配置拉满 + 换电 3 分钟 + 6 万台验证；SUV 里家庭场景最优。</div></div></div>
+<div class="rank"><div class="r">2</div><div class="body"><b>小鹏 GX 增程 Ultra SE（落地约 30 万）</b><div class="why">增程 1585km + 智驾最强；交付等 7–9 周。</div></div></div>
+<div class="rank"><div class="r">3</div><div class="body"><b>蔚来 ES8 六座（落地约 43.6 万）</b><div class="why">换电网络最成熟、服务最好；BaaS 30.9 万 + 月租是折中方案。</div></div></div>
+<div class="rank"><div class="r">4</div><div class="body"><b>理想 i9（落地约 39.7 万）</b><div class="why">产品最新，但无口碑 + 电池切换期，建议观望。</div></div></div>
+<div class="rank dim"><div class="r">5</div><div class="body"><b>小米澎程 N90 Max（落地约 28.9 万）</b><div class="why">无六座版；七座 2+2+3 过道进三排方便，5 人场景可用；性价比最高。</div></div></div>
+<div class="verdict"><div class="t">一句话建议</div>
+<p>5 人二胎、一娃一大人：<b>首选小鹏 X9</b>（唯一三排 ISOFIX + 侧滑门，抱新生儿上下车最省力）；<b>同价备选腾势 D9</b>（30.98 万，三排进出最方便）。<b>SUV 里 L90 顶配依然最值</b>（307,399 配置拉满），但三排进出和上下车便利性不如 MPV——如果你更看重开起来的感觉和换电，L90；如果更看重抱娃上下车的每一天，X9。</p></div>
+</div>
+
+<div class="sec" id="c5"><div class="sec-head"><div class="num">7</div><h2>未能核实</h2></div><div class="sec-sub">以下信息未取得可信公开来源，到店必问</div>
+<div class="warn"><b>⚠️ 未核实清单：</b><br>· 五款 SUV 三排 ISOFIX：均未见公开信息（大概率二排才有）<br>· 腾势 D9 三排 ISOFIX：公开信息矛盾<br>· 腾势 D9 入门版零重力/按摩/吸顶屏/云辇-C 是否减配<br>· 腾势 D9 / 高山 8 / 梦想家三款 10 月现行权益<br>· 高山 8 三排 ISOFIX / 后排娱乐屏 / 座椅通风加热按摩<br>· 小鹏 X9 Max 版二排通风加热按摩与城区领航边界<br>· 梦想家 10 月终端成交价<br>· 小鹏 GX 智驾路线：纯视觉 vs 激光雷达两种说法并存<br>· 乐道 L90 的 10 月新权益；蔚来 ES8 当前交付周期；理想 i9 置换/金融专项<br>· 各地地方补贴细则（以当地商务部门 10 月政策为准）</div>
 </div>
 
 <div class="sec" id="cs"><div class="sec-head"><div class="num">≡</div><h2>来源与边界</h2></div>
 <div class="card srcs"><ol>
-<li>公开网页深度调研（2026-10-10），研究报告存档于 research_notes/six-seat-ev-comparison-2026-10-20261010-1246/</li>
+<li>公开网页深度调研（2026-10-10 两轮），研究报告存档于 research_notes/six-seat-ev-comparison-2026-10-20261010-1246/ 与 mpv-vs-l90-2026-10-20261010-1322/</li>
 <li>各品牌官网 / 官方发布会信息（价格、配置、上市时间）</li>
 <li>2026 年 9 月交付数据（各品牌官方公布）</li>
-<li>终端探店案例（小鹏 GX 300,243 元落地案例）</li>
+<li>终端探店案例与车主反馈</li>
 </ol>
-<p class="note2">本页基于 2026-10-10 公开信息整理，价格与政策以官方最新发布和到店确认为准，不构成购车建议。调研中未登录任何账号。</p>
+<p class="note2">本页基于 2026-10-10 公开信息整理，价格与政策以官方最新发布和到店确认为准，不构成购车建议。调研中未登录任何账号。多数资讯为 AI 生成/自媒体内容，关键矛盾已在"未能核实"中单列。</p>
 </div></div>
 
-<div class="footer">六座新能源家用车深度对比 · 基准日 2026-10-10 · 整理日期 2026-10-10</div>
+<div class="footer">30万级家用车深度对比 · 基准日 2026-10-10 · 整理日期 2026-10-10</div>
 </main>
 <script>
 (function(){'use strict';
@@ -205,7 +267,7 @@ document.getElementById('print').addEventListener('click',function(){window.prin
 function progress(){
   var total=document.documentElement.scrollHeight-window.innerHeight;
   var pct=total>0?Math.min(100,Math.max(0,window.scrollY/total*100)):0;
-  document.getElementById('progress').style.width=pct+'%';
+  document.getElementById('progress').style.width=pct+'%'||'0%';
 }
 window.addEventListener('scroll',progress,{passive:true});
 window.addEventListener('resize',progress);
