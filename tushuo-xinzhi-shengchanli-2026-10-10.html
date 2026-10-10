@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { width:1080px; font-family:"Noto Sans CJK SC","PingFang SC","Microsoft YaHei",sans-serif; background:#f7f3ec; color:#2b2b2b; }
+  .header { background:linear-gradient(135deg,#8e0e0e 0%,#c1272d 55%,#8e0e0e 100%); color:#fff; padding:64px 60px 52px; text-align:center; position:relative; overflow:hidden; }
+  .header::after { content:""; position:absolute; left:0; right:0; bottom:0; height:10px; background:linear-gradient(90deg,#d4a017,#f5d76e,#d4a017); }
+  .kicker { display:inline-block; border:2px solid #f5d76e; color:#f5d76e; font-size:30px; letter-spacing:14px; padding:10px 26px 10px 40px; border-radius:8px; margin-bottom:28px; font-weight:700; }
+  .header h1 { font-size:64px; line-height:1.35; font-weight:900; letter-spacing:4px; margin-bottom:18px; }
+  .header .sub { font-size:28px; color:#ffe9a8; letter-spacing:2px; }
+  .core { background:#fff; margin:-6px 48px 0; border-radius:16px; padding:36px 44px; box-shadow:0 6px 24px rgba(140,10,10,.12); border-top:6px solid #d4a017; position:relative; z-index:2; }
+  .core .label { font-size:26px; color:#8e0e0e; font-weight:800; letter-spacing:6px; margin-bottom:14px; }
+  .core .big { font-size:44px; font-weight:900; color:#8e0e0e; margin-bottom:12px; }
+  .core p { font-size:28px; line-height:1.7; color:#444; }
+  .core .principles { display:flex; gap:14px; margin-top:18px; flex-wrap:wrap; }
+  .core .principles span { background:#fdf3e0; border:2px solid #d4a017; color:#8e0e0e; font-size:26px; font-weight:700; padding:10px 22px; border-radius:40px; }
+  .section { margin:44px 48px 0; }
+  .sec-head { display:flex; align-items:center; gap:18px; margin-bottom:22px; }
+  .num { width:64px; height:64px; border-radius:50%; background:linear-gradient(135deg,#c1272d,#8e0e0e); color:#f5d76e; font-size:36px; font-weight:900; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .sec-head h2 { font-size:40px; font-weight:900; color:#8e0e0e; letter-spacing:2px; }
+  .card { background:#fff; border-radius:14px; padding:30px 36px; margin-bottom:20px; box-shadow:0 3px 14px rgba(0,0,0,.06); border-left:8px solid #c1272d; }
+  .card h3 { font-size:32px; font-weight:800; color:#222; margin-bottom:12px; }
+  .card h3 .tag { display:inline-block; background:#c1272d; color:#fff; font-size:22px; padding:4px 14px; border-radius:20px; margin-left:12px; vertical-align:middle; font-weight:700;}
+  .card ul { list-style:none; }
+  .card li { font-size:27px; line-height:1.75; color:#444; padding-left:30px; position:relative; margin-bottom:6px; }
+  .card li::before { content:"▸"; position:absolute; left:0; color:#d4a017; font-weight:900; }
+  .chips { display:flex; flex-wrap:wrap; gap:12px; margin-top:14px; }
+  .chips span { background:#fdeeda; border:1.5px solid #d4a017; color:#7a4a00; font-size:25px; font-weight:700; padding:8px 20px; border-radius:30px; }
+  .warn { background:#fff7f7; border:2px dashed #c1272d; border-radius:14px; padding:28px 36px; margin:0 48px; }
+  .warn h3 { font-size:32px; color:#8e0e0e; font-weight:800; margin-bottom:12px; }
+  .warn li { font-size:27px; line-height:1.8; color:#555; list-style:none; padding-left:30px; position:relative;}
+  .warn li::before { content:"✕"; position:absolute; left:0; color:#c1272d; font-weight:900; }
+  .footer { margin:48px 48px 0; padding:30px; text-align:center; font-size:24px; color:#999; }
+  .bottom-bar { height:56px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="kicker">图说</div>
+  <h1>中共中央 国务院<br>关于发展新质生产力的意见</h1>
+  <div class="sub">新华社北京10月9日电 · 受权发布</div>
+</div>
+
+<div class="core">
+  <div class="label">总体要求 · 核心标志</div>
+  <div class="big">全要素生产率大幅提升</div>
+  <p>以科技创新为引领，推动技术革命性突破、生产要素创新性配置、产业深度转型升级。全方位推进科技创新、产业创新、发展方式创新、体制机制创新、人才工作机制创新。</p>
+  <div class="principles">
+    <span>创新主导</span><span>改革为要</span><span>因地制宜</span><span>先立后破</span>
+    <span>高技术</span><span>高效能</span><span>高质量</span>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-head"><div class="num">1</div><h2>大力推进科技创新</h2></div>
+  <div class="card"><h3>原创性颠覆性创新</h3>
+    <ul><li>坚持"四个面向"，聚焦战略性、标志性、引领性产品组织重大科技项目</li>
+    <li>目标导向与自由探索并重，实施基础学科和交叉学科突破计划</li></ul></div>
+  <div class="card"><h3>突破关键核心技术</h3>
+    <ul><li>发挥新型举国体制优势，组织制造业重点产业链高质量发展行动</li>
+    <li>落实首台（套）、首批次应用政策，促进技术迭代升级</li></ul></div>
+  <div class="card"><h3>强化企业创新主体地位<span class="tag">亮点</span></h3>
+    <ul><li>建立企业研发准备金制度，提高研发费用加计扣除比例</li>
+    <li>支持有能力的民营企业牵头承担国家重大技术攻关任务</li></ul></div>
+  <div class="card"><h3>加速成果转化</h3>
+    <ul><li>新技术新产品新场景大规模应用示范；布局概念验证、中试验证平台</li>
+    <li>高校院所按"先使用后付费"把成果许可给中小微企业；以AI引领科研范式变革</li></ul></div>
+</div>
+
+<div class="section">
+  <div class="sec-head"><div class="num">2</div><h2>科技创新和产业创新深度融合</h2></div>
+  <div class="card"><h3>改造提升传统产业</h3>
+    <ul><li>以数智技术、绿色技术改造传统产业，发展智能制造、绿色制造</li>
+    <li>实施大规模设备更新工程，守牢实体经济根基</li></ul></div>
+  <div class="card"><h3>培育壮大新兴产业</h3>
+    <div class="chips"><span>新一代信息技术</span><span>新能源</span><span>新材料</span><span>智能网联新能源汽车</span><span>机器人</span><span>生物医药</span><span>高端装备</span><span>航空航天</span></div>
+    <ul><li style="margin-top:12px">低空经济、商业航天在确保安全前提下健康有序发展；避免"内卷式"竞争</li></ul></div>
+  <div class="card"><h3>前瞻布局未来产业<span class="tag">亮点</span></h3>
+    <div class="chips"><span>量子科技</span><span>生物制造</span><span>氢能和核聚变能</span><span>脑机接口</span><span>具身智能</span><span>第六代移动通信</span></div></div>
+  <div class="card"><h3>数字经济深度融合</h3>
+    <ul><li>健全数据产权、交易、分配制度；实施"东数西算"工程</li>
+    <li>建设全国一体化算力网、国家区块链网络</li></ul></div>
+  <div class="card"><h3>全面实施"人工智能+"行动<span class="tag">亮点</span></h3>
+    <ul><li>推进AI改造传统产业，加快智能网联新能源汽车、AI手机电脑、人形机器人等智能终端应用</li>
+    <li>强化算力、算法、数据高效供给；构建AI安全监测预警应急体系</li></ul></div>
+</div>
+
+<div class="section">
+  <div class="sec-head"><div class="num">3</div><h2>推进发展方式创新</h2></div>
+  <div class="card"><h3>绿色低碳循环体系</h3>
+    <ul><li>做强绿色制造业、壮大绿色能源产业，建设一批零碳工厂和园区</li></ul></div>
+  <div class="card"><h3>碳市场与碳定价</h3>
+    <ul><li>全面实施碳排放总量和强度双控制度；扩大全国碳排放权交易市场覆盖范围</li>
+    <li>完善全国统一绿证市场，发展绿色金融</li></ul></div>
+  <div class="card"><h3>积极推进能源革命</h3>
+    <ul><li>有序发展先进核裂变能，构建高比例可再生能源电力系统</li></ul></div>
+</div>
+
+<div class="section">
+  <div class="sec-head"><div class="num">4</div><h2>推进体制机制创新</h2></div>
+  <div class="card"><h3>加大金融创新产品供给<span class="tag">亮点</span></h3>
+    <ul><li>壮大耐心资本：完善长期资本投早、投小、投长期、投硬科技的支持政策</li>
+    <li>鼓励规范发展天使投资、风险投资、私募股权投资；丰富科技创新债券；支持优质科技型企业上市融资</li></ul></div>
+  <div class="card"><h3>科技与经济紧密结合</h3>
+    <ul><li>深化职务科技成果赋权改革；建设全国一体化数据市场</li></ul></div>
+  <div class="card"><h3>完善市场监管</h3>
+    <ul><li>加强人工智能、生物等领域治理；探索"用数据决策、用数据管理"监管模式</li></ul></div>
+  <div class="card"><h3>全球配置先进生产要素</h3>
+    <ul><li>扩大高水平对外开放；建立高效便利安全的数据跨境流动机制</li></ul></div>
+</div>
+
+<div class="section">
+  <div class="sec-head"><div class="num">5</div><h2>深化人才工作机制创新</h2></div>
+  <div class="card"><h3>培养急需人才</h3>
+    <ul><li>发展新型研究型大学，优化学科专业设置；全面推进工学一体化技能人才培养</li></ul></div>
+  <div class="card"><h3>健全使用和流动政策<span class="tag">亮点</span></h3>
+    <ul><li>科研人员考核评价与报项目、发论文、评奖励适度脱钩，防止简单按"帽子"定薪酬职称待遇</li>
+    <li>健全"新八级工"职业技能等级制度，畅通产业工人上升通道</li></ul></div>
+</div>
+
+<div class="section">
+  <div class="sec-head"><div class="num">6</div><h2>加强组织实施</h2></div>
+</div>
+<div class="warn">
+  <h3>三条红线</h3>
+  <ul>
+    <li>不能脱实向虚、贪大求全、搞泡沫化</li>
+    <li>不能出现产业空心化或产业断层现象</li>
+    <li>不能盲目求新、顾此失彼</li>
+  </ul>
+  <h3 style="margin-top:16px">追责</h3>
+  <ul>
+    <li style="list-style:none">严禁借发展新质生产力之名违规滥用政策，对一哄而上、盲目投资造成重大损失的严肃追究责任</li>
+  </ul>
+</div>
+
+<div class="footer">资料来源：新华社受权发布（2026年10月9日）· 内容为要点提炼，原文以官方发布为准</div>
+<div class="bottom-bar"></div>
+
+</body>
+</html>
