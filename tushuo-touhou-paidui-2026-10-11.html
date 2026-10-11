@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>图说 | 投后派对：30分钟决定投资，十年退不出来</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif;background:#f2f6f9;color:#1e293b;max-width:760px;margin:0 auto;padding:0 0 60px;font-size:16px;line-height:1.75}
+.toolbar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid #e2e8f0}
+.toolbar-inner{max-width:760px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px}
+.brand{font-size:12px;font-weight:700;letter-spacing:2px;color:#0d9488;text-decoration:none;white-space:nowrap}
+.tools{display:flex;gap:8px}
+.tools button{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:5px 11px;font-size:12px;color:#475569;cursor:pointer}
+.tools button:hover{background:#f0fdfa;border-color:#0d9488}
+.tools button.off{background:#0d9488;color:#fff;border-color:#0d9488}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;background:#0d9488;width:0;transition:width .1s linear}
+.hero{background:linear-gradient(165deg,#dff3ef 0%,#eef6f4 55%,#f2f6f9 100%);padding:48px 26px 36px;text-align:center;border-bottom:3px solid #0d9488}
+.kicker{display:inline-block;border:1.5px solid #0d9488;color:#0d9488;font-size:14px;letter-spacing:8px;padding:7px 16px 7px 24px;border-radius:8px;margin-bottom:20px;font-weight:700;background:rgba(255,255,255,.6)}
+.hero h1{font-size:25px;line-height:1.5;font-weight:900;margin-bottom:12px;color:#123f3a}
+.hero .lead{font-size:14.5px;color:#5b6b7c;line-height:1.8;margin-bottom:18px}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;border-top:1px solid rgba(13,148,136,.25);padding-top:16px;text-align:left}
+.meta div{font-size:13px;color:#475569;line-height:1.7}
+.meta b{display:block;font-size:11px;color:#0d9488;font-weight:700;letter-spacing:2px;margin-bottom:2px}
+.evidence{margin:18px 16px 0;border-top:2px solid #0d9488;border-bottom:2px solid #0d9488;padding:14px 4px;font-size:12.5px;line-height:1.9;color:#5b6b7c;background:#f0fdfa;border-radius:4px}
+.evidence strong{color:#0d9488}
+.tag{display:inline-block;font-size:11px;padding:1px 8px;border-radius:6px;margin-left:6px;vertical-align:2px;letter-spacing:1px}
+.tag.zs{background:#eef2f5;color:#64748b}
+.tag.yj{background:#fffbeb;color:#b45309;border:1px solid #fde68a}
+.contents{display:flex;gap:8px 18px;flex-wrap:wrap;padding:16px;font-size:12.5px;border-bottom:1px solid #e2e8f0;background:#fff}
+.contents a{color:#5b6b7c;text-decoration:none}
+.contents a span{color:#0d9488;margin-right:5px;font-family:Georgia,serif;font-weight:700}
+.sec{margin:28px 16px 0;scroll-margin-top:70px}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+.num{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#0d9488,#0f766e);color:#fff;font-size:19px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:Georgia,serif}
+.sec-head h2{font-size:20px;font-weight:800;color:#123f3a}
+.sec-sub{font-size:13px;color:#7d8ba0;margin:0 0 14px 50px}
+.card{background:#fff;border-radius:14px;padding:16px 18px;margin-bottom:12px;border:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(15,118,110,.06)}
+.card .t{font-size:16px;font-weight:700;color:#0d9488;margin-bottom:8px}
+.card ul{list-style:none}
+.card li{font-size:14.5px;line-height:1.85;color:#3f4c5e;padding-left:20px;position:relative;margin-bottom:4px}
+.card li::before{content:"▸";position:absolute;left:0;color:#0d9488;font-weight:700}
+.card li b{color:#1e293b}
+.hl{background:#f0fdfa;border:1.5px dashed #0d9488;border-radius:14px;padding:16px 18px;margin-bottom:12px;font-size:14.5px;line-height:1.9;color:#123f3a}
+.hl b{color:#0d9488}
+.yjbox{background:#fffbeb;border-left:4px solid #f59e0b;border-radius:0 14px 14px 0;padding:16px 18px;margin-bottom:12px;font-size:14px;line-height:1.9;color:#854d0e}
+.yjbox .t{font-size:13px;font-weight:800;color:#b45309;margin-bottom:6px;letter-spacing:1px}
+.yjbox.hidden{display:none}
+.warn{background:#fffbeb;border:1.5px dashed #eab308;border-radius:14px;padding:16px 18px;margin-bottom:12px;font-size:14px;line-height:1.9;color:#854d0e}
+.warn b{color:#b45309}
+.group-t{font-size:14px;font-weight:800;color:#123f3a;margin:16px 2px 10px;letter-spacing:1px}
+.group-t::before{content:"";display:inline-block;width:4px;height:14px;background:#0d9488;border-radius:2px;margin-right:8px;vertical-align:-1px}
+.tbl-wrap{overflow-x:auto;background:#fff;border:1px solid #e2e8f0;border-radius:14px;box-shadow:0 1px 4px rgba(15,118,110,.06);margin-bottom:12px}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:13px}
+th{background:#f0fdfa;color:#0d9488;font-weight:700;padding:10px 12px;text-align:left;white-space:nowrap;border-bottom:2px solid #99e4dc}
+td{padding:10px 12px;border-bottom:1px solid #eef2f5;color:#3f4c5e;vertical-align:top;line-height:1.7}
+tr:last-child td{border-bottom:none}
+td:first-child{font-weight:700;color:#1e293b;white-space:nowrap;background:#f8fafc}
+.quote{border-left:4px solid #5eead4;background:#fff;border-radius:0 14px 14px 0;padding:16px 18px;margin-bottom:12px;box-shadow:0 1px 4px rgba(15,118,110,.06)}
+.quote p{font-size:16px;font-weight:700;color:#123f3a;line-height:1.8;margin-bottom:6px}
+.quote small{font-size:12px;color:#7d8ba0}
+.nums{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.numcard{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:16px;box-shadow:0 1px 4px rgba(15,118,110,.06)}
+.numcard .v{font-size:26px;font-weight:900;color:#0d9488;line-height:1.3;margin-bottom:4px}
+.numcard .d{font-size:12.5px;color:#5b6b7c;line-height:1.7}
+.numcard .s{font-size:11px;color:#94a3b8;margin-top:6px}
+.checklist{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:16px 18px;margin-bottom:12px;box-shadow:0 1px 4px rgba(15,118,110,.06)}
+.checklist .t{font-size:14px;font-weight:800;color:#123f3a;margin-bottom:10px}
+.checklist label{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#3f4c5e;line-height:1.8;padding:8px 0;border-bottom:1px dashed #eef2f5;cursor:pointer}
+.checklist label:last-child{border-bottom:none}
+.checklist input{margin-top:6px;accent-color:#0d9488;width:16px;height:16px;flex:none}
+.checklist input:checked+span{text-decoration:line-through;color:#94a3b8}
+.cprog{height:8px;background:#eef2f5;border-radius:4px;margin:10px 0 4px;overflow:hidden}
+.cprog i{display:block;height:100%;background:linear-gradient(90deg,#0d9488,#14b8a6);width:0;transition:width .3s}
+.ctext{font-size:12px;color:#7d8ba0}
+.cbtn{margin-top:10px;border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:5px 12px;font-size:12px;color:#64748b;cursor:pointer}
+.srcs{font-size:13px;line-height:2;color:#5b6b7c}
+.srcs ol{padding-left:20px}
+.srcs small{display:block;font-size:11.5px;color:#94a3b8;line-height:1.8;margin-top:2px}
+.footer{margin:26px 16px 0;text-align:center;font-size:12px;color:#94a3b8;line-height:2}
+.price-note{font-size:12px;color:#7d8ba0;line-height:1.8;margin:8px 2px 0}
+@media (max-width:480px){.meta{grid-template-columns:1fr}.nums{grid-template-columns:1fr}}
+@media print{body{background:#fff}.toolbar,.contents{display:none}.card,.quote,.numcard,.checklist{box-shadow:none}}
+</style>
+</head>
+<body>
+<header class="toolbar"><div class="toolbar-inner"><a class="brand" href="#top">图说 · 投后派对</a><div class="tools"><button id="toggleYj" type="button">收起延伸解读</button><button id="print" type="button">打印 / PDF</button></div></div><div id="progress" class="progress"></div></header>
+<main id="top">
+
+<div class="hero">
+<div class="kicker">图 说 · 一 级 市 场</div>
+<h1>投后派对：30 分钟决定投资<br>投后可能十年都退不出来</h1>
+<div class="lead">一位投后管理负责人的吐槽长文：前台负责造神，投后负责验尸。从 AI、具身智能、新能源、光伏、半导体到自动驾驶，复盘一级市场这轮"明星项目"是怎么变成坏账的。</div>
+<div class="meta">
+<div><b>原 作 者</b>乔纳森（某机构投后管理负责人）</div>
+<div><b>原 标 题</b>投后派对</div>
+<div><b>文 章 来 源</b>微信公众号文章</div>
+<div><b>图说日期</b>2026 年 10 月 11 日</div>
+</div>
+</div>
+
+<div class="evidence"><strong>来源边界：</strong><br>① 全文 7740 字已完整读取；以下为<b>观点转述</b><span class="tag zs">转述</span>，非逐字稿，个别长句有压缩。<br>② 文中案例与数字均<b>据原文转述，未经独立核实</b>；作者原话"如有雷同纯属巧合"，部分机构名原文即用"某杉""某G"代称。<br>③ <span class="tag yj">延伸解读</span>为图说编辑所加，可被顶部按钮一键收起，绝不冒充原话。</div>
+
+<nav class="contents"><a href="#c1"><span>01</span>30分钟 vs 十年</a><a href="#c2"><span>02</span>估值模型先跑通</a><a href="#c3"><span>03</span>三个铁律</a><a href="#c4"><span>04</span>AI死亡公墓</a><a href="#c5"><span>05</span>具身智能</a><a href="#c6"><span>06</span>新能源</a><a href="#c7"><span>07</span>光伏</a><a href="#c8"><span>08</span>半导体/消费电子</a><a href="#c9"><span>09</span>自动驾驶</a><a href="#c10"><span>10</span>免尽调金牌</a><a href="#c11"><span>11</span>退出照妖镜</a><a href="#c12"><span>12</span>四个警示</a><a href="#jq"><span>★</span>金句</a><a href="#num"><span>#</span>关键数字</a><a href="#act"><span>✓</span>行动清单</a><a href="#cs">来源</a></nav>
+
+<div class="sec" id="c1"><div class="sec-head"><div class="num">1</div><h2>30 分钟 vs 十年<span class="tag zs">转述</span></h2></div><div class="sec-sub">前台负责造神，投后负责验尸</div>
+<div class="card"><div class="t">开场：两个时间尺度</div><ul>
+<li>某知名机构合伙人在圆桌论坛提到：投一家 2001 年出生的清华在读博士的创业项目（给具身智能提供物理交互数据的公司），<b>只用 30 分钟就决定投资</b>。</li>
+<li>作者手里拿着回购仲裁文件和某企业破产清算文件："30 分钟，够我喝杯咖啡，不够我写完一份投资建议书，也不够看完一份 DD 报告。"</li>
+<li>而他经手的项目，"可能要等十年也退不出一家曾经的明星企业"。</li>
+</ul></div>
+<div class="hl"><b>核心判断：</b>前台在投决会上讲一个性感故事只要 30 分钟；投后要把这个故事拆成一堆坏账，需要十年。</div>
+</div>
+
+<div class="sec" id="c2"><div class="sec-head"><div class="num">2</div><h2>世界模型没跑通，估值模型先跑通了<span class="tag zs">转述</span></h2></div><div class="sec-sub">FA 话术 vs 风控五问</div>
+<div class="card"><div class="t">FA 在群里的话术</div><ul>
+<li>AI 世界模型稀缺标的，创始人清华姚班 + 斯坦福博士 + NeurIPS 最佳论文</li>
+<li>估值半年翻五倍，某杉、某 G 领投，机构都在抢份额，再不签约就没额度了</li>
+</ul></div>
+<div class="card"><div class="t">投决会现场</div><ul>
+<li>投资经理：创始人年轻有激情，知名机构加持，建议投。</li>
+<li>风控总监连问五个问题：<b>系统稳定吗？训练成本多少？有多少真实客户？收入是订阅还是项目制？退出路径是什么？</b></li>
+<li>主管合伙人："细节等投资以后再说，先锁定份额。"于是 TS 签了，单独尽调也不要了。</li>
+</ul></div>
+<div class="warn"><b>五年后：</b>项目躺在 Portfolio 表格里——上市困难、触发回购、创始人被限高、服务器欠费、客户没了、员工裁撤。负责的投资人可能已离职，剩下投后收拾烂摊子。</div>
+</div>
+
+<div class="sec" id="c3"><div class="sec-head"><div class="num">3</div><h2>三个铁律<span class="tag zs">转述</span></h2></div><div class="sec-sub">被资本寒冬和 DPI 教育出来的烙印</div>
+<div class="card"><ul>
+<li><b>技术领先 ≠ 产品领先。</b>AI 模型参数短期领先，不意味着系统稳定、成本可控、有市场、用户愿意买。</li>
+<li><b>产品领先 ≠ 商业逻辑跑通。</b>人形机器人运动控制很酷炫，但实际销售场景还在科研、表演、娱乐。</li>
+<li><b>知名机构投资 ≠ 企业能顺利退出。</b>股权融资是资源配置行为，不是诺贝尔奖，更不是客户验收报告。退出看的是实打实的回款（DPI）。</li>
+</ul></div>
+<div class="hl"><b>技术链条：</b>论文 → 专利 → 样机 → 小试 → 中试 → 量产 → 客户付费 → 复购，每一跳死亡率都高得惊人。很多项目死在"中试"和"客户预算"之间，创始人还在讲"技术国际领先"——但在客户采购流程里，领先排在"便宜、稳定、关系好、能开票"后面。</div>
+</div>
+
+<div class="sec" id="c4"><div class="sec-head"><div class="num">4</div><h2>AI 死亡公墓<span class="tag zs">转述</span></h2></div><div class="sec-sub">675 家，寿命中位数 5.3 年</div>
+<div class="card"><div class="t">IT 桔子数据库（2012–2025）</div><ul>
+<li>675 家 AI 公司进入"死亡公司公墓"；倒闭潮从 2019 年显著增长，2021–2024 维持高位</li>
+<li>倒下的公司大多创立于 2015–2018 年，<b>寿命中位数只有 5.3 年</b></li>
+</ul></div>
+<div class="card"><div class="t">Builder.ai：AI 界最大骗局</div><ul>
+<li>英国 AI 独角兽，估值 16 亿美元，投资方：微软、软银、卡塔尔投资局</li>
+<li>真相：根本没有大模型，用户需求直接传到印度让外包写代码；<b>财务虚报营收高达 300%</b>，骗局持续八年才败露</li>
+<li>软银愿景二期、淡马锡、Peak XV 全在名单里，没有一家顶级机构顺利脱身</li>
+</ul></div>
+<div class="card"><div class="t">Argo AI：36 亿美元烧光</div><ul>
+<li>福特 2017 年投 10 亿美元，大众 2020 年再投约 26 亿美元，赌 Robotaxi 改变城市出行</li>
+<li>2022 年底烧光所有投资人的钱，宣告破产</li>
+</ul></div>
+<div class="card"><div class="t">毫末智行：2025 年 11 月停摆</div><ul>
+<li>长城孵化 + 某瓴创投 + 某钢基金 + 美团，估值一度超 10 亿美元</li>
+<li>资金链断裂、技术路线转型迟缓、内部矛盾，被曝全面停摆、员工停工放假，管理层和投资人集体沉默</li>
+<li>作者讽刺：把股东关系当成客户关系、把孵化背景当成商业合同，是"投资幼稚妄想症"</li>
+</ul></div>
+</div>
+
+<div class="sec" id="c5"><div class="sec-head"><div class="num">5</div><h2>具身智能：估值 200 亿，七个月营收 140 万<span class="tag zs">转述</span></h2></div><div class="sec-sub">2026 上半年全球人形机器人融资 117 亿美元，同比 +129%</div>
+<div class="card"><div class="t">达闼科技：60:1 的烧钱比</div><ul>
+<li>估值 223 亿元，投资方：软银、上海国盛、珠海国资，累计融资超 54 亿元，中国机器人独角兽估值前列</li>
+<li>2025 年前七个月：<b>营收 140 万元，净亏损 8425 万元</b>——烧钱和收入比约 60:1</li>
+<li>结局：总部退楼、分公司关门、创始人成失信被执行人被限高</li>
+</ul></div>
+<div class="card"><div class="t">另外两家</div><ul>
+<li><b>K-Scale Labs</b>（硅谷）：前 Meta、特斯拉工程师创立，不到一年三轮融资、估值 5000 万美元，拿超 200 万美元预购订单，OpenAI、NVIDIA 工程师都来参观；后续融资不及预期，2025 年 11 月解散</li>
+<li><b>一星机器人</b>：吉利创始人李书福之子李星星发起，联合复旦、清华教授团队，成立四个月完成两轮融资；从高调成立到悄然解散，<b>不到半年</b></li>
+</ul></div>
+<div class="yjbox"><div class="t">延伸解读</div>作者的潜台词：教授光环和豪华研发阵容解决不了"中试车间"问题。具身智能的估值叙事（摩根士丹利预测 2050 年 TAM 7.5 万亿美元、存量 10 亿台）是 25 年后的贴现，而工资和房租是这个月就要付的。</div>
+</div>
+
+<div class="sec" id="c6"><div class="sec-head"><div class="num">6</div><h2>新能源汽车：从月销 3 万到一辆卖不出去<span class="tag zs">转述</span></h2></div><div class="sec-sub">当年抢得最凶的赛道，现在是投后最头疼的 Portfolio</div>
+<div class="card"><div class="t">哪吒汽车</div><ul>
+<li>2022 年销量近 10 万辆高光，月销曾破 3 万；2024 年跌到 6.45 万辆，<b>2025 年 1 月单月仅 110 辆</b></li>
+<li>2017 年起 10 轮融资 228.44 亿元，几乎全部烧光；2025 年 6 月启动破产重整，全系停售</li>
+<li>作者问前台："算过单车毛利吗？每卖一辆亏多少？"前台："新势力前期都亏，看规模效应。"作者：<b>如果每卖一辆都在扩大亏损，那不叫规模效应，叫规模灾难</b></li>
+</ul></div>
+<div class="card"><div class="t">倒下的名单</div><ul>
+<li><b>合创汽车</b>：烧光 30 亿只卖出 4 万台，2025 年倒下的首家新势力</li>
+<li><b>威马</b>：三次冲击 IPO 未果，2023 年 10 月申请破产重整</li>
+<li><b>高合、极越</b>紧随其后</li>
+<li><b>恒大汽车</b>：2024 上半年净亏 202.56 亿元，累计交付超 1429 辆，天津基地被法院受理破产清算</li>
+</ul></div>
+</div>
+
+<div class="sec" id="c7"><div class="sec-head"><div class="num">7</div><h2>光伏：最风光的赛道，2 年超 150 家破产<span class="tag zs">转述</span></h2></div><div class="sec-sub">作者称为"最惨烈的赛道，没有之一"</div>
+<div class="card"><ul>
+<li>2024 年以来超 150 家光伏企业申请破产或清算；2025 年上半年全国光伏相关企业<b>注销 5089 家</b></li>
+<li>光伏全产业链两年亏超 <b>1000 亿元</b></li>
+<li>龙头隆基绿能：员工从 2023 年末 7.5 万人骤降至 2025 年末 3.2 万人，两年裁员超 4.2 万人，降幅 56.3%</li>
+<li>当年有企业让投资人"写小作文"才能拿到投资额度</li>
+</ul></div>
+<div class="hl"><b>作者的反问：</b>"长期需求增长确定，和你在行业高点以高估值投进去能不能实现退出，是两个完全不同的问题。"</div>
+</div>
+
+<div class="sec" id="c8"><div class="sec-head"><div class="num">8</div><h2>半导体、消费电子：最贵的尽调盲区<span class="tag zs">转述</span></h2></div><div class="sec-sub">技术全球领先，不等于客户全球买单</div>
+<div class="card"><div class="t">Wolfspeed：碳化硅龙头归零</div><ul>
+<li>2021 年市值一度 165 亿美元；耗资数十亿美元建 200 毫米晶圆厂，产能利用率仅 20%</li>
+<li>背负 65 亿美元债务走向破产，债权人接管公司，<b>股权投资人排在清偿最后——股权清零</b></li>
+</ul></div>
+<div class="card"><div class="t">Untether AI：被英伟达碾压</div><ul>
+<li>加拿大 AI 芯片公司，累计融资 1.52 亿美元，投资方包括通用汽车创投、加拿大养老金计划投资局</li>
+<li>英伟达的碾压式主导让融资全面失败，被 AMD"人才收购"后申请破产；投资人从股东变成破产法庭上的无担保债权人</li>
+</ul></div>
+<div class="card"><div class="t">柔宇科技：投后部门的"教材"</div><ul>
+<li>创始人刘自鸿：清华本科 + 斯坦福博士；2012–2020 年股权融资约 61.5 亿元、债权约 29 亿元，估值最高 60 亿美元</li>
+<li>投资方：深创投、松禾资本、中信资本、IDG、工银投资、越秀产业基金</li>
+<li>售价高昂、软件适配不足，2024 年 11 月深圳中院裁定破产；无形资产起拍 539 万元一路腰斩至 9.71 万元仍无人问津</li>
+</ul></div>
+</div>
+
+<div class="sec" id="c9"><div class="sec-head"><div class="num">9</div><h2>自动驾驶：900 亿融资跌到 200 亿<span class="tag zs">转述</span></h2></div><div class="sec-sub">七年超 40 家产业链企业退出市场</div>
+<div class="card"><ul>
+<li>2021–2022 年赛道融资一度超 900 亿元；2025 年全年骤降至 200 亿元，<b>跌幅 78%</b></li>
+<li>七年超 40 家自动驾驶产业链企业退出市场；2025 年一年裁员、倒闭、退市超 10 家</li>
+<li><b>纵目科技</b>：估值曾破 90 亿元，累计融资超 22 亿元，2021–2023 累计亏损超 15 亿元，三次 IPO 失败；华为接管问界泊车方案后市场份额腰斩，2025 年 4 月法院受理破产，创始人被传"跑路失联"</li>
+<li><b>清研微视</b>：清华系独角兽，估值曾 90 亿元；破产清算时名下仅剩 90.38 万元存款及三辆小汽车，申报债权超 1.38 亿元</li>
+<li><b>中智行</b>：前百度高级副总裁王劲（"中国自动驾驶第一人"）创办；2025 年因无力支付一笔 1.5 万元劳动仲裁款，被裁定破产清算——<b>1.5 万元把一家明星公司送上破产法庭</b></li>
+</ul></div>
+<div class="hl"><b>作者质问：</b>各家投资机构，敢打开你们在自动驾驶赛道的真实回报模型吗？</div>
+</div>
+
+<div class="sec" id="c10"><div class="sec-head"><div class="num">10</div><h2>三个最贵的免尽调金牌<span class="tag zs">转述</span></h2></div><div class="sec-sub">暴雷项目的决策逻辑惊人一致：不是因为尽调扎实</div>
+<div class="card"><ul>
+<li><b>名校小天才。</b>清北、常春藤、奥赛金牌、Nature 一作，最好 00 后——标签往 BP 首页一放，估值自动上浮 30%。但 CEO 要干的事和搞科研是两回事：刘自鸿清华本科 + 斯坦福博士，柔宇还是破产了；"中国自动驾驶第一人"王劲，公司因 1.5 万元欠薪倒下。</li>
+<li><b>顶刊论文。</b>论文数量 ≠ 产业实战经验。科研再领先，客户不付钱，充其量是个放大版的实验室。</li>
+<li><b>顶级机构背书。</b>"红 X 投了""X 瓴投了""福特大众都投了"——在投决会上的杀伤力比任何财务模型都管用。但 Argo AI、Wolfspeed 哪个不是豪华股东阵容？<b>顶级机构背书不是防弹衣，更可能是麻醉剂。</b></li>
+</ul></div>
+<div class="card"><div class="t">连 DeepSeek 也要算账</div><ul>
+<li>假设 2026 年第二轮融资估值 5000 亿元，上市后市值 1.5–2.5 万亿元，考虑稀释，回报也就 2–3 倍</li>
+<li>148 倍 PS，估值逻辑能撑多久？70% 以上算力用于训练，推理扩张后成本怎么走？</li>
+<li>腾讯、宁德时代等战略投资人有资源协同；财务投资人连直接股东签字权都拿不到，更别说条款谈判</li>
+</ul></div>
+<div class="hl"><b>结论：</b>明星企业不是不能投，而是不能因为"知名机构已投"就省略自己的尽调、退出收益测算和独立判断。</div>
+</div>
+
+<div class="sec" id="c11"><div class="sec-head"><div class="num">11</div><h2>退出才是投后的照妖镜<span class="tag zs">转述</span></h2></div><div class="sec-sub">投资是艺术，退出是数学</div>
+<div class="card"><ul>
+<li>A 股"真实"过会率仅 <b>45.3%</b>，港股新股破发率回升至 <b>45%</b>；过去一年半 IPO 的 23 家港股公司，13 家已跌破发行价（近 60%）</li>
+<li>很多成立九年以上的基金，TVPI 还在涨，<b>DPI 可以忽略不计</b>；多只自动驾驶基金 DPI 趋近于零</li>
+<li>59% 的硬科技项目退出回报集中在 1–3 倍</li>
+</ul></div>
+<div class="card"><div class="t">庆功宴上的灵魂暴击</div><ul>
+<li>某明星科技企业港股 IPO，前台庆功宴上喝得酩酊大醉："终于退了。"结果锁定期还没过，股价跌了 55%</li>
+<li>LP："什么时候能减持？"GP："按目前价格减持，连本金都回不来。"LP 沉默三秒："那你们当初为什么投？"</li>
+<li>为什么投？创始人海外名校毕业 / 赛道天花板足够高 / 顶级机构都已参与——每个理由单独看都有道理，合在一起掩盖了一个致命问题：<b>没有人认真算过退出路径和 DPI</b></li>
+</ul></div>
+</div>
+
+<div class="sec" id="c12"><div class="sec-head"><div class="num">12</div><h2>投后给前台的四个警示<span class="tag zs">转述</span></h2></div><div class="sec-sub">别把后续融资当验收</div>
+<div class="card"><ul>
+<li><b>后续轮次融资 ≠ 验收。</b>融资是好事，但不等于突破技术里程碑，估值更不等于商业价值。人形机器人上游企业一年估值从 4 亿拉到 200 亿，不等于解决了大脑泛化问题。</li>
+<li><b>投后管理要从投前开始，而不是从暴雷开始。</b>核心职责不是"救火"，而是在投决阶段就介入：对退出路径、并购可能、回购条款可执行性、创始人连带担保能力做压力测试。如果投后在投决会上只能旁听不能发言，风控机制就是摆设——<b>承担退出压力的是投后，不是前台</b>。</li>
+<li><b>对"明星企业"建专门预警机制。</b>融资轮次越多、估值涨越快、投资人名单越豪华，越要警惕。不是没人发现异常，是没人愿意在"顶级机构都在"的氛围里当戳破泡沫的人。</li>
+<li><b>把 DPI 考核前置到投资决策环节。</b>很多投资经理只对"投出去"负责，不对"退出来"负责，这是激励错位。签字之前先和投后一起算清楚：五年后谁会买？什么估值？IPO 还是并购？上市后能顺利减持吗？回购的话对方有回购能力吗？</li>
+</ul></div>
+<div class="yjbox"><div class="t">延伸解读</div>这四个警示本质上是一个：把"退出"从投后的 KPI 变成投前的门槛。VC 行业最大的代理问题就是前台拿募资和管理费讲故事，投后拿 DPI 收尸——激励不对齐，尽调再厚也没用。</div>
+<div class="hl"><b>作者结语：</b>估值泡沫是资本对未来的贴现，不是市场对现在的确认。当行业把"融资能力"等同于"技术能力"、把"估值增长"等同于"企业价值"、把"顶级机构名单"等同于"尽调通过"，泡沫就不是某家公司的问题，而是整个一级市场的系统性定价失灵。<br><br>永远不要把融资成功误认为创业成功。</div>
+</div>
+
+<div class="sec" id="jq"><div class="sec-head"><div class="num">★</div><h2>金句区</h2></div><div class="sec-sub">原话转述，压缩自原文</div>
+<div class="quote"><p>"你们负责造神，我负责验尸。"</p><small>原话·转述 —— 开篇点题，前台与投后的分工</small></div>
+<div class="quote"><p>"30 分钟，够我喝杯咖啡，不够我写完一份投资建议书，也不够看完一份 DD 报告。"</p><small>原话·转述 —— 对 30 分钟投清华博士项目的回应</small></div>
+<div class="quote"><p>"技术领先 ≠ 产品领先 ≠ 商业逻辑跑通；知名机构投资 ≠ 企业能顺利退出。"</p><small>原话·转述 —— 三个铁律</small></div>
+<div class="quote"><p>"顶级机构背书并不是防弹衣，更可能是麻醉剂。"</p><small>原话·转述 —— 三个免尽调金牌</small></div>
+<div class="quote"><p>"投资是艺术，退出是数学。估值也许会冲到很高，DPI 不会陪你演文艺片。"</p><small>原话·转述 —— 退出才是照妖镜</small></div>
+<div class="quote"><p>"估值泡沫是资本对未来的贴现，不是市场对现在的确认。"</p><small>原话·转述 —— 结语</small></div>
+<div class="quote"><p>"永远不要把融资成功误认为创业成功。"</p><small>原话·转述 —— 结语收束</small></div>
+</div>
+
+<div class="sec" id="num"><div class="sec-head"><div class="num">#</div><h2>关键数字</h2></div><div class="sec-sub">均据原文转述，未经独立核实</div>
+<div class="nums">
+<div class="numcard"><div class="v">675 家</div><div class="d">2012–2025 年进入"死亡公司公墓"的 AI 公司数，寿命中位数仅 5.3 年</div><div class="s">来源：IT 桔子数据库（据原文转述）</div></div>
+<div class="numcard"><div class="v">60 : 1</div><div class="d">达闼科技烧钱收入比：估值 223 亿元，7 个月营收 140 万、净亏 8425 万</div><div class="s">来源：原文转述</div></div>
+<div class="numcard"><div class="v">228 亿</div><div class="d">哪吒汽车 10 轮融资总额，几乎烧光；月销从 3 万跌到 110 辆后破产重整</div><div class="s">来源：原文转述</div></div>
+<div class="numcard"><div class="v">150+ 家</div><div class="d">2024 年以来申请破产/清算的光伏企业；2025 上半年注销 5089 家，全产业链两年亏超 1000 亿</div><div class="s">来源：原文转述</div></div>
+<div class="numcard"><div class="v">-78%</div><div class="d">自动驾驶赛道融资从 2021–22 年超 900 亿跌到 2025 年 200 亿</div><div class="s">来源：原文转述</div></div>
+<div class="numcard"><div class="v">45.3%</div><div class="d">A 股"真实"过会率；港股新股破发率 45%；59% 硬科技项目退出回报仅 1–3 倍</div><div class="s">来源：原文转述</div></div>
+</div>
+</div>
+
+<div class="sec" id="act"><div class="sec-head"><div class="num">✓</div><h2>行动清单</h2></div><div class="sec-sub">图说编辑拟，非原文，可勾选复盘</div>
+<div class="checklist"><div class="t">下次投决会前，对着这张单子过一遍</div>
+<label><input type="checkbox"><span>先算退出再签字：五年后谁会买？什么估值？IPO 还是并购？上市后能减持吗？</span></label>
+<label><input type="checkbox"><span>把"顶级机构已投"从加分项改成预警项：名单越豪华，越要做独立尽调</span></label>
+<label><input type="checkbox"><span>风控五问贴墙上：系统稳定吗？训练成本多少？真实客户是谁？收入模式？退出路径？</span></label>
+<label><input type="checkbox"><span>对明星项目设专门预警：融资轮次越多、估值涨越快，越要压力测试回购条款可执行性</span></label>
+<label><input type="checkbox"><span>DPI 考核前置：投资经理不只对"投出去"负责，也对"退出来"负责</span></label>
+<label><input type="checkbox"><span>记住三句话：后续融资≠验收；估值≠商业价值；融资成功≠创业成功</span></label>
+<div class="cprog"><i id="cbar"></i></div><div class="ctext" id="ctext">已完成 0 / 6</div>
+<button class="cbtn" id="cclear" type="button">清空重来</button>
+</div>
+</div>
+
+<div class="sec" id="cs"><div class="sec-head"><div class="num">≡</div><h2>来源与边界</h2></div>
+<div class="card"><div class="t">来源</div><div class="srcs"><ol>
+<li>微信公众号文章《投后派对》（作者：乔纳森，某机构投后管理负责人）<br><small>全文 7740 字已完整读取；观点为转述非逐字稿；文中案例数字未经独立核实；作者声明"如有雷同纯属巧合""不构成投资建议"。</small></li>
+</ol></div></div>
+<div class="card"><div class="t">图例</div><div class="srcs" style="line-height:2">
+<span class="tag zs">转述</span> —— 原文观点的压缩转述，非逐字原话<br>
+<span class="tag yj">延伸解读</span> —— 图说编辑所加，可被顶部按钮一键收起<br><br>
+免责声明：本图说仅为原文的信息提炼，不构成投资建议。原文作者已声明"仅供吐槽娱乐"。
+</div></div>
+</div>
+
+<div class="footer">图说 · 投后派对 ｜ 2026-10-11<br>观点转述自微信公众号文章，延伸解读为编辑所加</div>
+
+</main>
+<script>
+(function(){
+var bar=document.getElementById('progress');
+function onScroll(){var h=document.documentElement;var p=h.scrollTop/(h.scrollHeight-h.clientHeight||1);bar.style.width=(p*100)+'%';}
+document.addEventListener('scroll',onScroll,{passive:true});onScroll();
+document.getElementById('print').addEventListener('click',function(){window.print();});
+var tgl=document.getElementById('toggleYj'),hidden=false;
+tgl.addEventListener('click',function(){hidden=!hidden;document.querySelectorAll('.yjbox').forEach(function(e){e.classList.toggle('hidden',hidden);});tgl.textContent=hidden?'展开延伸解读':'收起延伸解读';tgl.classList.toggle('off',hidden);});
+var boxes=document.querySelectorAll('.checklist input'),cbar=document.getElementById('cbar'),ctext=document.getElementById('ctext');
+function save(){var s=[];boxes.forEach(function(b,i){if(b.checked)s.push(i);});try{localStorage.setItem('tushuo-touhou-paidui',JSON.stringify(s));}catch(e){}}
+function load(){try{var s=JSON.parse(localStorage.getItem('tushuo-touhou-paidui')||'[]');boxes.forEach(function(b,i){b.checked=s.indexOf(i)>=0;});}catch(e){}update();}
+function update(){var n=0;boxes.forEach(function(b){if(b.checked)n++;});cbar.style.width=(n/boxes.length*100)+'%';ctext.textContent='已完成 '+n+' / '+boxes.length;}
+boxes.forEach(function(b){b.addEventListener('change',function(){update();save();});});
+document.getElementById('cclear').addEventListener('click',function(){boxes.forEach(function(b){b.checked=false;});update();save();});
+load();
+})();
+</script>
+</body>
+</html>
