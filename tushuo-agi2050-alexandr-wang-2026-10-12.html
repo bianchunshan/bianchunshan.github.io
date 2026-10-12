@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>图说·亚历山大·王：Muse 是怎么炼成的 | AGI 2050</title>
+<style>
+:root{--teal:#0d9488;--teal-d:#0f766e;--ink:#1e293b;--sub:#5b6b7c;--faint:#7d8ba0;--bg:#f2f6f9;--card:#fff;--quote:#5eead4;--ext:#fffbeb;--ext-b:#f59e0b}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.8;font-size:16px}
+/* 顶部工具栏 */
+.toolbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid #e2e8f0;padding:10px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.brand{font-weight:800;color:var(--teal-d);font-size:15px;letter-spacing:.5px}
+.toolbar .spacer{flex:1}
+.btn{border:1px solid var(--teal);background:#fff;color:var(--teal-d);border-radius:20px;padding:6px 14px;font-size:13px;cursor:pointer;transition:.2s}
+.btn:hover{background:var(--teal);color:#fff}
+.btn.active{background:var(--teal);color:#fff}
+.progress-wrap{position:fixed;top:0;left:0;width:100%;height:3px;background:#e2e8f0;z-index:101}
+.progress{height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--teal-d));transition:width .1s}
+.wrap{max-width:860px;margin:0 auto;padding:24px 18px 60px}
+/* Hero */
+.hero{background:linear-gradient(135deg,var(--teal),var(--teal-d));color:#fff;border-radius:18px;padding:38px 30px;margin:18px 0 24px;box-shadow:0 8px 28px rgba(13,148,136,.25)}
+.kicker{font-size:13px;opacity:.85;letter-spacing:2px;margin-bottom:10px}
+.hero h1{font-size:30px;line-height:1.4;margin-bottom:14px;font-weight:800}
+.hero .lede{font-size:16px;opacity:.92;line-height:1.9}
+.meta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px}
+.meta{background:rgba(255,255,255,.14);border-radius:10px;padding:10px 12px;font-size:13px}
+.meta b{display:block;font-size:12px;opacity:.75;font-weight:600;margin-bottom:2px}
+/* 来源边界 */
+.boundary{background:var(--card);border-radius:14px;padding:20px 22px;margin-bottom:22px;box-shadow:0 2px 10px rgba(15,23,42,.06);border-left:4px solid var(--teal)}
+.boundary h3{font-size:16px;margin-bottom:8px;color:var(--teal-d)}
+.tag{display:inline-block;font-size:12px;border-radius:6px;padding:2px 8px;margin-right:6px;font-weight:600}
+.tag.zs{background:#eef2f6;color:var(--sub)}
+.tag.ys{background:var(--ext);color:#b45309;border:1px solid #fde68a}
+/* 导航 */
+.toc{background:var(--card);border-radius:14px;padding:18px 22px;margin-bottom:24px;box-shadow:0 2px 10px rgba(15,23,42,.06)}
+.toc h3{font-size:15px;color:var(--teal-d);margin-bottom:10px}
+.toc ol{padding-left:20px;font-size:14px;color:var(--sub)}
+.toc a{color:var(--sub);text-decoration:none}
+.toc a:hover{color:var(--teal-d)}
+/* 章节 */
+.sec{background:var(--card);border-radius:14px;padding:26px 24px;margin-bottom:22px;box-shadow:0 2px 10px rgba(15,23,42,.06)}
+.sec-num{display:inline-block;background:linear-gradient(135deg,var(--teal),var(--teal-d));color:#fff;font-weight:800;border-radius:10px;width:34px;height:34px;line-height:34px;text-align:center;margin-right:10px;font-size:16px}
+.sec h2{font-size:21px;display:inline;vertical-align:middle}
+.sec .sub{color:var(--faint);font-size:14px;margin:8px 0 16px}
+.pt{margin-bottom:16px}
+.pt:last-child{margin-bottom:0}
+.pt .core{font-weight:700;font-size:16px;margin-bottom:6px}
+.pt .fact,.pt .why{font-size:15px;color:var(--sub)}
+.pt .why{margin-top:4px}
+.ref{font-size:12px;color:var(--faint);vertical-align:super}
+.ext{background:var(--ext);border-left:4px solid var(--ext-b);border-radius:0 10px 10px 0;padding:14px 16px;margin-top:14px;font-size:14px;color:#92400e}
+.ext .tag{margin-bottom:6px}
+.hl{border:2px dashed var(--teal);border-radius:10px;padding:14px 16px;margin-top:14px;font-size:15px;background:#f0fdfa}
+/* 金句 */
+.quotes{background:linear-gradient(180deg,#fff,#f0fdfa);border-radius:14px;padding:26px 24px;margin-bottom:22px;box-shadow:0 2px 10px rgba(15,23,42,.06)}
+.quotes h2{font-size:21px;color:var(--teal-d);margin-bottom:18px}
+.q{position:relative;padding:14px 14px 14px 46px;margin-bottom:16px;background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(15,23,42,.05)}
+.q:before{content:"“";position:absolute;left:12px;top:2px;font-size:40px;color:var(--quote);font-family:serif;line-height:1}
+.q .t{font-size:16px;font-weight:600;line-height:1.9}
+.q .s{font-size:12px;color:var(--faint);margin-top:6px}
+/* 数字 */
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:22px}
+.num{background:var(--card);border-radius:12px;padding:18px 14px;text-align:center;box-shadow:0 2px 10px rgba(15,23,42,.06)}
+.num .v{font-size:30px;font-weight:800;color:var(--teal);line-height:1.2}
+.num .d{font-size:13px;color:var(--sub);margin-top:6px;line-height:1.6}
+.num .src{font-size:11px;color:var(--faint);margin-top:4px}
+.sec-title{font-size:21px;color:var(--teal-d);margin-bottom:14px;font-weight:800}
+/* 行动清单 */
+.todo{background:var(--card);border-radius:14px;padding:26px 24px;margin-bottom:22px;box-shadow:0 2px 10px rgba(15,23,42,.06)}
+.todo-item{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid #f1f5f9;cursor:pointer;font-size:15px}
+.todo-item:last-of-type{border-bottom:none}
+.todo-item input{margin-top:6px;accent-color:var(--teal);width:18px;height:18px;flex-shrink:0}
+.todo-item.done span{color:var(--faint);text-decoration:line-through}
+.tprogress{height:8px;background:#e2e8f0;border-radius:4px;margin:14px 0 8px;overflow:hidden}
+.tprogress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--teal-d));transition:width .3s}
+/* 来源 */
+.sources{background:var(--card);border-radius:14px;padding:26px 24px;margin-bottom:22px;box-shadow:0 2px 10px rgba(15,23,42,.06);font-size:14px;color:var(--sub)}
+.sources h2{font-size:18px;color:var(--teal-d);margin-bottom:12px}
+.sources ol{padding-left:20px}
+.sources li{margin-bottom:10px}
+.sources a{color:var(--teal-d);word-break:break-all}
+.disclaimer{font-size:13px;color:var(--faint);background:#f8fafc;border-radius:10px;padding:14px 16px;margin-top:14px;line-height:1.8}
+@media(max-width:640px){.hero h1{font-size:23px}.meta-grid{grid-template-columns:repeat(2,1fr)}.nums{grid-template-columns:repeat(2,1fr)}}
+@media print{.toolbar,.progress-wrap,.toc,.todo .btn{display:none}.wrap{max-width:100%}}
+</style>
+</head>
+<body>
+<div class="progress-wrap"><div class="progress" id="progress"></div></div>
+<div class="toolbar">
+  <span class="brand">图说 · AGI 2050</span>
+  <span class="spacer"></span>
+  <button class="btn" id="toggleExt">收起延伸解读</button>
+  <button class="btn" onclick="window.print()">打印 / PDF</button>
+</div>
+
+<div class="wrap">
+
+<div class="hero">
+  <div class="kicker">图说 · 人物访谈</div>
+  <h1>亚历山大·王：把 Muse 做成一件纯粹的艺术品</h1>
+  <div class="lede">29 岁的 Meta 首席 AI 官复盘 Muse 全过程：两周拼出 Demo，7 个月死磕 100 多项指标；不卷代码、押注 35 亿人日常生活；200 人极简团队 + 200 多个直接汇报人。核心判断：个人超级智能体是 C 端软件的终局。</div>
+  <div class="meta-grid">
+    <div class="meta"><b>人物</b>亚历山大·王（Alexandr Wang）<br>Meta 首席 AI 官，Scale AI 创始人</div>
+    <div class="meta"><b>场合</b>David Senra 播客深度对谈<br>原视频 72 分钟</div>
+    <div class="meta"><b>日期</b>2026 年 10 月 11 日播出<br>公众号 10 月 12 日整理发布</div>
+    <div class="meta"><b>形式</b>AGI 2050 编辑部整理稿<br>非逐字稿，约 1.5 万字</div>
+  </div>
+</div>
+
+<div class="boundary">
+  <h3>先划清来源边界</h3>
+  <div style="font-size:14px;color:var(--sub);line-height:1.9">
+    <span class="tag zs">观点转述</span>以下内容转述自 AGI 2050 公众号对 David Senra 访谈的整理稿，<b>不是逐字实录</b>，表述经编辑部改写浓缩。<br>
+    <span class="tag ys">延伸解读</span>米黄底内容是图说编辑基于原文的引申思考，不属于受访者原话，可用顶部按钮一键收起。<br>
+    文中所有数据（下载量、团队规模、用户数等）均为<b>据原文转述，未经独立核实</b>，以原始信源为准。
+  </div>
+</div>
+
+<div class="toc">
+  <h3>章节导航</h3>
+  <ol>
+    <li><a href="#s1">诞生：两周 Demo，7 个月打磨</a></li>
+    <li><a href="#s2">战略：为什么不卷代码</a></li>
+    <li><a href="#s3">增长：史上最快消费级 AI 应用</a></li>
+    <li><a href="#s4">产品哲学：单一意志，反缝合怪</a></li>
+    <li><a href="#s5">组织：200 人团队与"采钻石"</a></li>
+    <li><a href="#s6">破圈：截图驱动与信任背摔</a></li>
+    <li><a href="#s7">第二大脑：把童年野心还给你</a></li>
+    <li><a href="#s8">加盟 Meta：5 周闪电重组</a></li>
+  </ol>
+</div>
+
+<div class="sec" id="s1">
+  <span class="sec-num">1</span><h2>诞生：两周 Demo，7 个月打磨</h2>
+  <div class="sub"><span class="tag zs">观点转述</span> 来源 <span class="ref">[1]</span></div>
+  <div class="pt"><div class="core">起点是 2025 年 6 月的一份备忘录</div>
+    <div class="fact">Meta 超级智能实验室（MSL）成立之初，扎克伯格发布内部备忘录《个人超级智能》，由他和 Nat Friedman（GitHub 前 CEO）等人共同推敲，核心问题是：怎么造出真正让所有人现实生活变好的 AI。</div></div>
+  <div class="pt"><div class="core">OpenClaw 是导火索</div>
+    <div class="fact">2026 年初，Anthropic Opus 4.5 发布 + 开源 OpenClaw 爆发。Nat Friedman 重度使用 OpenClaw 后形容"在极度恐惧与极度狂喜之间反复横跳"——它曾自主调取家中安防摄像头盯着他喝水、喝完发消息夸他。两人在 2026 年 2 月达成共识：超级智能体是 C 端软件的终局，各自写长篇备忘录直达董事会。</div></div>
+  <div class="pt"><div class="core">两周拼出原型，7 个月磨细节</div>
+    <div class="fact">战略共识达成后，团队用一到两周拼出原型并向董事会演示，吉祥物 Jollybot 等核心决策第一版就已成型。但从"偶尔惊艳、大部分时间崩溃"的 Demo 到推向数亿用户的消费品，隔着 7 个月"极其痛苦的工程折磨"——把模型研发路线图彻底对准"个人超级智能"，逐项死磕 100 多种具体行为能力的评估指标。</div></div>
+  <div class="hl">上线标准：100 多项指标全绿才发。很多版本在 80 项上全绿、20 项关键指标飘红，"只要有红的，坚决不能发布"。最终 Muse Spark 1.3 的特调版本全线标绿，加上主观体感"甩开之前所有版本好几个身位"，才拍板上线。</div>
+  <div class="ext"><span class="tag ys">延伸解读</span>OpenClaw 的曲线很有警示意义：迅速见顶又迅速退潮——"偶尔高光、平时全是 bug"的产品留不住人。Muse 的差异化不在 idea，而在把 demo 磨成工业品的耐心。对国内做 Agent 的团队，这是最值得抄的一课：评估体系先行，而不是功能先行。</div>
+</div>
+
+<div class="sec" id="s2">
+  <span class="sec-num">2</span><h2>战略：为什么不卷代码</h2>
+  <div class="sub"><span class="tag zs">观点转述</span> 来源 <span class="ref">[1]</span></div>
+  <div class="pt"><div class="core">2026 年初全行业只有一个共识：编程 Agent 是先进 AI 唯一有商业价值的形态</div>
+    <div class="fact">Opus 4.5 在代码生成上一骑绝尘，"Anthropic 正在吞噬一切"的阴影下，全行业羊群效应，所有人挤进代码赛道硬碰硬。</div></div>
+  <div class="pt"><div class="core">Meta 的判断：个人 Agent 才是自己的护城河战场</div>
+    <div class="fact">王的核心论点：人类生活分"不得不做的事"和"真正想做的事"。AGI 会消解前者（报销、排期、订票），释放的时间流向后者——爱好、兴趣、和朋友家人在一起。而 Instagram、WhatsApp、Facebook 恰恰覆盖了"人类出于纯粹意愿想度过的时间"，Meta 手握 35 亿日活用户，是超级智能时代"最大的天然承接者"。</div></div>
+  <div class="ext"><span class="tag ys">延伸解读</span>这套逻辑成立的前提是 Meta 独有的分发 + 社交图谱。国内厂商没有 35 亿用户的基本盘，照抄"不做代码做生活"未必成立；但反过来看——当所有人挤代码赛道时，生活场景的竞争反而没那么挤，差异化空间真实存在。</div>
+</div>
+
+<div class="sec" id="s3">
+  <span class="sec-num">3</span><h2>增长：史上最快消费级 AI 应用</h2>
+  <div class="sub"><span class="tag zs">观点转述</span> 数据据原文转述，未经独立核实 <span class="ref">[1]</span></div>
+  <div class="pt"><div class="core">上线 10 天登顶美国 App Store 免费榜</div>
+    <div class="fact">据 Sensor Tower 估算，Muse 用 22 天下载量突破 500 万次——同样的数字 ChatGPT 用了 56 天。王转发过第三方推演图表，称其为"人类科技史上增长最快的消费级 AI 应用"；官方口径保持克制，只说"数以百万计"。</div></div>
+  <div class="pt"><div class="core">它不是问答对话框</div>
+    <div class="fact">Muse 的本质是拥有系统底层接管权限、能自主调度现实软硬件与三方服务的"超级数字代理人"，上线时即带 Muse Charm 交互形态和 Jollybot 吉祥物。</div></div>
+</div>
+
+<div class="sec" id="s4">
+  <span class="sec-num">4</span><h2>产品哲学：单一意志，反缝合怪</h2>
+  <div class="sub"><span class="tag zs">观点转述</span> 来源 <span class="ref">[1]</span></div>
+  <div class="pt"><div class="core">伟大产品必须是一个人的绝对意志</div>
+    <div class="fact">王抨击大厂通病"产品经理的地狱"：每个 PM 都有 KPI，每人往产品里塞一个功能，最后拼出一杯"黏糊糊谁也咽不下去的缝合怪奶昔"，用户一打开就能闻到"部门博弈的恶臭"。Muse 必须有且只有一个极度清晰的中心意志——Nat Friedman 的审美和产品直觉塑造了它的灵魂。</div></div>
+  <div class="pt"><div class="core">核心团队不到 200 人，是刻意克制</div>
+    <div class="fact">管理层明知这是 Meta 当年最关键的产品战役，仍坚持不让团队膨胀到几千人。"Muse 必须是一件纯粹的艺术品，必须拥有极度统一且强烈的单一视角。"访谈当天恰逢乔布斯逝世 15 周年，主持人直接点出这就是乔布斯的产品哲学。</div></div>
+  <div class="ext"><span class="tag ys">延伸解读</span>"单一意志"听起来反流程，但前提是这个人是对的（Nat Friedman 曾一手促成 GitHub Copilot）。对普通团队更现实的版本是：关键战役配一个说了算的人 + 极简团队，而不是搞民主拼盘。</div>
+</div>
+
+<div class="sec" id="s5">
+  <span class="sec-num">5</span><h2>组织：200 人团队与"采钻石"</h2>
+  <div class="sub"><span class="tag zs">观点转述</span> 来源 <span class="ref">[1]</span></div>
+  <div class="pt"><div class="core">200 多个直接汇报人：反常识但 deliberate</div>
+    <div class="fact">MSL 核心研发集群（代号 TBD）所有顶级科学家行政上全部直接向王汇报——这是对抗大企业官僚病的"物理防火墙"："天才不需要保姆，只需要一个不被打扰的厨房。"业务推进靠打散成的敏捷 Pod 作战细胞 + 技术负责人拍板 + 高频白板辩论。</div></div>
+  <div class="pt"><div class="core">"采钻石" vs "盖摩天大楼"</div>
+    <div class="fact">王的管理第一性原理看收益分布：数据标注、物流是"盖楼"——线性回报，靠精益运营抠 2% 损耗；前沿模型研发是"深海采钻石"——极端幂律分布，大多数实验是废渣，一颗钻石回报百万倍。所以不能用流水线 KPI 管科学家，要给绝对自由、等万分之一的爆发。</div></div>
+  <div class="pt"><div class="core">从 Scale 到 Meta：从"绝对核心"到"环境搭建者"</div>
+    <div class="fact">在 Scale 他要求自己"能做公司里每一份工作"，成了最大瓶颈；在 Meta 转向教练角色——吸纳金字塔尖人才，给他们守住一个干净、没有政治内耗的环境。</div></div>
+</div>
+
+<div class="sec" id="s6">
+  <span class="sec-num">6</span><h2>破圈：截图驱动与信任背摔</h2>
+  <div class="sub"><span class="tag zs">观点转述</span> 来源 <span class="ref">[1]</span></div>
+  <div class="pt"><div class="core">现代消费级产品是"截图驱动型产品"</div>
+    <div class="fact">能不能火，就看在社交群聊里的截屏能不能引发惊叹。Jollybot 的视觉辨识度极强，"扫一眼截图就知道是 Muse 在干活"。王在 X 上"癫狂"发梗图全是亲手写的——开会都在想梗，吃饭吃到一半掏手机发。底层规律："算法和互联网天然只奖赏冒险和出人意料"。</div></div>
+  <div class="pt"><div class="core">留存靠"信任背摔"三步走</div>
+    <div class="fact">人对机器的信任是步步为营的：先试探性交一件极小的事→做成了给稍难的→最后才敢把复杂烂摊子无保留交付。每次微小试探都必须得到精准正向反馈，信任资产才能沉淀。消费级 Agent 走在钢丝绳上：频繁掉链子就会被判定为垃圾。</div></div>
+  <div class="ext"><span class="tag ys">延伸解读</span>"截图驱动"是个极好的自检标准：你的 AI 功能交付结果，能不能截一张图发到群里让别人"哇"出来？不能的话，增长多半靠买量，留存多半靠运气。</div>
+</div>
+
+<div class="sec" id="s7">
+  <span class="sec-num">7</span><h2>第二大脑：把童年野心还给你</h2>
+  <div class="sub"><span class="tag zs">观点转述</span> 来源 <span class="ref">[1]</span></div>
+  <div class="pt"><div class="core">成年人大多变成了"僵尸"</div>
+    <div class="fact">王的原话：童年时人人有宏大野心——拯救地球、当宇航员；被社会机器消磨后，绝大多数成年人在精神上成了没有自主能动性的"僵尸"。Muse 的使命是给每人配一个无限能力的第二大脑，打破僵尸状态，重新激活"能动性"（Agency）：有大想法，AI 帮你落地；成功后野心放大，再挑战更大的命题。</div>
+    <div class="why">他引用贝索斯致股东信："消费者最可爱的地方，在于他们永远不会对现状感到满意。"</div></div>
+  <div class="pt"><div class="core">AGI 的真正承诺：消解"不得不做的事"</div>
+    <div class="fact">未来不需要再处理发票、排期和琐碎流程。而 Meta 拥有的用户"意愿时间"，将成为最大的护城河。</div></div>
+</div>
+
+<div class="sec" id="s8">
+  <span class="sec-num">8</span><h2>加盟 Meta：5 周闪电重组</h2>
+  <div class="sub"><span class="tag zs">观点转述</span> 来源 <span class="ref">[1]</span></div>
+  <div class="pt"><div class="core">从第一通电话到敲定交易，只用了五六周</div>
+    <div class="fact">背景是 Llama 4 研发受挫，被内部视为重大战略挫败。扎克伯格在电话里极度坦诚："你觉得我们现在到底应该做什么？"王当时完全没意识到这是收购前奏——直到财务方案摆上谈判桌才惊醒。最终架构：Meta 斥巨资持有 Scale 49% 股份，Scale 保持独立，王带少数核心骨干全职加入 Meta。</div></div>
+  <div class="pt"><div class="core">割舍 9 年心血"撕心裂肺"</div>
+    <div class="fact">19 岁 MIT 辍学创立 Scale，占他人生的三分之一。引用 Paul Graham："如果你把公司视为毕生的心血，行为模式会完全不同。"打动他的是"一张干干净净的白纸"——外界眼中的"受损资产"，意味着可以从地基按自己原则重塑一个世界级实验室。</div></div>
+  <div class="pt"><div class="core">扎克伯格的"终结者"特质</div>
+    <div class="fact">王证实外界评价属实：对产品现状永远不满意、永远迭代，但不是摧毁团队化学反应的独裁者。在 7 个月打磨期里，华尔街质疑"烧天文数字却拿不出东西"，扎克伯格展现了极高的战略定力。他的名言："在一个瞬息万变的世界里，最大的风险就是不冒任何风险。"</div></div>
+</div>
+
+<div class="quotes">
+  <h2>金句区 <span style="font-size:13px;color:var(--faint);font-weight:400">（据整理稿转述，非逐字实录）</span></h2>
+  <div class="q"><div class="t">Muse 已经成为人类历史上增长最快的消费级 AI 应用，但我们根本没走行业老路。全行业都在卷代码 Agent，而 Meta 真正的终局，是接管全球 35 亿人的个人生活。</div><div class="s">原话·转述 ｜ 谈战略选择 [1]</div></div>
+  <div class="q"><div class="t">伟大产品必须是一个人的绝对意志。大厂做产品最容易沦为"产品经理的地狱"——每人塞一个功能，最后做出一杯难以下咽的缝合怪奶昔。</div><div class="s">原话·转述 ｜ 谈产品哲学 [1]</div></div>
+  <div class="q"><div class="t">人类成年后其实都变成了丧失激情的"僵尸"。Muse 的使命是给每个人配一个无限能力的第二大脑，把你童年时的野心重新还给你。</div><div class="s">原话·转述 ｜ 谈第二大脑 [1]</div></div>
+  <div class="q"><div class="t">AI 研发本质上是"采钻石"，不是"盖摩天大楼"。你不能靠流水线去挤压效率，而是给一群顶级天才绝对的自由，等待那万分之一的百万倍回报。</div><div class="s">原话·转述 ｜ 谈研发管理 [1]</div></div>
+  <div class="q"><div class="t">现代消费级产品的破圈逻辑只有一个，那就是"截图驱动"。你的交付结果如果不能在用户的群聊里一张图说明问题并引发惊呼，你的产品营销就已经失败了。</div><div class="s">原话·转述 ｜ 谈增长 [1]</div></div>
+  <div class="q"><div class="t">AGI 真正的承诺，是把人类不得不做的事全部消解。未来我们不需要再处理发票、排期和琐碎流程，而 Meta 拥有的人类"意愿时间"，将成为最大的护城河。</div><div class="s">原话·转述 ｜ 谈 AGI 终局 [1]</div></div>
+</div>
+
+<div class="sec-title">关键数字 <span style="font-size:13px;color:var(--faint);font-weight:400">（据原文转述，未经独立核实）</span></div>
+<div class="nums">
+  <div class="num"><div class="v">22 天</div><div class="d">下载量突破 500 万次<br>ChatGPT 用了 56 天</div><div class="src">[1] 据 Sensor Tower 估算转述</div></div>
+  <div class="num"><div class="v">10 天</div><div class="d">登顶美国 App Store<br>免费榜</div><div class="src">[1] 据原文转述</div></div>
+  <div class="num"><div class="v">35 亿</div><div class="d">Meta 各 App<br>每日真实活跃用户</div><div class="src">[1] 据原文转述</div></div>
+  <div class="num"><div class="v">100+</div><div class="d">个人 Agent 能力评估<br>细分指标，全绿才上线</div><div class="src">[1] 据原文转述</div></div>
+  <div class="num"><div class="v">&lt;200 人</div><div class="d">Muse 核心产品工程<br>+ 模型研发团队总人数</div><div class="src">[1] 据原文转述</div></div>
+  <div class="num"><div class="v">200+</div><div class="d">顶级研究员<br>直接向王汇报</div><div class="src">[1] 据原文转述</div></div>
+</div>
+
+<div class="todo">
+  <div class="sec-title">行动清单 <span style="font-size:13px;color:var(--faint);font-weight:400">（图说编辑拟，非原文）</span></div>
+  <div class="tprogress"><i id="tbar"></i></div>
+  <div style="font-size:13px;color:var(--faint);margin-bottom:8px"><span id="tcount">0</span> / 6 已完成 <button class="btn" id="tclear" style="margin-left:10px">清空</button></div>
+  <div class="todo-item"><input type="checkbox"><span>产品自检：我们最近交付的东西里，有没有"每人塞一个功能"的缝合怪味？列出来砍一刀。</span></div>
+  <div class="todo-item"><input type="checkbox"><span>增长自检：用"截图驱动"标准检验核心功能——交付结果能不能一张图在群聊里引发惊呼？</span></div>
+  <div class="todo-item"><input type="checkbox"><span>场景清单：列出目标用户"不得不做"的破事 Top 10，看 Agent 能吃掉几个。</span></div>
+  <div class="todo-item"><input type="checkbox"><span>组织复盘：下一场关键战役，能不能配一个说了算的人 + 200 人以内的极简团队？</span></div>
+  <div class="todo-item"><input type="checkbox"><span>信任设计：为自家 AI 功能设计"信任背摔"三步路径（小事→难事→烂摊子）。</span></div>
+  <div class="todo-item"><input type="checkbox"><span>研发分类：把手头工作分成"采钻石"（幂律）和"盖楼"（线性）两类，管理方式分开。</span></div>
+</div>
+
+<div class="sources">
+  <h2>来源与边界</h2>
+  <ol>
+    <li>AGI 2050 微信公众号《Muse 必须是一件纯粹的艺术品》，2026-10-12 发布，系对 David Senra 访谈的整理转述（非逐字稿）：<a href="https://mp.weixin.qq.com/s/D6ZpSpSyv7cRn4Ze4gwFJg">mp.weixin.qq.com/s/D6ZpSpSyv7cRn4Ze4gwFJg</a> —— 本图说全部观点与数据均转述自此，<b>未经独立核实</b>。</li>
+    <li>David Senra 播客访谈 Alexandr Wang，2026-10-11 播出，原视频 72 分钟：<a href="https://www.youtube.com/watch?v=S6l3aRsecuE">youtube.com/watch?v=S6l3aRsecuE</a> —— 原始一手信源，数据以此为准。</li>
+  </ol>
+  <div style="margin-top:12px;font-size:13px"><span class="tag zs">观点转述</span> 转述原文观点，不代表图说编辑立场。<span class="tag ys">延伸解读</span> 米黄底为编辑引申思考，可一键收起。</div>
+  <div class="disclaimer">免责声明：本图说为公开访谈整理稿的可视化摘要，仅供行业交流与知识参考。AI 行业发展存在诸多不确定性，文中数据、技术解读与行业研判未经独立核实，不构成任何投资或商业决策建议。原文版权归 AGI 2050 及原作者所有。</div>
+</div>
+
+</div>
+<script>
+window.addEventListener('scroll',function(){var h=document.documentElement;var p=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('progress').style.width=p+'%';});
+var extHidden=false;
+document.getElementById('toggleExt').addEventListener('click',function(){
+  extHidden=!extHidden;
+  document.querySelectorAll('.ext').forEach(function(e){e.style.display=extHidden?'none':'';});
+  this.textContent=extHidden?'展开延伸解读':'收起延伸解读';
+  this.classList.toggle('active',extHidden);
+});
+var boxes=document.querySelectorAll('.todo-item input');
+function upd(){var n=0;boxes.forEach(function(b,i){b.closest('.todo-item').classList.toggle('done',b.checked);if(b.checked)n++;try{localStorage.setItem('tushuo_agw_'+i,b.checked?'1':'0')}catch(e){}});document.getElementById('tcount').textContent=n;document.getElementById('tbar').style.width=(n/boxes.length*100)+'%';}
+boxes.forEach(function(b,i){try{if(localStorage.getItem('tushuo_agw_'+i)==='1')b.checked=true}catch(e){}b.addEventListener('change',upd);});
+document.getElementById('tclear').addEventListener('click',function(){boxes.forEach(function(b){b.checked=false});upd();});
+upd();
+</script>
+</body>
+</html>
